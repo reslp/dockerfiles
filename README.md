@@ -8,7 +8,8 @@ This repository contains docker files I accumulated for different purposes.
 IQ-tree
 ===================
 
-Installation:
+
+
 1. Install [Docker](http://www.docker.com) or if you are on Windows use [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
 2. Download the docker file: `curl https://raw.githubusercontent.com/reslp/dockerfiles/master/iqtree/Dockerfile > Dockerfile`. If you are using Docker Toolbox you will need to start the Virtual Machine first by clicking on the start.sh file in the Docker Toolbox Folder.
 3. In the same directory you can now build the container: `docker build --tag iqtree .`
@@ -21,6 +22,16 @@ An example command for IQ-tree may look like this:
 The most basic command which will show you an overview of IQ-trees command line paramters is:
 `docker run iqtree`
 
+MrBayes
+===================
+
+
+1. Install [Docker](http://www.docker.com) or if you are on Windows use [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
+2. Download the docker file: `curl https://raw.githubusercontent.com/reslp/dockerfiles/master/mrbayes/Dockerfile > Dockerfile`. If you are using Docker Toolbox you will need to start the Virtual Machine first by clicking on the start.sh file in the Docker Toolbox Folder.
+3. In the same directory you can now build the container: `docker build --tag mrbayes .`
+4. To execute `docker run -v <path_to_local_folder>:/input/ -it mb_ubuntu /sbin/my_init -- mpirun --allow-run-as-root -np 8 mb /input/<nexus_file.nex>`
+
+Important: <path_to_local_folder> has to be the full path to your files starting from the root of your file system. This folder should contain the NEXUS file used to run mrbayes.
 
 Phylo-Scripts
 ===================
