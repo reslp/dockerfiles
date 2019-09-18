@@ -42,3 +42,21 @@ Phylo-Scripts
 
 Important: <full_path_to_input_files> has to be the full path to your files starting from the root of your file system. This folder should contain all the single locus files which should be used in the multi gene alignment and the file with Sequence IDs (`IDs_used_for_tree.txt`). 
 
+Spades 3.12.0
+================================
+
+`docker pull reslp/spades`
+
+
+
+trimmomatic 0.38
+===============================
+`docke3r pull reslp/trimmomatic`
+
+Example command:
+
+```
+docker run -t -v $(pwd):/data reslp/trimmomatic trimmomatic PE -phred33 -threads 8 /data/pair1.fq.gz /data/pair2.fq.gz /data/trimmed_pair1.fq.gz /data/unpaired_pair1.fq.gz /data/trimmed_pair2.fq.gz /data/unpaired_pair2.fq.gz HEADCROP:20 ILLUMINACLIP:/data/adapters.fa:2:30:10 LEADING:30 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:80
+```
+
+Important: The adapter file is not part of the docker image. It needs to passed together with the mounted directory.
