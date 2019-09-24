@@ -60,6 +60,11 @@ Example command:
 ```
 docker run -t -v $(pwd):/data reslp/trimmomatic trimmomatic PE -phred33 -threads 8 /data/pair1.fq.gz /data/pair2.fq.gz /data/trimmed_pair1.fq.gz /data/unpaired_pair1.fq.gz /data/trimmed_pair2.fq.gz /data/unpaired_pair2.fq.gz HEADCROP:20 ILLUMINACLIP:/data/adapters.fa:2:30:10 LEADING:30 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:80
 ```
+or
+
+```
+docker run --user $(id -u):$(id -g) --rm -v $(pwd):/data reslp/trimmomatic trimmomatic
+```
 
 Important: The adapter file is not part of the docker image. It needs to passed together with the mounted directory.
 
@@ -67,7 +72,20 @@ Important: The adapter file is not part of the docker image. It needs to passed 
 fastqc 0.11.7
 ===============================
 
+Get the docker image:
+
 `docker pull reslp/fastqc`
+
+Example command for running the container:
+```
+docker run -v $(pwd):/data --rm reslp/fastqc fastqc /data/illumina_reads_5_R1_trimmed.fq -o /data
+```
+or 
+
+```
+docker run --user $(id -u):$(id -g) --rm -v $(pwd):/data reslp/fastqc fastqc -h
+```
+
 
 maxbin 2.2.6
 ===============================
