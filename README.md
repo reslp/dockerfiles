@@ -3,6 +3,8 @@ dockerfiles
 
 This repository contains Docker files I accumulated for different purposes. For these to work, first install [Docker](http://www.docker.com) or if you are on Windows install [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
 
+Some of the images are bare-bone and should maybe be changed when incorporated into analysis pipelines.
+
 
 
 IQ-tree
@@ -60,3 +62,14 @@ docker run -t -v $(pwd):/data reslp/trimmomatic trimmomatic PE -phred33 -threads
 ```
 
 Important: The adapter file is not part of the docker image. It needs to passed together with the mounted directory.
+
+
+fastqc 0.11.7
+===============================
+
+`docker pull reslp/fastqc`
+
+maxbin 2.2.6
+===============================
+
+`docker pull reslp/maxbin`
