@@ -91,3 +91,20 @@ maxbin 2.2.6
 ===============================
 
 `docker pull reslp/maxbin`
+
+`docker run --rm reslp/maxbin`
+
+concoct 1.1
+===============================
+
+`docker pull reslp/concoct`
+
+`docker run --rm reslp/concoct`
+
+metabat 2.13
+===============================
+
+`docker pull reslp/metabat`
+
+`docker run --rm reslp/metabat`
+
