@@ -108,3 +108,10 @@ metabat 2.13
 
 `docker run --rm reslp/metabat`
 
+busco 3.0.2
+===============================
+
+`docker pull reslp/busco`
+
+`docker run --rm reslp/busco`
+
