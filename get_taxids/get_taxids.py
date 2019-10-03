@@ -4,11 +4,14 @@ import datetime
 import sys
 
 if len(sys.argv) != 3:
-	print("get_taxids.py /absolute/path/to/mapping/prot.accessions2taxid /absolute/path/to/tabular_blast_results_file")
+	print("get_taxids.py /absolute/path/to/mapping/prot.accession2taxid /absolute/path/to/tabular_blast_results_file")
 	sys.exit(1)
 
-
-file1 = open(sys.argv[1], "r")
+if "prot.accession2taxid" not in sys.argv[1]:
+	file1 = open("/opt/mapping/prot.accession2taxid", "r")
+else:
+	file1 = open(sys.argv[1], "r")
+	
 all_ids_dict={}
 i = 0
 
