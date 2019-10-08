@@ -10,6 +10,9 @@ RUN conda config --append channels anaconda
 
 RUN conda config --set notify_outdated_conda false
 RUN conda install -y -c bioconda busco=3.0.2
+ENV AUGUSTUS_CONFIG_PATH /opt/conda/config
+RUN chmod a+w /opt/conda/config
+
 RUN conda clean -a -y
 
 CMD ["run_busco", "-h"]
