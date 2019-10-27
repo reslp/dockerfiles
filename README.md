@@ -101,6 +101,16 @@ concoct 1.1
 
 `docker run --rm reslp/concoct`
 
+A complete example filtering a metagenome. The `metagenome.fasta` file should be in the current working directory.
+
+```
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct cut_up_fasta.py /data/metagenome.fasta -c 10000 -o 0 --merge_last -b /data/metagenome.fasta_contigs_10K.bed > metagenome.fasta_contigs_10K.fa
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct concoct_coverage_table.py /data/metagenome.fasta_contigs_10K.bed /data/metagenome.fasta.bam > concoct_coverage_table.tsv
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct concoct --composition_file /data/metagenome.fasta_contigs_10K.fa --coverage_file /data/concoct_coverage_table.tsv -b /data/concoct/metagenome.fasta_concoct --threads $THREADS
+docker run --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct merge_cutup_clustering.py /data/concoct/metagenome.fasta_concoct_clustering_gt1000.csv > concoct/metagenome.fasta_concoct_clustering_merged.csv
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct extract_fasta_bins.py /data/metagenome.fasta /data/concoct/metagenome.fasta_concoct_clustering_merged.csv --output_path /data/concoct/bins
+```
+
 metabat 2.13
 ===============================
 
@@ -114,4 +124,26 @@ busco 3.0.2
 `docker pull reslp/busco`
 
 `docker run --rm reslp/busco`
+
+blobtools
+=======
+`docker pull reslp/blobtools`
+
+These commands expect that blast results are alread present:
+
+```
+docker run -t $DOCKER_USER -v $(pwd):/data/ --rm reslp/blobtools create -i /data/metagenome.fasta -b /data/metagenome.fasta.bam -t /data/blobtools/metagenome.fasta_diamond_matches_formatted -o /data/blobtools/metagenome.fasta_blobtools
+docker run -t $DOCKER_USER -v $(pwd):/data/ --rm reslp/blobtools view -i /data/blobtools/metagenome.fasta_blobtools.blobDB.json -o /data/blobtools/
+docker run -t $DOCKER_USER -v $(pwd):/data/ --rm reslp/blobtools plot -i /data/blobtools/metagenome.fasta_blobtools.blobDB.json -o /data/blobtools/
+```
+
+
+QUAST 
+=========
+`docker pull reslp/quast`
+
+Run QUAST on all fasta files in current directory:
+
+`docker run --rm -t -v $(pwd):/data/ reslp/quast quast.py $(ls -d -1 "*.fasta" | sed 's/^/\/data\//') -o /data/quast --silent
+`
 
