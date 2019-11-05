@@ -147,3 +147,17 @@ Run QUAST on all fasta files in current directory:
 `docker run --rm -t -v $(pwd):/data/ reslp/quast quast.py $(ls -d -1 "*.fasta" | sed 's/^/\/data\//') -o /data/quast --silent
 `
 
+ncbi-blast 2.9.0
+==========
+`docker pull reslp/ncbi-blast`
+
+To create a blast database and run a blastp search:
+`my_sequences.fasta`and `sequences_to_search.fa`need to be in the current working directory. The blastdb will also be created there.
+
+```
+docker run --rm -v $(pwd):/files/ reslp/ncbi-blast makeblastdb -in /files/my_sequences.fasta -dbtype 'prot' -hash_index -out my_blastdb
+
+docker run --rm -v $(pwd):/files/ reslp/ncbi-blast blastp -db /files/my_blastdb -query /files/sequences_to_search.fa -outfmt 6 > blast_results.txt
+
+```
+
