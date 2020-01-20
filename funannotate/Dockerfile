@@ -20,6 +20,7 @@ ENV TRINITY_HOME="/software/trinityrnaseq-v2.8.6"
 ENV PATH="/software/trinityrnaseq-v2.8.6:$PATH"
 
 #Augustus
+# for some reason it does not work with ubuntus augustus package
 #RUN apt-get install -y augustus
 #ENV AUGUSTUS_CONFIG_PATH="/usr/share/augustus/config/"
 RUN apt-get install -y libboost-iostreams-dev zlib1g-dev libgsl-dev libboost-graph-dev libboost-all-dev libsuitesparse-dev liblpsolve55-dev libsqlite3-dev libgsl-dev libboost-graph-dev libboost-all-dev libsuitesparse-dev liblpsolve55-dev libmysql++-dev libbamtools-dev libboost-all-dev && wget https://github.com/Gaius-Augustus/Augustus/archive/3.3.2.tar.gz && tar xvfz 3.3.2.tar.gz && cd Augustus-3.3.2/auxprogs && sed -i 's/cd bam2wig; make;/#cd bam2wig; make;/g' Makefile && sed -i 's/cd bam2wig; make clean;/#cd bam2wig; make clean;/g' Makefile && cd .. && make 
@@ -127,6 +128,8 @@ ENV PATH="/root/signalp-4.1:$PATH"
 ENV FUNANNOTATE_DB="/root/database"
 # to correct signalps path
 # sed -i -e 's#$ENV{SIGNALP} = *+#$ENV{SIGNALP} = \/root\/signalp-4.1#g' /root/signalp-4.1/signalp
+
+workdir /data
 
 ENTRYPOINT ["funannotate"]
 CMD ["-v"]
