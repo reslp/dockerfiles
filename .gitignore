@@ -1,2 +1,7 @@
 
 maxbin/run_MaxBin.pl
+funannotate/funannotate_linux.yaml
+funannotate/TEST
+funannotate/test_assembly.fas
+funannotate/test_assembly_clean.fas
+funannotate/test_assembly_masked.fas

@@ -1,0 +1,10 @@
+
+Dockerfile
+TEST
+database/
+external/
+funannotate_linux.yaml
+test_assembly.fas
+test_assembly_clean.fas
+test_assembly_masked.fas
+.gitignore
