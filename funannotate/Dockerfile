@@ -21,18 +21,14 @@ RUN apt-get update && \
 RUN wget https://sourceforge.net/projects/codingquarry/files/CodingQuarry_v2.0.tar.gz && \ 
 	tar xvfz CodingQuarry_v2.0.tar.gz && \
 	cd CodingQuarry_v2.0 && \
-	make && make clean
-
-ENV QUARRY_PATH="/software/CodingQuarry_v2.0/QuarryFiles"
-ENV PATH="/software/CodingQuarry_v2.0:$PATH"
+	make
 
 #Trinity
 RUN wget https://github.com/trinityrnaseq/trinityrnaseq/releases/download/v2.8.6/trinityrnaseq-v2.8.6.FULL.tar.gz && \
 	tar xvfz trinityrnaseq-v2.8.6.FULL.tar.gz && \
 	cd trinityrnaseq-v2.8.6 && \
-	make && make clean
-ENV TRINITY_HOME="/software/trinityrnaseq-v2.8.6"
-ENV PATH="/software/trinityrnaseq-v2.8.6:$PATH"
+	make
+
 
 #Augustus
 # for some reason it does not work with ubuntus augustus package. also bam2wig compilation does not work.
@@ -42,9 +38,8 @@ RUN wget https://github.com/Gaius-Augustus/Augustus/archive/3.3.2.tar.gz && \
 	sed -i 's/cd bam2wig; make;/#cd bam2wig; make;/g' Makefile && \
 	sed -i 's/cd bam2wig; make clean;/#cd bam2wig; make clean;/g' Makefile && \
 	cd .. && \
-	make && make clean
-ENV AUGUSTUS_CONFIG_PATH="/software/Augustus-3.3.2/config"
-ENV PATH="/software/Augustus-3.3.2/bin:$PATH"
+	make
+
 
 
 #BLAT
@@ -52,7 +47,7 @@ RUN mkdir blat && \
  	cd blat && \
  	wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/blat/blat && \
  	chmod 755 ./blat
-ENV PATH="/software/blat/:$PATH"
+
 
 #FASTA36
 RUN wget http://faculty.virginia.edu/wrpearson/fasta/fasta36/fasta-36.3.8g.tar.gz && \
@@ -78,24 +73,24 @@ RUN wget http://github.com/bbuchfink/diamond/releases/download/v0.9.29/diamond-l
 RUN wget http://research-pub.gene.com/gmap/src/gmap-gsnap-2019-09-12.tar.gz && \
 	tar xvfz gmap-gsnap-2019-09-12.tar.gz && \
 	cd gmap-2019-09-12/ && ./configure && \
-	make && make clean
-ENV PATH="/software/gmap-2019-09-12/src:$PATH"
+	make
+
 
 
 #minimap2
 RUN wget https://github.com/lh3/minimap2/releases/download/v2.17/minimap2-2.17_x64-linux.tar.bz2 && \
 	tar -jxvf minimap2-2.17_x64-linux.tar.bz2
-ENV PATH="/software/minimap2-2.17_x64-linux:$PATH"
+
 
 #kallisto
 RUN wget https://github.com/pachterlab/kallisto/releases/download/v0.46.1/kallisto_linux-v0.46.1.tar.gz && \
 	tar xvfz kallisto_linux-v0.46.1.tar.gz
-ENV PATH="/software/kallisto:$PATH"
+
 
 #Proteinortho
 RUN wget https://gitlab.com/paulklemm_PHD/proteinortho/-/archive/v6.0.12/proteinortho-v6.0.12.tar.gz && \
 	tar xvfz proteinortho-v6.0.12.tar.gz
-ENV PATH="/software/proteinortho-v6.0.12:$PATH"
+
 
 #pslCDnaFilter
 # this does currently not select a specific version!! It uses always the latest version
@@ -106,19 +101,18 @@ RUN wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/pslCDnaFilter && 
 #salmon
 RUN wget https://github.com/COMBINE-lab/salmon/releases/download/v1.1.0/salmon-1.1.0_linux_x86_64.tar.gz && \
 	tar xvfz salmon-1.1.0_linux_x86_64.tar.gz
-ENV PATH="/software/salmon-latest_linux_x86_64/bin:$PATH"
+
 
 #snap
 RUN git clone https://github.com/KorfLab/SNAP.git && \
 	cd SNAP && \
-	make 
-ENV ZOE="/software/SNAP/Zoe"
-ENV PATH="/software/SNAP:$PATH"
+	make
+
 
 #stringtie
 RUN wget http://ccb.jhu.edu/software/stringtie/dl/stringtie-2.0.6.Linux_x86_64.tar.gz && \
 	tar xvfz stringtie-2.0.6.Linux_x86_64.tar.gz
-ENV PATH="/software/stringtie-2.0.6.Linux_x86_64:$PATH"
+
 
 #tRNA-Scan
 RUN wget http://trna.ucsc.edu/software/trnascan-se-2.0.5.tar.gz && \
@@ -142,7 +136,7 @@ RUN wget http://trimal.cgenomics.org/_media/trimal.v1.2rev59.tar.gz && \
 	tar xvfz trimal.v1.2rev59.tar.gz && \
 	cd trimAl/source && \
 	make
-ENV PATH="/software/trimAl/source:$PATH"
+
 
 #trimmomatic
 # trimmomatic needs an executable called trimmomatic in the PATH. This is to set it up.
@@ -157,22 +151,80 @@ RUN touch trimmomatic && \
 RUN wget https://github.com/PASApipeline/PASApipeline/releases/download/pasa-v2.4.1/PASApipeline.v2.4.1.FULL.tar.gz && \
 	tar xvfz PASApipeline.v2.4.1.FULL.tar.gz && \
 	cd PASApipeline.v2.4.1 && \
-	make && make clean
-ENV PASAHOME="/software/PASApipeline.v2.4.1"
+	make
+
 
 #Evidence Modeler
 RUN wget https://github.com/EVidenceModeler/EVidenceModeler/archive/v1.1.1.tar.gz && \
 	tar xvfz v1.1.1.tar.gz
-ENV EVM_HOME="/software/EVidenceModeler-1.1.1"
+
 
 #ete3
 # this installs a slightly older version, but the pyqt issue does not occur with it.
 RUN pip install --upgrade ete3==3.0.0b35
 
+
+####RepeatModeler - several dependcies needed for that
+# RECON
+RUN wget http://www.repeatmasker.org/RepeatModeler/RECON-1.08.tar.gz && \
+	tar xvfz RECON-1.08.tar.gz && \
+	cd RECON-1.08/src && \
+	make && make install && \
+	sed -i -e 's#\$path = \"\";#\$path = \"/software/RECON-1.08/bin\";#' /software/RECON-1.08/scripts/recon.pl
+# RepeatScout
+RUN wget http://www.repeatmasker.org/RepeatScout-1.0.6.tar.gz && \
+	tar xvfz RepeatScout-1.0.6.tar.gz && \
+	cd RepeatScout-1.0.6 && \
+	make && \
+	cp RepeatScout build_lmer_table /usr/local/bin
+# TRF
+RUN wget http://tandem.bu.edu/trf/downloads/trf409.linux64 && \
+	chmod +x trf409.linux64 && \
+	mv trf409.linux64 /usr/local/bin/trf
+# rmblast
+RUN wget http://www.repeatmasker.org/rmblast-2.10.0+-x64-linux.tar.gz && \
+	tar xvfz rmblast-2.10.0+-x64-linux.tar.gz
 #Repeatmasker
-RUN wget http://www.repeatmasker.org/RepeatMasker-4.1.0.tar.gz && \
-	tar xvfz RepeatMasker-4.1.0.tar.gz
-ENV PATH="/software/RepeatMasker:$PATH"
+# fixing the perl paths is from: https://github.com/chrishah/maker-docker/blob/master/repeatmasker/Dockerfile
+RUN wget http://www.repeatmasker.org/RepeatMasker-open-4-0-7.tar.gz && \
+	tar xvfz RepeatMasker-open-4-0-7.tar.gz && \
+	sed -i -e 's#TRF_PRGM = ""#TRF_PRGM = \"/usr/local/bin/trf\"#g' RepeatMasker/RepeatMaskerConfig.tmpl && \
+	sed -i -e 's#DEFAULT_SEARCH_ENGINE = \"crossmatch\"#DEFAULT_SEARCH_ENGINE = \"ncbi\"#g' RepeatMasker/RepeatMaskerConfig.tmpl && \
+	sed -i -e 's#RMBLAST_DIR   = \"/usr/local/rmblast\"#RMBLAST_DIR   = \"/software/rmblast-2.10.0/bin\"#g' RepeatMasker/RepeatMaskerConfig.tmpl && \
+	sed -i -e 's#REPEATMASKER_DIR          = \"\$FindBin::RealBin\"#REPEATMASKER_DIR          = \"/software/RepeatMasker\"#g' RepeatMasker/RepeatMaskerConfig.tmpl && \
+	cp RepeatMasker/RepeatMaskerConfig.tmpl RepeatMasker/RepeatMaskerConfig.pm && \
+	perl -i -0pe 's/^#\!.*perl.*/#\!\/usr\/bin\/env perl/g' \
+	RepeatMasker/RepeatMasker \
+	RepeatMasker/DateRepeats \
+	RepeatMasker/ProcessRepeats \
+	RepeatMasker/RepeatProteinMask \
+	RepeatMasker/DupMasker \
+	RepeatMasker/util/queryRepeatDatabase.pl \
+	RepeatMasker/util/queryTaxonomyDatabase.pl \
+	RepeatMasker/util/rmOutToGFF3.pl \
+	RepeatMasker/util/rmToUCSCTables.pl
+	
+#Repeatmodeler itself
+# fixing the perl paths is from: https://github.com/chrishah/maker-docker/blob/master/repeatmasker/Dockerfile
+RUN wget http://www.repeatmasker.org/RepeatModeler/RepeatModeler-open-1.0.10.tar.gz && \
+	tar xvfz RepeatModeler-open-1.0.10.tar.gz && \
+	cd RepeatModeler-open-1.0.10 && \
+	perl -i -0pe 's/^#\!.*/#\!\/usr\/bin\/env perl/g' \
+	configure \
+	BuildDatabase \
+	Refiner \
+	RepeatClassifier \
+	RepeatModeler \
+	TRFMask \
+	util/dfamConsensusTool.pl \
+	util/renameIds.pl \
+	util/viewMSA.pl && \
+	sed -i -e 's#RECON_DIR = \"/usr/local/bin\"#RECON_DIR = \"/software/RECON-1.08/bin\"#g' RepModelConfig.pm.tmpl && \
+	sed -i -e 's#RSCOUT_DIR = \"/usr/local/bin/\"#RSCOUT_DIR = \"/software/RepeatScout-1.0.6\"#g' RepModelConfig.pm.tmpl && \
+	sed -i -e 's#RMBLAST_DIR      = \"/usr/local/rmblast\"#RMBLAST_DIR      = \"/software/rmblast-2.10.0/bin\"#g' RepModelConfig.pm.tmpl && \
+	sed -i -e 's#REPEATMASKER_DIR = \"/usr/local/RepeatMasker\"#REPEATMASKER_DIR = \"/software/RepeatMasker\"#g' RepModelConfig.pm.tmpl && \
+	cp RepModelConfig.pm.tmpl RepModelConfig.pm
+		
 
 #tbl2asn
 RUN wget ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/converters/by_program/tbl2asn/linux64.tbl2asn.gz && \
@@ -183,10 +235,6 @@ RUN wget ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/converters/by_program/tbl2asn
 RUN rm *.gz
 
 #export variables:
-ENV PATH="/root/gm_et_linux_64:$PATH"
-ENV GENEMARK_PATH="/root/gm_et_linux_64"
-ENV PATH="/root/signalp-4.1:$PATH"
-ENV FUNANNOTATE_DB="/root/database"
 # to correct signalps path
 # sed -i -e 's#$ENV{SIGNALP} = *+#$ENV{SIGNALP} = \/root\/signalp-4.1#g' /root/signalp-4.1/signalp
 
@@ -196,7 +244,39 @@ MAINTAINER <resl.philipp@bio.lmu.de>
 
 COPY --from=build / /
 
-workdir /data
+ENV RMBLAST_DIR=/software/rmblast-2.10.0/bin
+ENV RECON_DIR=/software/RECON-1.08/bin
+ENV PATH="/software/RepeatMasker:$PATH"
+ENV PATH="/software/RepeatModeler-open-1.0.10:$PATH"
+ENV REPEATMASKER_DIR="/software/RepeatMasker"
+
+
+ENV QUARRY_PATH="/software/CodingQuarry_v2.0/QuarryFiles"
+ENV PATH="/software/CodingQuarry_v2.0:$PATH"
+ENV TRINITY_HOME="/software/trinityrnaseq-v2.8.6"
+ENV PATH="/software/trinityrnaseq-v2.8.6:$PATH"
+ENV PATH="/software/gmap-2019-09-12/src:$PATH"
+ENV PATH="/software/minimap2-2.17_x64-linux:$PATH"
+ENV PATH="/software/kallisto:$PATH"
+ENV PATH="/software/proteinortho-v6.0.12:$PATH"
+ENV PATH="/software/salmon-latest_linux_x86_64/bin:$PATH"
+ENV ZOE="/software/SNAP/Zoe"
+ENV PATH="/software/SNAP:$PATH"
+ENV PATH="/software/stringtie-2.0.6.Linux_x86_64:$PATH"
+ENV PATH="/software/trimAl/source:$PATH"
+ENV PASAHOME="/software/PASApipeline.v2.4.1"
+ENV EVM_HOME="/software/EVidenceModeler-1.1.1"
+ENV PATH="/software/RepeatMasker:$PATH"
+ENV AUGUSTUS_CONFIG_PATH="/software/Augustus-3.3.2/config"
+ENV PATH="/software/Augustus-3.3.2/bin:$PATH"
+ENV PATH="/software/blat/:$PATH"
+
+ENV PATH="/root/gm_et_linux_64:$PATH"
+ENV GENEMARK_PATH="/root/gm_et_linux_64"
+ENV PATH="/root/signalp-4.1:$PATH"
+ENV FUNANNOTATE_DB="/root/database"
+
+WORKDIR /data
 
 ENTRYPOINT ["funannotate"]
 CMD ["-v"]
