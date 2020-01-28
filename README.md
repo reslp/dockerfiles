@@ -160,3 +160,19 @@ docker run --rm -v $(pwd):/files/ reslp/ncbi-blast blastp -db /files/my_blastdb 
 
 ```
 
+singularity 3.4.1
+==========
+
+`docker pull reslp/singularity:3.4.1`
+
+To run the conatiner and to be able to run singularity containers inside it docker needs to be run with privileged mode:
+
+```
+docker run --privileged -it --rm -v $(pwd):/data --entrypoint /bin/bash reslp/singularity:3.4.1
+```
+
+Inside the container it is now possible to run singularity images. For example the singularity image for funannotate (which was downloaded and converted to .sif from Docker Hub).
+
+```
+singularity run funannotate.sif mask -i Trapelia_coarctata_sorted.fas -o Trapelia_coarctata_mask.fas -m repeatmasker
+```
