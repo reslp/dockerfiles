@@ -176,3 +176,10 @@ Inside the container it is now possible to run singularity images. For example t
 ```
 singularity run funannotate.sif mask -i Trapelia_coarctata_sorted.fas -o Trapelia_coarctata_mask.fas -m repeatmasker
 ```
+
+eggnog-mapper 1.0.3
+======
+
+`docker pull reslp/eggnog-mapper`
+
+`docker run reslp/eggnog-mapper`
