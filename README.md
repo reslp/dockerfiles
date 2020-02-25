@@ -124,7 +124,7 @@ busco 3.0.2
 
 `docker run --rm reslp/busco`
 
-blobtools
+blobtools 1.1.1
 =======
 `docker pull reslp/blobtools`
 
@@ -137,7 +137,7 @@ docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/blobtools plo
 ```
 
 
-QUAST 
+QUAST 5.0.2
 =========
 `docker pull reslp/quast`
 
