@@ -9,4 +9,4 @@ RUN chmod a+x /usr/bin/get_taxids.py
 #RUN gunzip prot.accession2taxid.gz
 WORKDIR /data/
 
-ENTRYPOINT ["/usr/bin/get_taxids.py"]
+CMD ["get_taxids.py"]

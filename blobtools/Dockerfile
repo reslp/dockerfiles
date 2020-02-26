@@ -22,5 +22,5 @@ RUN wget ftp://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz && \
 WORKDIR /blobtools
 RUN ./blobtools nodesdb --nodes /opt/db/nodes.dmp --names /opt/db/names.dmp
 
-CMD ["-h"]
-ENTRYPOINT ["./blobtools"]
+ENV PATH="/blobtools:$PATH"
+CMD ["blobtools", "-h"]

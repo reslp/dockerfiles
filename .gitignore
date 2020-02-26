@@ -7,3 +7,5 @@ funannotate/test_assembly_clean.fas
 funannotate/test_assembly_masked.fas
 funannotate/.zhistory
 .zhistory
+.DS_Store
+.DS_Store
