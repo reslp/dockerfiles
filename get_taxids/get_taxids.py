@@ -25,8 +25,10 @@ file1.close()
 #print(all_ids_dict)
 sys.stderr.write(str(datetime.datetime.now())+" Mapping taxids\n")
 file2 = open(sys.argv[2], "r")
+lines = file2.readlines()
+file2.close()
 
-for line in file2:
+for line in lines:
 	elements = line.strip("\n").split("\t")
 	try:	
 		taxid = all_ids_dict[elements[1]]
@@ -34,5 +36,4 @@ for line in file2:
 		continue
 	print(elements[0],"\t",taxid,"\t", elements[11])
 
-file2.close()
 sys.stderr.write(str(datetime.datetime.now())+" done\n")
