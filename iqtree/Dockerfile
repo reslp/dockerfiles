@@ -15,21 +15,15 @@ RUN apt-get update -qq && \
  	python3-dev \
 	git \
 	wget \
-	cmake
-	
-# Now Install IQ-TREE
-RUN git clone https://github.com/Cibiv/IQ-TREE.git && \
-	cd IQ-TREE && \
-	mkdir build && \
-	cd build && \
-	cmake -DIQTREE_FLAGS=omp .. && \
-	make && \
-	cp iqtree-omp /usr/local/bin && \
-	rm -rf IQ-TREE
+	cmake && \
+  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# clean up
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# Now Install IQ-TREE
+RUN wget https://github.com/Cibiv/IQ-TREE/releases/download/v2.0-rc2/iqtree-2.0-rc2-Linux.tar.gz && \
+  tar xvfz iqtree-2.0-rc2-Linux.tar.gz && \
+  cp iqtree-2.0-rc2-Linux/bin/iqtree /usr/local/bin
+
 
 # set entry point
-ENTRYPOINT ["/usr/local/bin/iqtree-omp"]
+ENTRYPOINT ["/usr/local/bin/iqtree"]
 CMD ["-h"]
