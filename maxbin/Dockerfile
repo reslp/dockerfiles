@@ -1,5 +1,5 @@
-FROM continuumio/miniconda:4.7.10
-MAINTAINER <resl.philipp@bio.lmu.de>
+FROM ubuntu:18.04
+MAINTAINER <philipp.resl@uni-graz.at>
 
 RUN conda install -c bioconda maxbin2=2.2.6 && \
 	conda clean -a -y
