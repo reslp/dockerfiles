@@ -177,9 +177,17 @@ Inside the container it is now possible to run singularity images. For example t
 singularity run funannotate.sif mask -i Trapelia_coarctata_sorted.fas -o Trapelia_coarctata_mask.fas -m repeatmasker
 ```
 
+
 eggnog-mapper 1.0.3
 ======
 
 `docker pull reslp/eggnog-mapper`
 
 `docker run reslp/eggnog-mapper`
+
+ASTRAL 5.7.1
+======
+```
+docker pull reslp/astral:5.7.1
+docker run -it --rm reslp/astral:5.7.1 java -jar /ASTRAL-5.7.1/Astral/astral.5.7.1.jar
+```
