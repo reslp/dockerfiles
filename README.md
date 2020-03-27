@@ -191,3 +191,10 @@ ASTRAL 5.7.1
 docker pull reslp/astral:5.7.1
 docker run -it --rm reslp/astral:5.7.1 java -jar /ASTRAL-5.7.1/Astral/astral.5.7.1.jar
 ```
+
+pal2nal v14
+====
+```
+docker pull reslp/pal2nal:14
+docker run -it reslp/pal2nal:14
+```
