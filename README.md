@@ -178,12 +178,21 @@ singularity run funannotate.sif mask -i Trapelia_coarctata_sorted.fas -o Trapeli
 ```
 
 
-eggnog-mapper 1.0.3
+eggnog-mapper
 ======
+Version 1.0.3:
 
-`docker pull reslp/eggnog-mapper`
+```
+docker pull reslp/eggnog-mapper:1.0.3
+docker run reslp/eggnog-mapper:1.0.3
+```
 
-`docker run reslp/eggnog-mapper`
+Version 2.0.1:
+
+```
+docker pull reslp/eggnog-mapper:2.0.1
+docker run reslp/eggnog-mapper:2.0.1
+```
 
 ASTRAL 5.7.1
 ======
