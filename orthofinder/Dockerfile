@@ -12,5 +12,4 @@ RUN conda config --set notify_outdated_conda false
 RUN conda install -c bioconda orthofinder=2.3.3
 RUN conda clean -a -y
 
-ENTRYPOINT ["orthofinder"]
-CMD ["-h"]
+CMD ["orthofinder"]
