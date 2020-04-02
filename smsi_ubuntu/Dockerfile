@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
 	git \
 	cryptsetup-bin
 
-RUN wget https://dl.google.com/go/go1.11.1.linux-amd64.tar.gz && \
-	tar -xvf go1.11.1.linux-amd64.tar.gz && \
+RUN wget https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz && \
+	tar -xvf go1.13.1.linux-amd64.tar.gz && \
 	mv go /usr/local
 	
 ENV GOROOT="/usr/local/go"
@@ -27,7 +27,7 @@ RUN mkdir -p ${GOPATH}/src/github.com/sylabs && \
 	cd ${GOPATH}/src/github.com/sylabs && \
 	git clone https://github.com/sylabs/singularity.git && \
 	cd singularity && \
-	git checkout v3.4.1 && \
+	git checkout v3.5.2 && \
 	./mconfig && \
     make -C ./builddir && \
     make -C ./builddir install
@@ -36,6 +36,6 @@ ENV HOME="/data"
 WORKDIR /data
 
 RUN conda config --set notify_outdated_conda false
-RUN conda install -c bioconda -c conda-forge snakemake=5.10.0
+RUN conda install -c bioconda -c conda-forge snakemake=5.13.0
 
 CMD ["/bin/bash"]
