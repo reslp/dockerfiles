@@ -7,7 +7,8 @@ RUN apt-get update && \
 	cd ASTRAL-5.7.1 && \
 	unzip Astral.5.7.1.zip && \
 	chmod a+x /ASTRAL-5.7.1/Astral/astral.5.7.1.jar && \
-	chmod a+r /ASTRAL-5.7.1/Astral/astral.5.7.1.jar
+	chmod a+r /ASTRAL-5.7.1/Astral/astral.5.7.1.jar && \
+	chmod +rx /ASTRAL-5.7.1/Astral/lib/*
 	
 
 CMD ["java", "-jar", "/ASTRAL-5.7.1/Astral/astral.5.7.1.jar"]
