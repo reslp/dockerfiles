@@ -207,3 +207,9 @@ pal2nal v14
 docker pull reslp/pal2nal:14
 docker run -it reslp/pal2nal:14
 ```
+
+mafft 7.464
+===
+```
+docker run -it --rm -v $(pwd):/data reslp/mafft:7.464 mafft --auto --quiet /data/OG0000331.fa > OG0000331_aligned.fa
+```
