@@ -213,3 +213,11 @@ mafft 7.464
 ```
 docker run -it --rm -v $(pwd):/data reslp/mafft:7.464 mafft --auto --quiet /data/OG0000331.fa > OG0000331_aligned.fa
 ```
+
+scrape_cazy v1
+====
+Containerized version of a python script to download information from CAZY.org:
+
+```
+docker run --rm reslp/scrape_cazy:1
+```
