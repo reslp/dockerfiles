@@ -11,5 +11,5 @@ RUN apt-get install -y wget && \
 	wget https://raw.githubusercontent.com/reslp/genomics/master/scrape_cazy.py && \
 	mv scrape_cazy.py /usr/local/bin && \
 	chmod +x /usr/local/bin/scrape_cazy.py
-	
+WORKDIR /data
 CMD ["scrape_cazy.py","-h"]
