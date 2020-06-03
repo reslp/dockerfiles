@@ -221,3 +221,15 @@ Containerized version of a python script to download information from CAZY.org:
 ```
 docker run --rm reslp/scrape_cazy:1
 ```
+
+deeploc 1.0
+====
+This container needs some things set up properly to work:
+
+1. Download DeepLoc: https://services.healthtech.dtu.dk/software.php
+2. Change the first line in `bin/deeploc`to `#!/usr/bin/env python`
+3. Mind that you correctly use the bindpoints of the container on execution:
+
+```
+docker run --rm -it -v $(pwd)/deeploc-1.0/bin:/external -v $(pwd)/deeploc-1.0/DeepLoc:/usr/lib/python3/dist-packages/DeepLoc -v $(pwd):/data reslp/deeploc:1.0 deeploc -f /data/deeploc-1.0/test.fasta
+```
