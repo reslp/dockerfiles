@@ -17,5 +17,5 @@ RUN pip3 install numpy==1.14.0 scipy==1.0.0 six==1.11.0 Theano==1.0.1 git+https:
 RUN mkdir /external
 
 ENV PATH="/external:$PATH"
-
+WORKDIR /data
 CMD ["deeploc", "-h"]
