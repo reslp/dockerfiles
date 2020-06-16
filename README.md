@@ -42,7 +42,7 @@ Phylo-Scripts
 2. Install the phylo-scripts container: `docker build github.com/reslp/phylo-scripts --tag phylo-scripts`. If you are using Docker Toolbox you will need to start the Virtual Machine first by clicking on the start.sh file in the Docker Toolbox Folder.
 3. To create concatenated alignments execute `docker run -v <full_path_to_input_files>:/input_files/ phylo-scripts`
 
-Important: <full_path_to_input_files> has to be the full path to your files starting from the root of your file system. This folder should contain all the single locus files which should be used in the multi gene alignment and the file with Sequence IDs (`IDs_used_for_tree.txt`). 
+Important: <full_path_to_input_files> has to be the full path to your files starting from the root of your file system. This folder should contain all the single locus files which should be used in the multi gene alignment and the file with Sequence IDs (`IDs_used_for_tree.txt`).
 
 Spades 3.12.0
 ================================
@@ -80,7 +80,7 @@ Example command for running the container:
 ```
 docker run -v $(pwd):/data --rm reslp/fastqc fastqc /data/illumina_reads_5_R1_trimmed.fq -o /data
 ```
-or 
+or
 
 ```
 docker run --user $(id -u):$(id -g) --rm -v $(pwd):/data reslp/fastqc fastqc -h
@@ -232,4 +232,13 @@ This container needs some things set up properly to work:
 
 ```
 docker run --rm -it -v $(pwd)/deeploc-1.0/bin:/external -v $(pwd)/deeploc-1.0/DeepLoc:/usr/lib/python3/dist-packages/DeepLoc -v $(pwd):/data reslp/deeploc:1.0 deeploc -f /data/deeploc-1.0/test.fasta
+```
+
+RStudio Server /w knitr
+=====
+
+Change the password accordingly. The username is rstudio.
+
+```
+docker run --rm -p 8787:8787 -v $(pwd):/home/rstudio -e PASSWORD=testpassword reslp/rstudio-knitr:4.0.0
 ```
