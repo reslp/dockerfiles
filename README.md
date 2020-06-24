@@ -219,7 +219,7 @@ scrape_cazy v1
 Containerized version of a python script to download information from CAZY.org:
 
 ```
-docker run --rm reslp/scrape_cazy:1
+docker run --rm reslp/scrape_vim cazy:1
 ```
 
 deeploc 1.0
@@ -232,13 +232,4 @@ This container needs some things set up properly to work:
 
 ```
 docker run --rm -it -v $(pwd)/deeploc-1.0/bin:/external -v $(pwd)/deeploc-1.0/DeepLoc:/usr/lib/python3/dist-packages/DeepLoc -v $(pwd):/data reslp/deeploc:1.0 deeploc -f /data/deeploc-1.0/test.fasta
-```
-
-RStudio Server /w knitr
-=====
-
-Change the password accordingly. The username is rstudio.
-
-```
-docker run --rm -p 8787:8787 -v $(pwd):/home/rstudio -e PASSWORD=testpassword reslp/rstudio-knitr:4.0.0
 ```
