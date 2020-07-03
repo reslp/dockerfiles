@@ -241,3 +241,7 @@ Correct long reads: https://github.com/morispi/CONSENT
 docker run --rm -v $(pwd):/corrected reslp/consent:v2.1 CONSENT-correct --in /corrected/Lmin_combined.fasta --out /corrected/Lmin_combined_corrected.fasta --type ONT
 ```
 
+fmlrc v.1.0.0
+===
+
+Correct long reads: https://github.com/holtjma/fmlrc
