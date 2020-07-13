@@ -245,3 +245,7 @@ fmlrc v.1.0.0
 ===
 
 Correct long reads: https://github.com/holtjma/fmlrc
+
+biopython_plus:1.77
+===
+This image should serve as an environment to execute python scripts which use biopython and scipy.
