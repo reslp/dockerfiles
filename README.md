@@ -249,3 +249,11 @@ Correct long reads: https://github.com/holtjma/fmlrc
 biopython_plus:1.77
 ===
 This image should serve as an environment to execute python scripts which use biopython and scipy.
+
+miniBarcoder
+====
+This is a dockerfile for: https://github.com/asrivathsan/miniBarcoder
+
+```
+docker run  --rm -it --entrypoint /bin/bash reslp/minibarcoder:5e1dc3b
+```
