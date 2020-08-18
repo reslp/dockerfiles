@@ -257,3 +257,11 @@ This is a dockerfile for: https://github.com/asrivathsan/miniBarcoder
 ```
 docker run  --rm -it --entrypoint /bin/bash reslp/minibarcoder:5e1dc3b
 ```
+
+metaxa 2.2
+====
+
+WORKDIR is /data
+```
+docker run --rm -it -v $(pwd):/data reslp/metaxa:2.2
+```

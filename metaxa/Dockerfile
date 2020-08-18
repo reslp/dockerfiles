@@ -14,6 +14,6 @@ RUN conda clean -a -y
 RUN mkdir data
 WORKDIR data
 
-ENTRYPOINT ["/bin/bash"]
+CMD ["metaxa2", "-h"]
 
 
