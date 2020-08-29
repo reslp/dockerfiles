@@ -265,3 +265,11 @@ WORKDIR is /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/metaxa:2.2
 ```
+
+phylobayes 4.1c
+====
+
+WORDIR is /data
+```
+docker run --rm -it -v $(pwd):/data reslp/phylobayes:4.1c
+```
