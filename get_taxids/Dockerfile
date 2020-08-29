@@ -1,5 +1,5 @@
 FROM continuumio/miniconda3:4.7.10
-MAINTAINER <resl.philipp@bio.lmu.de>
+MAINTAINER <philipp.resl@uni-graz.at>
 
 ENV PATH /opt/conda/bin:$PATH
 
