@@ -273,3 +273,11 @@ WORDIR is /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/phylobayes:4.1c
 ```
+
+GUIDANCE2 2.02
+===
+WORDIR is /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/guidance2:2.02
+```
