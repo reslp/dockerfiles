@@ -281,3 +281,12 @@ WORDIR is /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/guidance2:2.02
 ```
+
+raxml-ng 1.0.0
+===
+WORKDIR is /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/raxml-ng:1.0.0
+```
+
