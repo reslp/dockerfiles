@@ -290,3 +290,11 @@ WORKDIR is /data
 docker run --rm -it -v $(pwd):/data reslp/raxml-ng:1.0.0
 ```
 
+rmarkdown based on R 3.6.3
+===
+WORKDIR is /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/rmarkdown:3.6.3 Rscript -e "rmarkdown::render('./report.rmd')"
+```
+
