@@ -33,7 +33,7 @@ The **tags** given for each container correspond the the available versions of d
 [phylobayes](#phylobayes)
 [phylo-scripts](#phylo-scripts)
 [raxml-ng](#raxml-ng)
-[rmarkdown](#markdown-based-on-r)
+[rmarkdown](#rmarkdown-based-on-r)
 [scrape_cazy](#scrape_cazy)
 [singularity](#singularity)
 [spades](#spades)
