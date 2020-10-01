@@ -1,11 +1,10 @@
 # dockerfiles
 
-
-This repository contains Docker files I accumulated for different purposes. For these to work, first install [Docker](http://www.docker.com) or if you are on Windows install [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
+This repository contains Docker files I accumulated for different purposes.
 
 Some of the images are bare-bone and should maybe be changed when incorporated into analysis pipelines.
 
-The **working directory** in these containers is generally `/data`. This can be used as a bindpoint. Dowbloaded software is generally kept in `/software`. Some older containers here may however not follow this rules.
+The **working directory** in these containers is generally `/data`. This can be used as a bindpoint. Downloaded software is generally kept in `/software`. Some older containers here may however not follow this rules.
 
 The **tags** given for each container correspond the the available versions of different programs.
 
