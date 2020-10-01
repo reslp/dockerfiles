@@ -5,60 +5,51 @@ This repository contains Docker files I accumulated for different purposes. For 
 
 Some of the images are bare-bone and should maybe be changed when incorporated into analysis pipelines.
 
+The working directory in these containers is generally /data. This can be used as a bindpoint. Dowbloaded software is generally kept in /software. Some older containers here may however not follow this rules.
+
+The tags given for each container correspond the the available versions of different programs.
 
 
-IQ-tree
+iqtree
 ===================
-
-
-
-1. Install [Docker](http://www.docker.com) or if you are on Windows use [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
-2. Download the docker file: `curl https://raw.githubusercontent.com/reslp/dockerfiles/master/iqtree/Dockerfile > Dockerfile`. If you are using Docker Toolbox you will need to start the Virtual Machine first by clicking on the start.sh file in the Docker Toolbox Folder.
-3. In the same directory you can now build the container: `docker build --tag iqtree .`
-4. To execute `docker run -v <full_path_to_input_files>:/input_files/ iqtree`
-
-Important: <full_path_to_input_files> has to be the full path to your files starting from the root of your file system. This folder should contain alignment and or partitiuon files for use with iqtree.
-
-An example command for IQ-tree may look like this:
-`docker run -v /user/home/philipp/alignments/:/input/ iqtree -nt 1 -s /input/alignment.fas`
-The most basic command which will show you an overview of IQ-trees command line paramters is:
-`docker run iqtree`
-
-MrBayes
-===================
-
-
-1. Install [Docker](http://www.docker.com) or if you are on Windows use [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
-2. Download the docker file: `curl https://raw.githubusercontent.com/reslp/dockerfiles/master/mrbayes/Dockerfile > Dockerfile`. If you are using Docker Toolbox you will need to start the Virtual Machine first by clicking on the start.sh file in the Docker Toolbox Folder.
-3. In the same directory you can now build the container: `docker build --tag mrbayes .`
-4. To execute `docker run -v <path_to_local_folder>:/input/ -it mb_ubuntu /sbin/my_init -- mpirun --allow-run-as-root -np 8 mb /input/<nexus_file.nex>`
-
-Important: <path_to_local_folder> has to be the full path to your files starting from the root of your file system. This folder should contain the NEXUS file used to run mrbayes.
-
-Phylo-Scripts
-===================
-
-1. Install [Docker](http://www.docker.com) or if you are on Windows use [Docker Toolbox](https://www.docker.com/products/docker-toolbox).
-2. Install the phylo-scripts container: `docker build github.com/reslp/phylo-scripts --tag phylo-scripts`. If you are using Docker Toolbox you will need to start the Virtual Machine first by clicking on the start.sh file in the Docker Toolbox Folder.
-3. To create concatenated alignments execute `docker run -v <full_path_to_input_files>:/input_files/ phylo-scripts`
-
-Important: <full_path_to_input_files> has to be the full path to your files starting from the root of your file system. This folder should contain all the single locus files which should be used in the multi gene alignment and the file with Sequence IDs (`IDs_used_for_tree.txt`).
-
-Spades 3.12.0
-================================
-
-`docker pull reslp/spades`
-
-
-
-trimmomatic 0.38
-===============================
-`docke3r pull reslp/trimmomatic`
-
-Example command:
+tags: 2.0rc2, 2.0.7
 
 ```
-docker run -t -v $(pwd):/data reslp/trimmomatic trimmomatic PE -phred33 -threads 8 /data/pair1.fq.gz /data/pair2.fq.gz /data/trimmed_pair1.fq.gz /data/unpaired_pair1.fq.gz /data/trimmed_pair2.fq.gz /data/unpaired_pair2.fq.gz HEADCROP:20 ILLUMINACLIP:/data/adapters.fa:2:30:10 LEADING:30 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:80
+docker run -v $(pwd):/data reslp/iqtree:2.0.7
+```
+ 
+
+mrbayes-MPI
+===================
+tags: 3.2.6
+
+```
+docker run -v $(pwd):/data -it reslp/mrbayes-mpi:3.2.6 /sbin/my_init -- mpirun --allow-run-as-root -np 8 mb /data/alignment.nex
+```
+
+phylo-scripts
+===================
+tags: latest
+
+```
+docker run reslp/phylo-scripts:latest
+```
+
+
+Spades
+================================
+tags: 3.12.0, 3.13.0
+
+`docker pull reslp/spades:3.13.0`
+
+
+
+trimmomatic
+===============================
+tags: 0.38
+
+```
+docker run -t -v $(pwd):/data reslp/trimmomatic:0.38 trimmomatic PE -phred33 -threads 8 /data/pair1.fq.gz /data/pair2.fq.gz /data/trimmed_pair1.fq.gz /data/unpaired_pair1.fq.gz /data/trimmed_pair2.fq.gz /data/unpaired_pair2.fq.gz HEADCROP:20 ILLUMINACLIP:/data/adapters.fa:2:30:10 LEADING:30 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:80
 ```
 or
 
@@ -69,101 +60,97 @@ docker run --user $(id -u):$(id -g) --rm -v $(pwd):/data reslp/trimmomatic trimm
 Important: The adapter file is not part of the docker image. It needs to passed together with the mounted directory.
 
 
-fastqc 0.11.7
+fastqc
 ===============================
-
-Get the docker image:
-
-`docker pull reslp/fastqc`
-
-Example command for running the container:
-```
-docker run -v $(pwd):/data --rm reslp/fastqc fastqc /data/illumina_reads_5_R1_trimmed.fq -o /data
-```
-or
+tags: 0.11.7
 
 ```
-docker run --user $(id -u):$(id -g) --rm -v $(pwd):/data reslp/fastqc fastqc -h
+docker run -v $(pwd):/data --rm reslp/fastqc:0.11.7 fastqc /data/illumina_reads_5_R1_trimmed.fq -o /data
+
+docker run --user $(id -u):$(id -g) --rm -v $(pwd):/data reslp/fastqc:0.11.7 fastqc -h
 ```
 
-maxbin 2.2.6
+maxbin
 ===============================
+tags: 2.2.6
 
-`docker pull reslp/maxbin`
+`docker pull reslp/maxbin:2.2.6`
 
-`docker run --rm reslp/maxbin`
+`docker run --rm reslp/maxbin:2.2.6`
 
-concoct 1.1
+concoct
 ===============================
+tags: 1.1
 
-`docker pull reslp/concoct`
+`docker pull reslp/concoct:1.1`
 
-`docker run --rm reslp/concoct`
+`docker run --rm reslp/concoct:1.1`
 
 A complete example filtering a metagenome. The `metagenome.fasta` file should be in the current working directory.
 
 ```
-docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct cut_up_fasta.py /data/metagenome.fasta -c 10000 -o 0 --merge_last -b /data/metagenome.fasta_contigs_10K.bed > metagenome.fasta_contigs_10K.fa
-docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct concoct_coverage_table.py /data/metagenome.fasta_contigs_10K.bed /data/metagenome.fasta.bam > concoct_coverage_table.tsv
-docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct concoct --composition_file /data/metagenome.fasta_contigs_10K.fa --coverage_file /data/concoct_coverage_table.tsv -b /data/concoct/metagenome.fasta_concoct --threads 24
-docker run --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct merge_cutup_clustering.py /data/concoct/metagenome.fasta_concoct_clustering_gt1000.csv > concoct/metagenome.fasta_concoct_clustering_merged.csv
-docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct extract_fasta_bins.py /data/metagenome.fasta /data/concoct/metagenome.fasta_concoct_clustering_merged.csv --output_path /data/concoct/bins
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct:1.1 cut_up_fasta.py /data/metagenome.fasta -c 10000 -o 0 --merge_last -b /data/metagenome.fasta_contigs_10K.bed > metagenome.fasta_contigs_10K.fa
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct:1.1 concoct_coverage_table.py /data/metagenome.fasta_contigs_10K.bed /data/metagenome.fasta.bam > concoct_coverage_table.tsv
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct:1.1 concoct --composition_file /data/metagenome.fasta_contigs_10K.fa --coverage_file /data/concoct_coverage_table.tsv -b /data/concoct/metagenome.fasta_concoct --threads 24
+docker run --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct:1.1 merge_cutup_clustering.py /data/concoct/metagenome.fasta_concoct_clustering_gt1000.csv > concoct/metagenome.fasta_concoct_clustering_merged.csv
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/concoct:1.1 extract_fasta_bins.py /data/metagenome.fasta /data/concoct/metagenome.fasta_concoct_clustering_merged.csv --output_path /data/concoct/bins
 ```
 
-metabat 2.13
+metabat
 ===============================
+tags: 2.13
 
-`docker pull reslp/metabat`
+```
+docker run --rm reslp/metabat:2.13
+```
 
-`docker run --rm reslp/metabat`
-
-busco 3.0.2
+busco
 ===============================
+tags: 3.0.2
 
-`docker pull reslp/busco`
+```
+docker run --rm reslp/busco:3.0.2
+```
 
-`docker run --rm reslp/busco`
-
-blobtools 1.1.1
+blobtools
 =======
-`docker pull reslp/blobtools`
+tags: 1.1.1
 
 These commands expect that blast results are alread present:
 
 ```
-docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/blobtools create -i /data/metagenome.fasta -b /data/metagenome.fasta.bam -t /data/blobtools/metagenome.fasta_diamond_matches_formatted -o /data/blobtools/metagenome.fasta_blobtools
-docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/blobtools view -i /data/blobtools/metagenome.fasta_blobtools.blobDB.json -o /data/blobtools/
-docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/blobtools plot -i /data/blobtools/metagenome.fasta_blobtools.blobDB.json -o /data/blobtools/
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/blobtools:1.1.1 create -i /data/metagenome.fasta -b /data/metagenome.fasta.bam -t /data/blobtools/metagenome.fasta_diamond_matches_formatted -o /data/blobtools/metagenome.fasta_blobtools
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/blobtools:1.1.1 view -i /data/blobtools/metagenome.fasta_blobtools.blobDB.json -o /data/blobtools/
+docker run -t --user $(id -u):$(id -g) -v $(pwd):/data/ --rm reslp/blobtools:1.1.1 plot -i /data/blobtools/metagenome.fasta_blobtools.blobDB.json -o /data/blobtools/
 ```
 
 
-QUAST 5.0.2
+QUAST
 =========
-`docker pull reslp/quast`
+tags: 5.0.2
 
 Run QUAST on all fasta files in current directory:
 
-`docker run --rm -t -v $(pwd):/data/ reslp/quast quast.py $(ls -d -1 "*.fasta" | sed 's/^/\/data\//') -o /data/quast --silent
+`docker run --rm -t -v $(pwd):/data/ reslp/quast:5.0.2 quast.py $(ls -d -1 "*.fasta" | sed 's/^/\/data\//') -o /data/quast --silent
 `
 
-ncbi-blast 2.9.0
+ncbi-blast
 ==========
-`docker pull reslp/ncbi-blast`
+tags: 2.9.0
 
 To create a blast database and run a blastp search:
 `my_sequences.fasta`and `sequences_to_search.fa`need to be in the current working directory. The blastdb will also be created there.
 
 ```
-docker run --rm -v $(pwd):/files/ reslp/ncbi-blast makeblastdb -in /files/my_sequences.fasta -dbtype 'prot' -hash_index -out my_blastdb
+docker run --rm -v $(pwd):/files/ reslp/ncbi-blast:2.9.0 makeblastdb -in /files/my_sequences.fasta -dbtype 'prot' -hash_index -out my_blastdb
 
-docker run --rm -v $(pwd):/files/ reslp/ncbi-blast blastp -db /files/my_blastdb -query /files/sequences_to_search.fa -outfmt 6 > blast_results.txt
+docker run --rm -v $(pwd):/files/ reslp/ncbi-blast:2.9.0 blastp -db /files/my_blastdb -query /files/sequences_to_search.fa -outfmt 6 > blast_results.txt
 
 ```
 
-singularity 3.4.1
+singularity
 ==========
-
-`docker pull reslp/singularity:3.4.1`
+tags: 3.4.1
 
 To run the conatiner and to be able to run singularity containers inside it docker needs to be run with privileged mode:
 
@@ -180,50 +167,54 @@ singularity run funannotate.sif mask -i Trapelia_coarctata_sorted.fas -o Trapeli
 
 eggnog-mapper
 ======
-Version 1.0.3:
 
-```
-docker pull reslp/eggnog-mapper:1.0.3
-docker run reslp/eggnog-mapper:1.0.3
-```
-
-Version 2.0.1:
+tags: 1.0.3, 2.0.1
 
 ```
 docker pull reslp/eggnog-mapper:2.0.1
 docker run reslp/eggnog-mapper:2.0.1
 ```
 
-ASTRAL 5.7.1
+ASTRAL
 ======
+tags: 5.7.1
 ```
 docker pull reslp/astral:5.7.1
 docker run -it --rm reslp/astral:5.7.1 java -jar /ASTRAL-5.7.1/Astral/astral.5.7.1.jar
 ```
 
-pal2nal v14
+pal2nal
 ====
+tags: 14
+
 ```
 docker pull reslp/pal2nal:14
 docker run -it reslp/pal2nal:14
 ```
 
-mafft 7.464
+mafft
 ===
+tags: 7.464
+
 ```
 docker run -it --rm -v $(pwd):/data reslp/mafft:7.464 mafft --auto --quiet /data/OG0000331.fa > OG0000331_aligned.fa
 ```
 
-scrape_cazy v1
+scrape_cazy
 ====
+tags: 1
+
+
 Containerized version of a python script to download information from CAZY.org:
 
 ```
 docker run --rm reslp/scrape_vim cazy:1
 ```
 
-deeploc 1.0
+deeploc
 ====
+tags: 1.0
+
 This container needs some things set up properly to work:
 
 1. Download DeepLoc: https://services.healthtech.dtu.dk/software.php
@@ -233,65 +224,92 @@ This container needs some things set up properly to work:
 ```
 docker run --rm -it -v $(pwd)/deeploc-1.0/bin:/external -v $(pwd)/deeploc-1.0/DeepLoc:/usr/lib/python3/dist-packages/DeepLoc -v $(pwd):/data reslp/deeploc:1.0 deeploc -f /data/deeploc-1.0/test.fasta
 ```
-CONSENT v2.1
+
+CONSENT
 ===
 Correct long reads: https://github.com/morispi/CONSENT
+
+tags: v2.1
 
 ```
 docker run --rm -v $(pwd):/corrected reslp/consent:v2.1 CONSENT-correct --in /corrected/Lmin_combined.fasta --out /corrected/Lmin_combined_corrected.fasta --type ONT
 ```
 
-fmlrc v.1.0.0
+fmlrc
 ===
-
 Correct long reads: https://github.com/holtjma/fmlrc
 
-biopython_plus:1.77
+tags: v1.0.0
+
+```
+docker run reslp/fmlrc:v1.0.0
+```
+
+biopython_plus
 ===
-This image should serve as an environment to execute python scripts which use biopython and scipy.
+This image should serve as a base environment to execute python scripts which use biopython and scipy. Tag version corresponds to biopython.
+
+tags: 1.77
+
+```
+docker run reslp:biopython_plus:1.77
+```
+
 
 miniBarcoder
 ====
 This is a dockerfile for: https://github.com/asrivathsan/miniBarcoder
 
+tags: 5e1dc3b
+
 ```
 docker run  --rm -it --entrypoint /bin/bash reslp/minibarcoder:5e1dc3b
 ```
 
-metaxa 2.2
+metaxa
 ====
+tags: 2.2
 
 WORKDIR is /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/metaxa:2.2
 ```
 
-phylobayes 4.1c
+phylobayes
 ====
+tags: 4.1c
 
 WORDIR is /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/phylobayes:4.1c
 ```
 
-GUIDANCE2 2.02
+GUIDANCE2
 ===
+tags: 2.02
+
 WORDIR is /data
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/guidance2:2.02
 ```
 
-raxml-ng 1.0.0
+raxml-ng
 ===
+tags: 1.0.0
+
 WORKDIR is /data
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/raxml-ng:1.0.0
 ```
 
-rmarkdown based on R 3.6.3
+rmarkdown based on R
 ===
+The tags versions correspond to the R version.
+
+tags: 3.6.3 
+
 WORKDIR is /data
 
 ```

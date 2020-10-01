@@ -1,5 +1,6 @@
-# Docker file for IQ-tree
+# Docker file for iqtree
 # written by Philipp Resl, Dez. 2017
+# last change: Oct. 2020
 # with inspiration from: https://hub.docker.com/r/asmmhossain/pipelign/~/dockerfile/
 
 # Use phusion/baseimage as base image
@@ -19,11 +20,12 @@ RUN apt-get update -qq && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Now Install IQ-TREE
-RUN wget https://github.com/Cibiv/IQ-TREE/releases/download/v2.0-rc2/iqtree-2.0-rc2-Linux.tar.gz && \
-  tar xvfz iqtree-2.0-rc2-Linux.tar.gz && \
-  cp iqtree-2.0-rc2-Linux/bin/iqtree /usr/local/bin
-
-
+WORKDIR /software
+RUN wget https://github.com/Cibiv/IQ-TREE/releases/download/v2.0.7/iqtree-2.0.7-Linux.tar.gz && \
+	tar xvfz iqtree-2.0.7-Linux.tar.gz && \
+	cp iqtree-2.0.7-Linux/bin/iqtree2 /usr/local/bin && \
+	ln -s /usr/local/bin/iqtree2 /usr/local/bin/iqtree
+WORKDIR /data
 # set entry point
 ENTRYPOINT ["/usr/local/bin/iqtree"]
 CMD ["-h"]

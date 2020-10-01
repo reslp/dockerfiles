@@ -13,13 +13,16 @@ RUN  apt-get update \
   && apt-get install -y openmpi-doc \
   && apt-get install -y libopenmpi-dev \
   && apt-get install -y autoconf \
-  && apt-get install -y build-essential \
-  && wget https://sourceforge.net/projects/mrbayes/files/mrbayes/3.2.6/mrbayes-3.2.6.tar.gz \
+  && apt-get install -y build-essential
+WORKDIR /software
+RUN wget https://github.com/NBISweden/MrBayes/releases/download/v3.2.6/mrbayes-3.2.6.tar.gz \
   && tar -xf mrbayes-3.2.6.tar.gz \
   && cd mrbayes-3.2.6/src/ \
   && autoconf \
   && ./configure --enable-mpi=yes --with-beagle=no \
   && make \
   && make install
+
+WORKDIR /data
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
