@@ -1,6 +1,6 @@
 # dockerfiles
 
-This repository contains Docker files I accumulated for different purposes.
+This repository contains Dockerfiles I accumulated for different purposes.
 
 Some of the images are bare-bone and should maybe be changed when incorporated into analysis pipelines.
 
@@ -15,8 +15,8 @@ The **tags** given for each container correspond the the available versions of d
 [blobtools](#blobtools)
 [busco](#busco)
 [concoct](#concoct)
-[deeploc](#deeploc)
 [consent](#consent)
+[deeploc](#deeploc)
 [eggnog-mapper](#eggnog-mapper)
 [fastqc](#fastqc)
 [fmlrc](#fmlrc)
@@ -30,6 +30,7 @@ The **tags** given for each container correspond the the available versions of d
 [mrbayes](#mrbayes)
 [pal2nal](#pal2nal)
 [phylobayes](#phylobayes)
+[phylobayes-mpi](#phylobayes-mpi)
 [phylo-scripts](#phylo-scripts)
 [raxml-ng](#raxml-ng)
 [rmarkdown](#rmarkdown-based-on-r)
@@ -294,6 +295,15 @@ WORDIR is /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/phylobayes:4.1c
 ```
+
+## phylobayes-mpi
+tags: 1.8b
+
+WORDIR is /data
+```
+docker run --rm -it -v $(pwd):/data reslp/phylobayes:1.8b
+```
+
 
 ## GUIDANCE2
 tags: 2.02
