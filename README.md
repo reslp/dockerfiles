@@ -10,6 +10,7 @@ The **tags** given for each container correspond the the available versions of d
 
 **Currently available containers:**
 
+[abyss](#abyss)
 [astral](#astral)
 [biopython_plus](#biopython_plus)
 [blobtools](#blobtools)
@@ -22,6 +23,7 @@ The **tags** given for each container correspond the the available versions of d
 [fmlrc](#fmlrc)
 [guidance2](#guidance2)
 [iqtree](#iqtree)
+[kmergenie](#kmergenie)
 [mafft](#mafft)
 [mamba](#mamba)
 [maxbin](#maxbin)
@@ -329,8 +331,6 @@ The tags versions correspond to the R version.
 
 tags: 3.6.3 
 
-
-
 ```
 docker run --rm -it -v $(pwd):/data reslp/rmarkdown:3.6.3 Rscript -e "rmarkdown::render('./report.rmd')"
 ```
@@ -350,4 +350,11 @@ WORKDIR is /data
 
 ```
 docker run --rm -it reslp/abyss:2.2.5
+```
+
+## kmergenie
+tags: 1.7051
+
+```
+docker run --rm -it reslp/kmergenie:1.7051
 ```
