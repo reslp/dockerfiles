@@ -9,7 +9,7 @@ RUN mkdir -p ${GOPATH}/src/github.com/sylabs && \
 	cd ${GOPATH}/src/github.com/sylabs && \
 	git clone https://github.com/sylabs/singularity.git && \
 	cd singularity && \
-	git checkout v3.4.1 && \
+	git checkout v3.6.3 && \
 	./mconfig && \
     make -C ./builddir && \
     make -C ./builddir install

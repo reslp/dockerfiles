@@ -176,7 +176,7 @@ docker run --rm -v $(pwd):/files/ reslp/ncbi-blast:2.9.0 blastp -db /files/my_bl
 ```
 
 ## singularity
-tags: 3.4.1
+tags: 3.4.1, 3.6.3
 
 To run the conatiner and to be able to run singularity containers inside it docker needs to be run with privileged mode:
 
