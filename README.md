@@ -23,6 +23,7 @@ The **tags** given for each container correspond the the available versions of d
 [guidance2](#guidance2)
 [iqtree](#iqtree)
 [mafft](#mafft)
+[mamba](#mamba)
 [maxbin](#maxbin)
 [metabat](#metabat)
 [metaxa](#metaxa)
@@ -332,5 +333,13 @@ WORKDIR is /data
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/rmarkdown:3.6.3 Rscript -e "rmarkdown::render('./report.rmd')"
+```
+## mamba
+This can serve as a base image for things installed using conda and mamba.
+
+tags: 0.5.3
+
+```
+docker run --rm -it reslp/mamba:0.5.3
 ```
 
