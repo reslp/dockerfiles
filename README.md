@@ -329,7 +329,7 @@ The tags versions correspond to the R version.
 
 tags: 3.6.3 
 
-WORKDIR is /data
+
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/rmarkdown:3.6.3 Rscript -e "rmarkdown::render('./report.rmd')"
@@ -343,3 +343,11 @@ tags: 0.5.3
 docker run --rm -it reslp/mamba:0.5.3
 ```
 
+## abyss
+tags: 2.2.5
+
+WORKDIR is /data
+
+```
+docker run --rm -it reslp/abyss:2.2.5
+```
