@@ -41,6 +41,7 @@ The **tags** given for each container correspond the the available versions of d
 [singularity](#singularity)
 [spades](#spades)
 [trimmomatic](#trimmomatic)
+[ubuntu](#ubuntu)
 [quast](#quast)
 [ncbi-blast](#ncbi-blast)
 
@@ -357,4 +358,12 @@ tags: 1.7051
 
 ```
 docker run --rm -it reslp/kmergenie:1.7051
+```
+
+## ubuntu
+This is based on the official ubuntu image and containes build-essential, vim and wget and gdb.
+tags: 20.04
+
+```
+docker run --rm -it reslp/ubuntu:20.04
 ```
