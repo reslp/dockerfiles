@@ -15,6 +15,7 @@ The **tags** given for each container correspond the the available versions of d
 [biopython_plus](#biopython_plus)
 [blobtools](#blobtools)
 [busco](#busco)
+[cafe](#cafe)
 [concoct](#concoct)
 [consent](#consent)
 [deeploc](#deeploc)
@@ -368,3 +369,11 @@ tags: 20.04
 ```
 docker run --rm -it reslp/ubuntu:20.04
 ```
+
+## cafe
+tags: 4.2.1
+
+```
+docker run --rm -it reslp/cafe:4.2.1
+```
+
