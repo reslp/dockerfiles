@@ -4,7 +4,7 @@ This repository contains Dockerfiles I accumulated for different purposes.
 
 Some of the images are bare-bone and should maybe be changed when incorporated into analysis pipelines.
 
-The **working directory** in these containers is generally `/data`. This can be used as a bindpoint. Downloaded software is generally kept in `/software`. Some older containers here may however not follow this rules.
+The **working directory** in these containers is generally `/data`. This can be used as a bindpoint. Downloaded software is generally kept in `/software`. Some older containers here may however not follow these rules.
 
 The **tags** given for each container correspond the the available versions of different programs.
 
@@ -23,6 +23,7 @@ The **tags** given for each container correspond the the available versions of d
 [fastqc](#fastqc)
 [fmlrc](#fmlrc)
 [guidance2](#guidance2)
+[hmmer](#hmmer)
 [iqtree](#iqtree)
 [kmergenie](#kmergenie)
 [mafft](#mafft)
@@ -375,5 +376,12 @@ tags: 4.2.1
 
 ```
 docker run --rm -it reslp/cafe:4.2.1
+```
+
+## hmmer
+tags: 3.1b2
+
+```
+docker run --rm -it -v $(pwd):/data reslp/hmmer:3.1b2 /bin/bash
 ```
 
