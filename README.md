@@ -12,6 +12,7 @@ The **tags** given for each container correspond the the available versions of d
 
 [abyss](#abyss)
 [astral](#astral)
+[augustus](#augustus)
 [biopython_plus](#biopython_plus)
 [blobtools](#blobtools)
 [busco](#busco)
@@ -393,3 +394,9 @@ tags: 6.6.0
 docker run --rm -it -v $(pwd):/data reslp/emboss:6.6.0 /bin/bash
 ```
 
+## augustus
+tags: 3.3.3
+
+```
+docker run --rm -it $(pwd):/data reslp/augustus:3.3.3
+```
