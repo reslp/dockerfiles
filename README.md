@@ -17,6 +17,7 @@ The **tags** given for each container correspond the the available versions of d
 [blobtools](#blobtools)
 [busco](#busco)
 [cafe](#cafe)
+[clustalo](#clustalo)
 [concoct](#concoct)
 [consent](#consent)
 [deeploc](#deeploc)
@@ -399,4 +400,11 @@ tags: 3.3.3
 
 ```
 docker run --rm -it $(pwd):/data reslp/augustus:3.3.3
+```
+
+## clustalo
+tags: 1.2.4
+
+```
+docker run --rm -it reslp/clustalo:1.2.4
 ```
