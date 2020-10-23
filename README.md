@@ -20,6 +20,7 @@ The **tags** given for each container correspond the the available versions of d
 [consent](#consent)
 [deeploc](#deeploc)
 [eggnog-mapper](#eggnog-mapper)
+[emboss](#emboss)
 [fastqc](#fastqc)
 [fmlrc](#fmlrc)
 [guidance2](#guidance2)
@@ -383,5 +384,12 @@ tags: 3.1b2
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/hmmer:3.1b2 /bin/bash
+```
+
+## emboss
+tags: 6.6.0
+
+```
+docker run --rm -it -v $(pwd):/data reslp/emboss:6.6.0 /bin/bash
 ```
 
