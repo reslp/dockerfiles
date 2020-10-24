@@ -142,10 +142,13 @@ docker run --rm reslp/metabat:2.13
 ```
 
 ## busco
-tags: 3.0.2
+tags: 3.0.2, 4.1.4
+
+The command for busco >4 is busco instead of run_busco on busco <4.
 
 ```
 docker run --rm reslp/busco:3.0.2
+docker run --rm reslp/busco:4.1.4
 ```
 
 ## blobtools
