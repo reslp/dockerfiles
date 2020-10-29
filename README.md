@@ -13,6 +13,7 @@ The **tags** given for each container correspond the the available versions of d
 [abyss](#abyss)
 [astral](#astral)
 [augustus](#augustus)
+[bedtools](#bedtools)
 [biopython_plus](#biopython_plus)
 [blobtools](#blobtools)
 [busco](#busco)
@@ -410,4 +411,11 @@ tags: 1.2.4
 
 ```
 docker run --rm -it reslp/clustalo:1.2.4
+```
+
+## bedtools
+tags: 2.29.2
+
+```
+docker run --rm -it reslp/bedtools:2.29.2
 ```
