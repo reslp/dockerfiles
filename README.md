@@ -26,6 +26,7 @@ The **tags** given for each container correspond the the available versions of d
 [emboss](#emboss)
 [fastqc](#fastqc)
 [fmlrc](#fmlrc)
+[get_organelle](#get_organelle)
 [guidance2](#guidance2)
 [hmmer](#hmmer)
 [iqtree](#iqtree)
@@ -419,3 +420,11 @@ tags: 2.29.2
 ```
 docker run --rm -it reslp/bedtools:2.29.2
 ```
+
+## get_organelle
+tags: 1.7.1
+
+```
+docker run --rm -it reslp/getorganelle:1.7.1 get_organelle_from_reads.py
+```
+
