@@ -44,6 +44,7 @@ The **tags** given for each container correspond the the available versions of d
 [phylo-scripts](#phylo-scripts)
 [raxml-ng](#raxml-ng)
 [rmarkdown](#rmarkdown-based-on-r)
+[samtools](#samtools)
 [scrape_cazy](#scrape_cazy)
 [singularity](#singularity)
 [spades](#spades)
@@ -428,3 +429,9 @@ tags: 1.7.1
 docker run --rm -it reslp/getorganelle:1.7.1 get_organelle_from_reads.py
 ```
 
+## samtools
+tags: 1.9, 1.11
+
+```
+docker run --rm -it reslp/samtools:1.11
+```

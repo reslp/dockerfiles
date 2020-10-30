@@ -1,12 +1,10 @@
-FROM continuumio/miniconda:4.7.10
-MAINTAINER <resl.philipp@bio.lmu.de>
+FROM reslp/mamba:0.5.3
+MAINTAINER <philipp.resl@uni-graz.at>
 
 ENV PATH /opt/conda/bin:$PATH
 
-RUN conda config --append channels bioconda && \
-	conda config --append channels conda-forge && \
-	conda config --append channels anaconda && \
-	conda install -c bioconda samtools=1.9 && \
-	conda clean -a -y
+RUN mamba install -c bioconda -y samtools=1.11
+	
+WORKDIR /data
 
 CMD ["samtools"]
