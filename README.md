@@ -38,6 +38,7 @@ The **tags** given for each container correspond the the available versions of d
 [metaxa](#metaxa)
 [miniBarcoder](#miniBarcoder)
 [mrbayes](#mrbayes)
+[multiqc](#multiqc)
 [pal2nal](#pal2nal)
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)

@@ -11,5 +11,6 @@ RUN conda config --append channels bioconda && \
 	conda install -c bioconda multiqc=1.6 && \
 	conda clean -a -y
 
-ENTRYPOINT ["multiqc"]
-CMD ["."]
+WORKDIR /data
+
+CMD ["multiqc"]
