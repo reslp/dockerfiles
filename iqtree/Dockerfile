@@ -26,6 +26,7 @@ RUN wget https://github.com/Cibiv/IQ-TREE/releases/download/v2.0.7/iqtree-2.0.7-
 	cp iqtree-2.0.7-Linux/bin/iqtree2 /usr/local/bin && \
 	ln -s /usr/local/bin/iqtree2 /usr/local/bin/iqtree
 WORKDIR /data
+ENV PATH="/usr/local/bin:$PATH"
+
 # set entry point
-ENTRYPOINT ["/usr/local/bin/iqtree"]
-CMD ["-h"]
+CMD ["iqtree"]
