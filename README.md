@@ -49,6 +49,7 @@ The **tags** given for each container correspond the the available versions of d
 [scrape_cazy](#scrape_cazy)
 [singularity](#singularity)
 [spades](#spades)
+[trimal](#trimal)
 [trimmomatic](#trimmomatic)
 [ubuntu](#ubuntu)
 [quast](#quast)
@@ -436,3 +437,11 @@ tags: 1.9, 1.11
 ```
 docker run --rm -it reslp/samtools:1.11
 ```
+
+## trimal
+tags: 1.4.1
+
+```
+docker run --rm -it -v $(pwd):/data reslp/trimal:1.4.1 trimal -in /data/aligned_all_PF00083.fas -out /data/trimmed_all_PF00083.fas -gappyout
+```
+
