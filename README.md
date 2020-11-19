@@ -40,6 +40,7 @@ The **tags** given for each container correspond the the available versions of d
 [miniBarcoder](#miniBarcoder)
 [mrbayes](#mrbayes)
 [multiqc](#multiqc)
+[ont-fast5-api](#ont-fast5-api)
 [pal2nal](#pal2nal)
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
@@ -460,6 +461,16 @@ docker run --rm -it -v $(pwd):/data reslp/table2asn:20201119 linux64.table2asn_G
 tags: 4de542f
 
 ```
+# see also ont-fast5-api container on how to convert multi-read fast5 (which is the current read type) to single-read fast5.
 docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f flappie --help
+docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f flappie /data/fast5_single/0/ > 0.fastq
+```
+
+## ont-fast5-api
+tags: 3.1.6
+
+```
+# this will convert multi-read fast5 (newer Minion read type) to single-read fast5. See here: https://github.com/nanoporetech/flappie/issues/32
+docker run --rm -it -v $(pwd):/data reslp/ont-fast5-api:3.1.6 multi_to_single_fast5 -i /data/fast5_pass -s /data/fast5_single -t 4
 ```
 
