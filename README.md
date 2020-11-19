@@ -25,6 +25,7 @@ The **tags** given for each container correspond the the available versions of d
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
 [fastqc](#fastqc)
+[flappie](#flappie)
 [fmlrc](#fmlrc)
 [get_organelle](#get_organelle)
 [guidance2](#guidance2)
@@ -454,3 +455,11 @@ Program has no good versioning, tags are build dates.
 ```
 docker run --rm -it -v $(pwd):/data reslp/table2asn:20201119 linux64.table2asn_GFF -help
 ```
+
+## flappie
+tags: 4de542f
+
+```
+docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f flappie --help
+```
+
