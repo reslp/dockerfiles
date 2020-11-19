@@ -49,6 +49,7 @@ The **tags** given for each container correspond the the available versions of d
 [scrape_cazy](#scrape_cazy)
 [singularity](#singularity)
 [spades](#spades)
+[table2asn](#table2asn)
 [trimal](#trimal)
 [trimmomatic](#trimmomatic)
 [ubuntu](#ubuntu)
@@ -445,3 +446,11 @@ tags: 1.4.1
 docker run --rm -it -v $(pwd):/data reslp/trimal:1.4.1 trimal -in /data/aligned_all_PF00083.fas -out /data/trimmed_all_PF00083.fas -gappyout
 ```
 
+## table2asn
+tags: 20201119
+
+Program has no good versioning, tags are build dates.
+
+```
+docker run --rm -it -v $(pwd):/data reslp/table2asn:20201119 linux64.table2asn_GFF -help
+```
