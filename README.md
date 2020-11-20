@@ -460,10 +460,15 @@ docker run --rm -it -v $(pwd):/data reslp/table2asn:20201119 linux64.table2asn_G
 ## flappie
 tags: 4de542f
 
+WORKDIR /data
+
+For convenience the flappy container now also includes ont-fast5-api v. 3.1.6. 
 ```
 # see also ont-fast5-api container on how to convert multi-read fast5 (which is the current read type) to single-read fast5.
 docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f flappie --help
 docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f flappie /data/fast5_single/0/ > 0.fastq
+# using ont-fast5-api:
+docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f multi_to_single_fast5 -i /data/fast5_pass -s /data/fast5_single -t 4
 ```
 
 ## ont-fast5-api
