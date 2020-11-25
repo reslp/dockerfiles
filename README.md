@@ -40,6 +40,7 @@ The **tags** given for each container correspond the the available versions of d
 [miniBarcoder](#miniBarcoder)
 [mrbayes](#mrbayes)
 [multiqc](#multiqc)
+[mummer](#mummer)
 [ont-fast5-api](#ont-fast5-api)
 [pal2nal](#pal2nal)
 [phylobayes](#phylobayes)
@@ -479,3 +480,11 @@ tags: 3.1.6
 docker run --rm -it -v $(pwd):/data reslp/ont-fast5-api:3.1.6 multi_to_single_fast5 -i /data/fast5_pass -s /data/fast5_single -t 4
 ```
 
+## mummer
+tags: 4.0.0beta2
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/mummer:4.0.0beta2
+```
