@@ -53,6 +53,7 @@ The **tags** given for each container correspond the the available versions of d
 [singularity](#singularity)
 [spades](#spades)
 [table2asn](#table2asn)
+[tbl2asn](#tbl2asn)
 [trimal](#trimal)
 [trimmomatic](#trimmomatic)
 [ubuntu](#ubuntu)
@@ -453,10 +454,23 @@ docker run --rm -it -v $(pwd):/data reslp/trimal:1.4.1 trimal -in /data/aligned_
 tags: 20201119
 
 Program has no good versioning, tags are build dates.
+This is the beta version from NCBI which includes also GFF support.
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/table2asn:20201119 linux64.table2asn_GFF -help
 ```
+
+## tbl2asn
+tags: 25.8
+
+This is the legacy version of the NCBI tool.
+
+```
+docker run --rm -it -v $(pwd):/data reslp/tbl2asn:25.8
+```
+
+
+
 
 ## flappie
 tags: 4de542f
