@@ -6,7 +6,7 @@ Some of the images are bare-bone and should maybe be changed when incorporated i
 
 The **working directory** in these containers is generally `/data`. This can be used as a bindpoint. Downloaded software is generally kept in `/software`. Some older containers here may however not follow these rules.
 
-The **tags** given for each container correspond the the available versions of different programs.
+The **tags** given for each container correspond the the available versions of different programs. The Dockerfiles refer to the latest tags.
 
 **Currently available containers:**
 
@@ -348,7 +348,7 @@ docker run --rm -it -v $(pwd):/data reslp/raxml-ng:1.0.0
 ## rmarkdown based on R
 The tags versions correspond to the R version.
 
-tags: 3.6.3 
+tags: 3.6.3, 4.0.3 
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/rmarkdown:3.6.3 Rscript -e "rmarkdown::render('./report.rmd')"
