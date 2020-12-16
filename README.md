@@ -1,4 +1,4 @@
-# dockerfiles
+#dockerfiles
 
 This repository contains Dockerfiles I accumulated for different purposes.
 
@@ -16,6 +16,7 @@ The **tags** given for each container correspond the the available versions of d
 [bedtools](#bedtools)
 [biopython_plus](#biopython_plus)
 [blobtools](#blobtools)
+[bonito](#bonito)
 [busco](#busco)
 [cafe](#cafe)
 [clustalo](#clustalo)
@@ -502,3 +503,17 @@ WORKDIR /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/mummer:4.0.0beta2
 ```
+
+## bonito
+tags: 0.3.2
+
+WORKDIR /data
+
+This container works only with CPUs not GPUs. To basecall Minion reads run this:
+
+```
+docker run --rm -i -v $(pwd):/data reslp/bonito:0.3.2 bonito basecaller dna_r9.4.1@v2 --use_openvino --device=cpu /data/fast5_pass 1> basecalls.fasta
+docker run --rm -i -v $(pwd):/data reslp/bonito:0.3.2 bonito basecaller dna_r9.4.1@v3 --use_openvino --device=cpu /data/fast5_pass 1> basecalls.fasta
+docker run --rm -i -v $(pwd):/data reslp/bonito:0.3.2 bonito basecaller dna_r9.4.1@v2 --use_openvino --device=cpu /data/fast5_pass --fastq 1> basecalls.fastq
+```
+
