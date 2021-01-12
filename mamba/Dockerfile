@@ -7,7 +7,7 @@ RUN conda config --append channels bioconda && \
 	conda config --append channels conda-forge && \
 	conda config --append channels anaconda && \
 	conda config --set notify_outdated_conda false && \
-	conda install -y -c conda-forge mamba=0.5.3 && \
+	conda install -y -c conda-forge mamba=0.7.7 && \
 	conda clean -a -y
 
 CMD ["mamba"]
