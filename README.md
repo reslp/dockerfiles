@@ -31,6 +31,7 @@ The **tags** given for each container correspond the the available versions of d
 [get_organelle](#get_organelle)
 [guidance2](#guidance2)
 [hmmer](#hmmer)
+[interproscan-wrapper](#interproscan-wrapper)
 [iqtree](#iqtree)
 [kmergenie](#kmergenie)
 [mafft](#mafft)
@@ -516,4 +517,14 @@ docker run --rm -i -v $(pwd):/data reslp/bonito:0.3.2 bonito basecaller dna_r9.4
 docker run --rm -i -v $(pwd):/data reslp/bonito:0.3.2 bonito basecaller dna_r9.4.1@v3 --use_openvino --device=cpu /data/fast5_pass 1> basecalls.fasta
 docker run --rm -i -v $(pwd):/data reslp/bonito:0.3.2 bonito basecaller dna_r9.4.1@v2 --use_openvino --device=cpu /data/fast5_pass --fastq 1> basecalls.fastq
 ```
+
+## interproscan-wrapper
+tags: 5.33-72.0, 5.39-77.0
+
+This is a wrapper container for use with interproscan. Interproscan is huge so it can't be properly packed into a container. The tags refer to the tested versions of interproscan which work with this container.
+
+```
+docker pull reslp/interproscan-wrapper:5.33-72.0
+```
+
 
