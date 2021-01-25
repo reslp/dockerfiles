@@ -48,6 +48,7 @@ The **tags** given for each container correspond the the available versions of d
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
 [phylo-scripts](#phylo-scripts)
+[pyscaf](#pyscaf)
 [raxml-ng](#raxml-ng)
 [rmarkdown](#rmarkdown-based-on-r)
 [samtools](#samtools)
@@ -527,6 +528,17 @@ Newer versions of the container are based on Ubuntu 20.04 which has python 3.8.5
 
 ```
 docker pull reslp/interproscan-wrapper:5.39-77.0
+```
+
+## pyscaf
+https://github.com/lpryszcz/pyScaf
+
+tags: 0.12a4
+
+WORKDIR /data
+
+```
+docker run -v $(pwd):/data -it --rm reslp/pyscaf:0.12a
 ```
 
 
