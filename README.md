@@ -23,7 +23,7 @@ The **tags** given for each container correspond the the available versions of d
 [concoct](#concoct)
 [consent](#consent)
 [deeploc](#deeploc)
-[edta]{(#edta)
+[edta](#edta)
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
 [fastqc](#fastqc)
