@@ -23,6 +23,7 @@ The **tags** given for each container correspond the the available versions of d
 [concoct](#concoct)
 [consent](#consent)
 [deeploc](#deeploc)
+[edta]{edta}
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
 [fastqc](#fastqc)
@@ -541,4 +542,14 @@ WORKDIR /data
 docker run -v $(pwd):/data -it --rm reslp/pyscaf:0.12a
 ```
 
+## edta
+Extensive de-novo TE annotator - https://github.com/oushujun/EDTA
+
+tags: 1.9.6
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/edta:1.96
+```
 
