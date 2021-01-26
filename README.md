@@ -13,6 +13,7 @@ The **tags** given for each container correspond the the available versions of d
 [abyss](#abyss)
 [astral](#astral)
 [augustus](#augustus)
+[bedops](#bedops)
 [bedtools](#bedtools)
 [biopython_plus](#biopython_plus)
 [blobtools](#blobtools)
@@ -550,6 +551,17 @@ tags: 1.9.6
 WORKDIR /data
 
 ```
-docker run --rm -it reslp/edta:1.96
+docker run --rm -it reslp/edta:1.9.6
+```
+
+## bedops
+high performance genomic feature operations - https://github.com/bedops/bedops
+
+tags: 2.4.39
+
+WORKDIR /data
+
+```
+docker run -v $(pwd):/data --rm -it reslp/bedops:2.4.39
 ```
 
