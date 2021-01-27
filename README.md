@@ -550,6 +550,8 @@ tags: 1.9.6
 
 WORKDIR /data
 
+This container uses rmblast 2.9.0 to make the conda installed repeatmasker work, version 2.10.0 won't work. Also, for edta to work in singularity, the configure perl script of RepeatMasker needs to be executed again.
+
 ```
 docker run --rm -it reslp/edta:1.9.6
 ```
