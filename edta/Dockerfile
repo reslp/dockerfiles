@@ -9,6 +9,13 @@ RUN cd /opt/conda/share/RepeatMasker/ && perl ./configure -trfbin=`which trf` -h
 #RUN wget https://raw.githubusercontent.com/chrishah/maker-docker/master/repeatmasker/to_include/rebuild && cp rebuild /opt/conda/share/RepeatMasker/rebuild
 #ENV REPEATMASKER_DIR=/opt/conda/share/RepeatMasker
 #RUN perl /opt/conda/share/RepeatMasker/rebuild
+
+#change shebang line so that this works in singularity (-login shells lack PATH)
+RUN sed -ie 's$#!\/bin\/bash -login$#!\/bin\/bash$' /opt/conda/share/EDTA/util/run_helitron_scanner.sh
+
+#lower maxmemory for helitronscanner to 10GB
+RUN sed -ie 's$MEMGB=300$MEMGB=50$' /opt/conda/share/EDTA/util/run_helitron_scanner.sh
+
 WORKDIR /data
 
 CMD ["EDTA.pl"]
