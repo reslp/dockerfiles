@@ -59,6 +59,7 @@ The **tags** given for each container correspond the the available versions of d
 [seqtk](#seqtk)
 [singularity](#singularity)
 [spades](#spades)
+[sra-tools](#sra-tools)
 [table2asn](#table2asn)
 [tbl2asn](#tbl2asn)
 [trimal](#trimal)
@@ -592,4 +593,12 @@ WORKDIR /data
 docker run -v $(pwd):/data --rm -it reslp/seqtk:1.3 seqtk
 ```
 
+## sra-tools
+The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives. - https://github.com/ncbi/sra-tools
 
+tags: 2.10.9
+
+WORKDIR /data
+```
+docker run --rm -it reslp/sra-tools:2.10.9 fastq-dump
+```
