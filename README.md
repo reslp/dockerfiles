@@ -56,6 +56,7 @@ The **tags** given for each container correspond the the available versions of d
 [rmarkdown](#rmarkdown-based-on-r)
 [samtools](#samtools)
 [scrape_cazy](#scrape_cazy)
+[seqtk](#seqtk)
 [singularity](#singularity)
 [spades](#spades)
 [table2asn](#table2asn)
@@ -578,6 +579,17 @@ WORDIR /data
 ```
 docker run -v $(pwd):/data --rm -it reslp/norgal:1.0 norgal
 docker run -v $(pwd):/data --rm -it reslp/norgal:1.0 norgal.py
+```
+
+## seqtk
+FASTA and FASTQ processing tool - https://github.com/lh3/seqtk
+
+tags: 1.3
+
+WORKDIR /data
+
+```
+docker run -v $(pwd):/data --rm -it reslp/seqtk:1.3 seqtk
 ```
 
 
