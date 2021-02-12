@@ -45,6 +45,7 @@ The **tags** given for each container correspond the the available versions of d
 [mrbayes](#mrbayes)
 [multiqc](#multiqc)
 [mummer](#mummer)
+[ncbi-blast](#ncbi-blast)
 [norgal](#norgal)
 [ont-fast5-api](#ont-fast5-api)
 [pal2nal](#pal2nal)
@@ -66,7 +67,7 @@ The **tags** given for each container correspond the the available versions of d
 [trimmomatic](#trimmomatic)
 [ubuntu](#ubuntu)
 [quast](#quast)
-[ncbi-blast](#ncbi-blast)
+[quicktree](#quicktree)
 
 
 
@@ -602,3 +603,15 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/sra-tools:2.10.9 fastq-dump
 ```
+
+## quicktree
+Fast implementation of the neighbour-joining phylogenetic inference method - https://github.com/khowe/quicktree
+
+tags: 2.5
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/quicktree:2.5
+```
+
