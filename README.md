@@ -45,6 +45,7 @@ The **tags** given for each container correspond the the available versions of d
 [mrbayes](#mrbayes)
 [multiqc](#multiqc)
 [mummer](#mummer)
+[norgal](#norgal)
 [ont-fast5-api](#ont-fast5-api)
 [pal2nal](#pal2nal)
 [phylobayes](#phylobayes)
@@ -566,4 +567,17 @@ WORKDIR /data
 ```
 docker run -v $(pwd):/data --rm -it reslp/bedops:2.4.39
 ```
+
+## norgal
+Mitochondrial genome assembler - https://bitbucket.org/kosaidtu/norgal/src/master/
+
+tags: 1.0
+
+WORDIR /data
+
+```
+docker run -v $(pwd):/data --rm -it reslp/norgal:1.0 norgal
+docker run -v $(pwd):/data --rm -it reslp/norgal:1.0 norgal.py
+```
+
 
