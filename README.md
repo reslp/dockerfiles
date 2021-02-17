@@ -1,4 +1,4 @@
-#dockerfiles
+# dockerfiles
 
 This repository contains Dockerfiles I accumulated for different purposes.
 
@@ -48,6 +48,7 @@ The **tags** given for each container correspond the the available versions of d
 [mummer](#mummer)
 [ncbi-blast](#ncbi-blast)
 [norgal](#norgal)
+[novoplasty](#novoplasty)
 [ont-fast5-api](#ont-fast5-api)
 [pal2nal](#pal2nal)
 [phylobayes](#phylobayes)
@@ -621,6 +622,20 @@ Splice-aware global aligner for DNA and RNA sequencing reads - https://jgi.doe.g
 
 tags: 38.90
 
+WORKDIR /data
+
 ```
 docker run --rm -it -v $(pwd):/data reslp/bbmap:38.90 bbmap.sh
+```
+
+## novoplasty
+The organelle assembler and heteroplasmy caller - https://github.com/ndierckx/NOVOPlasty
+
+tags: 4.2
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/novoplasty:4.2
+docker run --rm -it -v $(pwd):/data reslp/novoplasty:4.2 NOVOPlasty.pl
 ```
