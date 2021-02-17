@@ -13,6 +13,7 @@ The **tags** given for each container correspond the the available versions of d
 [abyss](#abyss)
 [astral](#astral)
 [augustus](#augustus)
+[bbmap](#bbmap)
 [bedops](#bedops)
 [bedtools](#bedtools)
 [biopython_plus](#biopython_plus)
@@ -615,3 +616,11 @@ WORKDIR /data
 docker run --rm -it reslp/quicktree:2.5
 ```
 
+## bbmap
+Splice-aware global aligner for DNA and RNA sequencing reads - https://jgi.doe.gov/data-and-tools/bbtools/bb-tools-user-guide/bbmap-guide/
+
+tags: 38.90
+
+```
+docker run --rm -it -v $(pwd):/data reslp/bbmap:38.90 bbmap.sh
+```
