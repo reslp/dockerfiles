@@ -43,6 +43,7 @@ The **tags** given for each container correspond the the available versions of d
 [metabat](#metabat)
 [metaxa](#metaxa)
 [miniBarcoder](#miniBarcoder)
+[mitos](#mitos)
 [mrbayes](#mrbayes)
 [multiqc](#multiqc)
 [mummer](#mummer)
@@ -639,3 +640,17 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/novoplasty:4.2
 docker run --rm -it -v $(pwd):/data reslp/novoplasty:4.2 NOVOPlasty.pl
 ```
+
+## mitos
+MITOS is a tool for the annotation of metazoan mitochondrial genomes. - https://gitlab.com/Bernt/MITOS
+
+tags: 2.0.8
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/mitos:2.0.8 runmitos.py
+docker run --rm -it -v $(pwd):/data reslp/mitos:2.0.8
+```
+
+
