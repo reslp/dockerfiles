@@ -58,6 +58,7 @@ The **tags** given for each container correspond the the available versions of d
 [pyscaf](#pyscaf)
 [raxml-ng](#raxml-ng)
 [rmarkdown](#rmarkdown-based-on-r)
+[rphylogenetics](#rphylogenetics)
 [samtools](#samtools)
 [scrape_cazy](#scrape_cazy)
 [seqtk](#seqtk)
@@ -653,4 +654,14 @@ docker run --rm -it -v $(pwd):/data reslp/mitos:2.0.8 runmitos.py
 docker run --rm -it -v $(pwd):/data reslp/mitos:2.0.8
 ```
 
+## rphylogenetics
+This is an R container with some phylogenetic packages preinstalled. It is based on my rmarkdown container.
+Packages: ape, phytools, wesanderson, RColorBrewer
 
+tags: 4.0.3 (refers to used R version)
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/rphylogenetics:4.0.3
+```
