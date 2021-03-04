@@ -645,7 +645,7 @@ docker run --rm -it -v $(pwd):/data reslp/novoplasty:4.2 NOVOPlasty.pl
 ## mitos
 MITOS is a tool for the annotation of metazoan mitochondrial genomes. - https://gitlab.com/Bernt/MITOS
 
-tags: 2.0.8
+tags: 2.0.8, 1.0.5
 
 WORKDIR /data
 
