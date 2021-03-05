@@ -1,0 +1,9 @@
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get install -y build-essential wget
+WORKDIR /software
+RUN wget https://github.com/hahnlab/CAFE5/releases/download/v5.0b2/CAFE5-5.0.0.tar.gz && tar xvfz CAFE5-5.0.0.tar.gz
+RUN cd CAFE && ./configure && make && cp bin/cafexp /usr/local/bin/cafe
+
+WORKDIR /data
+CMD ["cafe"]
