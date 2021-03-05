@@ -51,6 +51,7 @@ The **tags** given for each container correspond the the available versions of d
 [norgal](#norgal)
 [novoplasty](#novoplasty)
 [ont-fast5-api](#ont-fast5-api)
+[orthofinder](#orthofinder)
 [pal2nal](#pal2nal)
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
@@ -665,3 +666,17 @@ WORKDIR /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/rphylogenetics:4.0.3
 ```
+
+## Orthofinder
+OrthoFinder: phylogenetic orthology inference for comparative genomics
+
+tags: 2.3.3, 2.5.2
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/orthofinder:2.5.2
+```
+
+```
+docker run --rm -it -v 
