@@ -36,6 +36,7 @@ The **tags** given for each container correspond the the available versions of d
 [hmmer](#hmmer)
 [interproscan-wrapper](#interproscan-wrapper)
 [iqtree](#iqtree)
+[jupyter-lab](#jupyter-lab)
 [kmergenie](#kmergenie)
 [mafft](#mafft)
 [mamba](#mamba)
@@ -682,5 +683,25 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/orthofinder:2.5.2
 ```
 
+## Jupyter-Lab
+This Jupyter Lab Notebook also has Tensorflow, Scikitlearn, pandas and numpy installed.
+The tags refer to the tensorflow version.
+
+tags: 2.4.1
+
+To start a server (either jupyter lab or jupyter notebook):
+
 ```
-docker run --rm -it -v 
+docker run -d --rm -p 8888:8888 reslp/jupyter-tf:2.4.1 jupyter-lab
+docker run -d --rm -p 8888:8888 reslp/jupyter-tf:2.4.1
+```
+
+This will return a hash. Run docker logs on that hash to see the access token. eg:
+
+```
+docker logs 406f5662e0a0fb544ed80d95054642e55439f6eb18fcae30487c8488159e36e4
+```
+
+
+
+
