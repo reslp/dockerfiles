@@ -22,6 +22,7 @@ The **tags** given for each container correspond the the available versions of d
 [busco](#busco)
 [cafe](#cafe)
 [clustalo](#clustalo)
+[cupp](#cupp)
 [concoct](#concoct)
 [consent](#consent)
 [deeploc](#deeploc)
@@ -704,4 +705,13 @@ docker logs 406f5662e0a0fb544ed80d95054642e55439f6eb18fcae30487c8488159e36e4
 
 
 
+## CUPP
+CUPP is a new approach for sequence analysis based on the hypothesis that conserved peptide patterns can be used to identify similarities between proteins. -
+https://www.bioengineering.dtu.dk/english/ResearchNy/Research-Sections/Section-for-Protein-Chemistry-and-Enzyme-Technology/Enzyme-Technology/CUPP
 
+tags: 1.0.14
+
+```
+docker run --rm -it reslp/cupp:1.0.14 python /software/CUPP_v1.0.14/CUPPprediction.py --help
+
+```
