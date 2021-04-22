@@ -35,6 +35,7 @@ The **tags** given for each container correspond the the available versions of d
 [get_organelle](#get_organelle)
 [guidance2](#guidance2)
 [hmmer](#hmmer)
+[ima2](#ima2)
 [interproscan-wrapper](#interproscan-wrapper)
 [iqtree](#iqtree)
 [jupyter-lab](#jupyter-lab)
@@ -715,3 +716,16 @@ tags: 1.0.14
 docker run --rm -it reslp/cupp:1.0.14 python /software/CUPP_v1.0.14/CUPPprediction.py --help
 
 ```
+
+## ima2
+IM is a program, written with Rasmus Nielsen, for the fitting of an isolation model with migration to haplotype data drawn from two closely related species or populations. - https://bio.cst.temple.edu/~tuf29449/software
+
+tags: 8.27.12
+
+WORKDIR /data
+
+
+```
+docker run --rm -it reslp/ima2:8.27.12
+```
+
