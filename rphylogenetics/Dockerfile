@@ -6,6 +6,7 @@ RUN install2.r -e ape phytools wesanderson RColorBrewer
 #phytools geiger brms wesanderson RColorBrewer 
 RUN install2.r -e BiocManager
 RUN R -e 'BiocManager::install("ggtree")'
+RUN install2.r -e cowplot
 WORKDIR /data
 
 CMD ["R"]
