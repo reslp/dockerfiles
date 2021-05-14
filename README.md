@@ -11,6 +11,7 @@ The **tags** given for each container correspond the the available versions of d
 **Currently available containers:**
 
 [abyss](#abyss)
+[alitv](#alitv)
 [astral](#astral)
 [augustus](#augustus)
 [bbmap](#bbmap)
@@ -728,4 +729,17 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/ima2:8.27.12
 ```
+
+
+## alitv
+AliTV is a program to visualize whole genome alignments: https://alitv.readthedocs.io/en/latest/manual.html
+
+tags: d06bd45
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/alitv:d06bd45
+```
+
 
