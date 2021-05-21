@@ -610,7 +610,7 @@ docker run -v $(pwd):/data --rm -it reslp/seqtk:1.3 seqtk
 ## sra-tools
 The SRA Toolkit and SDK from NCBI is a collection of tools and libraries for using data in the INSDC Sequence Read Archives. - https://github.com/ncbi/sra-tools
 
-tags: 2.10.9
+tags: 2.20.1, 2.10.9
 
 WORKDIR /data
 ```
