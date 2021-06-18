@@ -206,7 +206,7 @@ To create a blast database and run a blastp search:
 `my_sequences.fasta`and `sequences_to_search.fa`need to be in the current working directory. The blastdb will also be created there.
 
 ```
-docker run --rm -v $(pwd):/files/ reslp/ncbi-blast:2.9.0 makeblastdb -in /files/my_sequences.fasta -dbtype 'prot' -hash_index -out my_blastdb
+docker run --rm -v $(pwd):/files/ reslp/ncbi-blast:2.9.0 makeblastdb -in /files/my_sequences.fasta -dbtype 'prot' -hash_index -out /files/my_blastdb
 
 docker run --rm -v $(pwd):/files/ reslp/ncbi-blast:2.9.0 blastp -db /files/my_blastdb -query /files/sequences_to_search.fa -outfmt 6 > blast_results.txt
 
@@ -267,7 +267,8 @@ tags: 1
 Containerized version of a python script to download information from CAZY.org:
 
 ```
-docker run --rm reslp/scrape_vim cazy:1
+docker run -it --rm reslp/scrape_cazy:1
+docker run --rm -it -v $(pwd):/data reslp/scrape_cazy:1 scrape_cazy.py -f GH3
 ```
 
 ## deeploc
