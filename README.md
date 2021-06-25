@@ -743,4 +743,12 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/alitv:d06bd45
 ```
 
+## speedtest-cli
+This a command line program which performs network speedtests: https://www.speedtest.net/de/apps/cli
+
+tags: 2.1.2
+
+```
+docker run --rm reslp/speedtest-cli:2.1.2 speedtest-cli --csv >> /home/pi/speedtest/speedtest_data.txt
+```
 
