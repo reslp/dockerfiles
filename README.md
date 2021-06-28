@@ -14,6 +14,7 @@ The **tags** given for each container correspond the the available versions of d
 [alitv](#alitv)
 [astral](#astral)
 [augustus](#augustus)
+[bamutil](#bamutil)
 [bbmap](#bbmap)
 [bedops](#bedops)
 [bedtools](#bedtools)
@@ -771,6 +772,8 @@ an ultrafast de novo duplicates removal tool for paired short DNA sequences - ht
 
 tags: 1.1
 
+WORKDIR /data
+
 ```
 docker run --rm -it reslp/fastuniq:1.1
 ```
@@ -780,7 +783,20 @@ Fast Length Adjustment of SHort reads - https://ccb.jhu.edu/software/FLASH/
 
 tags: 1.2.11
 
+WORKDIR /data
+
 ```
 docker run --rm -it reslp/flash:1.2.11
+```
+
+## bamutil
+Programs that perform operations on SAM/BAM files, all built into a single executable, bam. - https://genome.sph.umich.edu/wiki/BamUtil
+
+tags: 1.0.15
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/bamutil:1.0.15
 ```
 
