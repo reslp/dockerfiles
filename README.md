@@ -37,6 +37,7 @@ The **tags** given for each container correspond the the available versions of d
 [flappie](#flappie)
 [flash](#flash)
 [fmlrc](#fmlrc)
+[gatk](#gatk)
 [get_organelle](#get_organelle)
 [guidance2](#guidance2)
 [hmmer](#hmmer)
@@ -810,4 +811,17 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/picard:2.18.7
+```
+
+## gatk
+Genome analysis toolkit - https://gatk.broadinstitute.org/hc/en-us
+
+tags: 3.8
+
+WORKDIR /data
+
+Hint: Executable name is gatk3 NOT gatk!
+
+```
+docker run --rm -it reslp/gatk:3.8 gatk3
 ```
