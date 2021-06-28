@@ -34,6 +34,7 @@ The **tags** given for each container correspond the the available versions of d
 [fastqc](#fastqc)
 [fastuniq](#fastuniq)
 [flappie](#flappie)
+[flash](#flash)
 [fmlrc](#fmlrc)
 [get_organelle](#get_organelle)
 [guidance2](#guidance2)
@@ -773,3 +774,13 @@ tags: 1.1
 ```
 docker run --rm -it reslp/fastuniq:1.1
 ```
+
+## flash
+Fast Length Adjustment of SHort reads - https://ccb.jhu.edu/software/FLASH/ 
+
+tags: 1.2.11
+
+```
+docker run --rm -it reslp/flash:1.2.11
+```
+
