@@ -32,6 +32,7 @@ The **tags** given for each container correspond the the available versions of d
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
 [fastqc](#fastqc)
+[fastuniq](#fastuniq)
 [flappie](#flappie)
 [fmlrc](#fmlrc)
 [get_organelle](#get_organelle)
@@ -762,4 +763,13 @@ WORKDIR /data
 
 ```
 docker run reslp/bowtie2:2.3.5 bowtie2
+```
+
+## fastuniq
+an ultrafast de novo duplicates removal tool for paired short DNA sequences - https://sourceforge.net/projects/fastuniq/
+
+tags: 1.1
+
+```
+docker run --rm -it reslp/fastuniq:1.1
 ```
