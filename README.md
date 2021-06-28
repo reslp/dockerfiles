@@ -12,6 +12,7 @@ The **tags** given for each container correspond the the available versions of d
 
 [abyss](#abyss)
 [alitv](#alitv)
+[angsd](#angsd)
 [astral](#astral)
 [augustus](#augustus)
 [bamutil](#bamutil)
@@ -777,7 +778,7 @@ tags: 1.1
 WORKDIR /data
 
 ```
-docker run --rm -it reslp/fastuniq:1.1
+docker run --rm -it reslp/fastuniq:1.1 fastuniq
 ```
 
 ## flash
@@ -788,7 +789,7 @@ tags: 1.2.11
 WORKDIR /data
 
 ```
-docker run --rm -it reslp/flash:1.2.11
+docker run --rm -it reslp/flash:1.2.11 flash
 ```
 
 ## bamutil
@@ -799,7 +800,7 @@ tags: 1.0.15
 WORKDIR /data
 
 ```
-docker run --rm -it reslp/bamutil:1.0.15
+docker run --rm -it reslp/bamutil:1.0.15 bam
 ```
 
 ## picard
@@ -810,7 +811,7 @@ tags: 2.18.7
 WORKDIR /data
 
 ```
-docker run --rm -it reslp/picard:2.18.7
+docker run --rm -it reslp/picard:2.18.7 picard
 ```
 
 ## gatk
@@ -825,3 +826,13 @@ Hint: Executable name is gatk3 NOT gatk!
 ```
 docker run --rm -it reslp/gatk:3.8 gatk3
 ```
+
+## angsd
+ANGSD is a software for analyzing next generation sequencing data - http://www.popgen.dk/angsd/index.php/ANGSD
+
+tags: 0.935
+
+```
+docker run --rm -it reslp/angsd:0.935 angsd
+```
+
