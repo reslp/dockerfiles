@@ -64,6 +64,7 @@ The **tags** given for each container correspond the the available versions of d
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
 [phylo-scripts](#phylo-scripts)
+[picard](#picard)
 [pyscaf](#pyscaf)
 [raxml-ng](#raxml-ng)
 [rmarkdown](#rmarkdown-based-on-r)
@@ -800,3 +801,13 @@ WORKDIR /data
 docker run --rm -it reslp/bamutil:1.0.15
 ```
 
+## picard
+Java tools for working with NGS data in the BAM format - http://broadinstitute.github.io/picard/
+
+tags: 2.18.7
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/picard:2.18.7
+```
