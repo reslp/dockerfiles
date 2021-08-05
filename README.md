@@ -67,6 +67,7 @@ The **tags** given for each container correspond the the available versions of d
 [phylobayes-mpi](#phylobayes-mpi)
 [phylo-scripts](#phylo-scripts)
 [picard](#picard)
+[purge_haplotigs](#purge_haplotigs)
 [pyscaf](#pyscaf)
 [raxml-ng](#raxml-ng)
 [rmarkdown](#rmarkdown-based-on-r)
@@ -834,5 +835,17 @@ tags: 0.935
 
 ```
 docker run --rm -it reslp/angsd:0.935 angsd
+```
+
+## purge_haplotigs
+
+Pipeline to help with curating heterozygous diploid genome assemblies - https://bitbucket.org/mroachawri/purge_haplotigs/src/master/
+
+tags: 1.1.1
+
+WORKDIR /data
+
+```
+docker run --rm -it $(pwd):/data reslp/purge_haplotigs:1.1.1
 ```
 
