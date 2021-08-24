@@ -33,6 +33,7 @@ The **tags** given for each container correspond the the available versions of d
 [edta](#edta)
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
+[fasta3](#fasta3)
 [fastqc](#fastqc)
 [fastuniq](#fastuniq)
 [flappie](#flappie)
@@ -847,5 +848,19 @@ WORKDIR /data
 
 ```
 docker run --rm -it $(pwd):/data reslp/purge_haplotigs:1.1.1
+```
+
+## fasta3
+
+The FASTA package - protein and DNA sequence similarity searching and alignment programs
+
+tags: 36.3.8
+
+WORKDIR /data
+
+*Hint:* All the programs of the FASTA3 package have 36 appended to the end of their name. So eg. glsearch is glsearch36 in this container.
+
+```
+docker run --rm -it -v $(pwd):/data reslp/fasta3:36.3.8 glsearch36 /data/query.fas /data/subset.fasta
 ```
 
