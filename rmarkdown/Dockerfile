@@ -20,8 +20,10 @@ RUN apt-get update && apt-get install -y pandoc littler r-cran-littler
 RUN apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev
 RUN install2.r -e tinytex tidyverse kableExtra dplyr tidyverse readr ggplot2 viridis
 RUN R -e "tinytex::install_tinytex()"	
-
-
+RUN install2.r -e plotly plyr reshape2
+RUN install2.r -e ggpubr cowplot patchwork
+RUN install2.r -e flexdashboard
+RUN install2.r -e formattable
 #RUN apt-get install -y texlive-latex-extra
 #RUN tlmgr init-usertree
 #RUN tlmgr update --self && tlmgr install framed
