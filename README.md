@@ -48,6 +48,7 @@ The **tags** given for each container correspond the the available versions of d
 [iqtree](#iqtree)
 [jupyter-lab](#jupyter-lab)
 [kmergenie](#kmergenie)
+[macse](#macse)
 [mafft](#mafft)
 [mamba](#mamba)
 [maxbin](#maxbin)
@@ -863,4 +864,15 @@ WORKDIR /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/fasta3:36.3.8 glsearch36 /data/query.fas /data/subset.fasta
 ```
+
+# macse
+
+MACSE: Multiple Alignment of Coding SEquences Accounting for Frameshifts and Stop Codons.
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/macse:1.2 macse
+```
+
 
