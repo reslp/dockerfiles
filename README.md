@@ -384,7 +384,7 @@ docker run --rm -it -v $(pwd):/data reslp/rmarkdown:3.6.3 Rscript -e "rmarkdown:
 ## mamba
 This can serve as a base image for things installed using conda and mamba.
 
-tags: 0.5.3, 0.6.0, 0.7.0
+tags: 0.5.3, 0.6.0, 0.7.0, 0.15.3
 
 ```
 docker run --rm -it reslp/mamba:0.5.3
