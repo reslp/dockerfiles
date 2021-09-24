@@ -871,10 +871,11 @@ MACSE: Multiple Alignment of Coding SEquences Accounting for Frameshifts and Sto
 
 WORKDIR /data
 
-tags: 1.2
+tags: 1.2, 2.05
 
 ```
 docker run --rm -it reslp/macse:1.2 macse
+docker run --rm -it reslp/macse:2.05 macse -h
 ```
 
 

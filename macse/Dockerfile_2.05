@@ -1,0 +1,16 @@
+FROM reslp/mamba:0.15.3
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y -c bioconda macse=1.2
+
+
+# this is a hack to replace the macse1.2 version with macse2.05, while keeping the original structure from conda.
+RUN apt-get install -y wget
+RUN wget https://bioweb.supagro.inra.fr/macse/releases/macse_v2.05.jar
+RUN mv macse_v2.05.jar /opt/conda/share/macse-1.2-1/macse_v1.2.jar
+
+WORKDIR /data
+
+CMD ["macse", "-h"]
+
+
