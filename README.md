@@ -46,6 +46,7 @@ The **tags** given for each container correspond the the available versions of d
 [ima2](#ima2)
 [interproscan-wrapper](#interproscan-wrapper)
 [iqtree](#iqtree)
+[julia](#julia)
 [jupyter-lab](#jupyter-lab)
 [kmergenie](#kmergenie)
 [macse](#macse)
@@ -876,6 +877,20 @@ tags: 1.2, 2.05
 ```
 docker run --rm -it reslp/macse:1.2 macse
 docker run --rm -it reslp/macse:2.05 macse -h
+```
+
+#julia
+
+julia - The Julia Programming Language
+
+This container includes julia and a number of packages from BioJulia and packages for data handling, plotting and report generation.
+
+tags: 1.6.3
+
+WORDKIR /data
+
+```
+docker run --rm -it reslp/julia:1.6.3 julia
 ```
 
 
