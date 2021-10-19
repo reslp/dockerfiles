@@ -61,6 +61,7 @@ The **tags** given for each container correspond the the available versions of d
 [multiqc](#multiqc)
 [mummer](#mummer)
 [ncbi-blast](#ncbi-blast)
+[nim](#nim)
 [norgal](#norgal)
 [novoplasty](#novoplasty)
 [ont-fast5-api](#ont-fast5-api)
@@ -879,7 +880,7 @@ docker run --rm -it reslp/macse:1.2 macse
 docker run --rm -it reslp/macse:2.05 macse -h
 ```
 
-#julia
+# julia
 
 julia - The Julia Programming Language
 
@@ -891,6 +892,16 @@ WORDKIR /data
 
 ```
 docker run --rm -it reslp/julia:1.6.3 julia
+```
+
+# nim
+
+Nim programming lanuage
+
+tags: 1.4.8
+
+```
+docker run --rm -it reslp/nim:1.4.8
 ```
 
 
