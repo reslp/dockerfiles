@@ -120,10 +120,13 @@ docker run reslp/phylo-scripts:latest
 
 
 ## Spades
-tags: 3.12.0, 3.13.0
+tags: 3.12.0, 3.13.0, 3.15.3
 
-`docker pull reslp/spades:3.13.0`
+WORKDIR /data
 
+```
+docker pull reslp/spades:3.13.0
+```
 
 
 ## trimmomatic
