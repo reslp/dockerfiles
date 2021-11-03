@@ -3,5 +3,4 @@ MAINTAINER <philipp.resl@uni-graz.at>
 
 RUN brew install nim
 
-ENTRYPOINT ["nim"]
-CMD ["-h"]
+CMD ["nim"]
