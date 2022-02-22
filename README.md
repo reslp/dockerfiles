@@ -57,6 +57,7 @@ The **tags** given for each container correspond the the available versions of d
 [metaxa](#metaxa)
 [miniBarcoder](#miniBarcoder)
 [mitos](#mitos)
+[mosdepth](#mosdepth)
 [mrbayes](#mrbayes)
 [multiqc](#multiqc)
 [mummer](#mummer)
@@ -907,4 +908,13 @@ tags: 1.4.8
 docker run --rm -it reslp/nim:1.4.8
 ```
 
+# mosdepth
+
+fast BAM/CRAM depth calculation for WGS, exome, or targeted sequencing (https://github.com/brentp/mosdepth)
+
+tags: 0.3.3
+
+```
+docker run --rm -it reslp/mosdepth:0.3.3
+```
 
