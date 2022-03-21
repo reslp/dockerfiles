@@ -88,6 +88,7 @@ The **tags** given for each container correspond the the available versions of d
 [trimal](#trimal)
 [trimmomatic](#trimmomatic)
 [ubuntu](#ubuntu)
+[viralmsa](#viralmsa)
 [quast](#quast)
 [quicktree](#quicktree)
 
@@ -918,3 +919,16 @@ tags: 0.3.3
 docker run --rm -it reslp/mosdepth:0.3.3
 ```
 
+# viralmsa
+
+Reference-guided multiple sequence alignment of viral genomes  (https://github.com/niemasd/ViralMSA)
+
+Note: There is an offical container, but it lacks several dependencies and does not work (tested March 21, 2022) hence the container here which largely builds on the official version.
+
+tags: 1.1.20
+
+WORKDUT /data
+
+```
+docker run --rm -it reslp/viralmsa:1.1.20 ViralMSA.py -h
+```
