@@ -30,6 +30,7 @@ The **tags** given for each container correspond the the available versions of d
 [concoct](#concoct)
 [consent](#consent)
 [deeploc](#deeploc)
+[dentist](#dentist)
 [edta](#edta)
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
@@ -931,4 +932,16 @@ WORKDUT /data
 
 ```
 docker run --rm -it reslp/viralmsa:1.1.20 ViralMSA.py -h
+```
+
+# dentist
+
+Close assembly gaps using long-reads at high accuracy. (https://github.com/a-ludi/dentist)
+
+Note: This container also includes snakemake 6.0.2 so it is possible to run the whole dentist pipeline within the container.
+
+tags: 3.0.0
+
+```
+docker run --rm -it reslp/dentist:3.0.0 dentist
 ```
