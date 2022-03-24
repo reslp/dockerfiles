@@ -356,11 +356,11 @@ docker run --rm -it -v $(pwd):/data reslp/phylobayes:4.1c
 ```
 
 ## phylobayes-mpi
-tags: 1.8b
+tags: 1.8b, git_dca7bdf, c12c4d7
 
 WORDIR is /data
 ```
-docker run --rm -it -v $(pwd):/data reslp/phylobayes:1.8b
+docker run --rm -it -v $(pwd):/data reslp/phylobayes-mpi:c12c4d7
 ```
 
 

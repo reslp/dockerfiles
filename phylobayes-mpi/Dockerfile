@@ -6,11 +6,12 @@ ENV TZ=Europe/Vienna
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && apt-get install -y wget build-essential libopenmpi-dev
+RUN apt-get install -y git
 
 WORKDIR /software
 
-RUN wget https://github.com/bayesiancook/pbmpi/archive/v1.8b.tar.gz && tar xvfz v1.8b.tar.gz
-RUN cd pbmpi-1.8b/sources && make && cp -r ../data/* /usr/local/bin 
+RUN git clone https://github.com/bayesiancook/pbmpi.git && \
+	cd pbmpi && git checkout c12c4d7 && cd sources && make && cp -r ../data/* /usr/local/bin
 
 WORKDIR /data
 
