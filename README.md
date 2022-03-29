@@ -62,6 +62,7 @@ The **tags** given for each container correspond the the available versions of d
 [mrbayes](#mrbayes)
 [multiqc](#multiqc)
 [mummer](#mummer)
+[muscle](#muscle)
 [ncbi-blast](#ncbi-blast)
 [nim](#nim)
 [norgal](#norgal)
@@ -945,3 +946,16 @@ tags: 3.0.0
 ```
 docker run --rm -it reslp/dentist:3.0.0 dentist
 ```
+
+# muscle
+
+Multiple sequence alignment with top benchmark scores scalable to thousands of sequences. (https://github.com/rcedgar/muscle)
+
+tags: 5.1
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/muscle:5.1 muscle
+```
+
