@@ -987,4 +987,15 @@ WORKDIR /data
 docker run --rm -it reslp/colord:1.1.0 colord
 ```
 
+# bmge
+
+BMGE (Block Mapping and Gathering with Entropy) is a program that selects regions in a multiple sequence alignment that are suited for phylogenetic inference. 
+
+tags: 1.12
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/bmge:1.12 bmge
+```
 
