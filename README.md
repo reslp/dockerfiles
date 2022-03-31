@@ -26,9 +26,10 @@ The **tags** given for each container correspond the the available versions of d
 [busco](#busco)
 [cafe](#cafe)
 [clustalo](#clustalo)
-[cupp](#cupp)
+[colord](#colord)
 [concoct](#concoct)
 [consent](#consent)
+[cupp](#cupp)
 [deeploc](#deeploc)
 [dentist](#dentist)
 [edta](#edta)
@@ -973,3 +974,17 @@ The script in the container is called necat not necat.pl.
 ```
 docker run --rm -it reslp/necat:0.0.1_update20200803 necat
 ```
+
+# colord
+
+A versatile compressor of third generation sequencing reads. (https://github.com/refresh-bio/colord)
+
+tags: 1.1.0
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/colord:1.1.0 colord
+```
+
+
