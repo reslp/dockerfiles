@@ -64,6 +64,7 @@ The **tags** given for each container correspond the the available versions of d
 [mummer](#mummer)
 [muscle](#muscle)
 [ncbi-blast](#ncbi-blast)
+[necat](#necat)
 [nim](#nim)
 [norgal](#norgal)
 [novoplasty](#novoplasty)
@@ -959,3 +960,16 @@ WORKDIR /data
 docker run --rm -it reslp/muscle:5.1 muscle
 ```
 
+# necat
+
+NECAT is an error correction and de-novo assembly tool for Nanopore long noisy reads. (https://github.com/xiaochuanle/NECAT)
+
+tags: 0.0.1_update20200803
+
+WORKDIR /data
+
+The script in the container is called necat not necat.pl.
+
+```
+docker run --rm -it reslp/necat:0.0.1_update20200803 necat
+```
