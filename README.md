@@ -21,6 +21,7 @@ The **tags** given for each container correspond the the available versions of d
 [bedtools](#bedtools)
 [biopython_plus](#biopython_plus)
 [blobtools](#blobtools)
+[bmge](#bmge)
 [bonito](#bonito)
 [bowtie2](#bowtie2)
 [busco](#busco)
