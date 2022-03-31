@@ -395,9 +395,12 @@ tags: 3.6.3, 4.0.3
 docker run --rm -it -v $(pwd):/data reslp/rmarkdown:3.6.3 Rscript -e "rmarkdown::render('./report.rmd')"
 ```
 ## mamba
+
+The Fast Cross-Platform Package Manager (https://github.com/mamba-org/mamba)
+
 This can serve as a base image for things installed using conda and mamba.
 
-tags: 0.5.3, 0.6.0, 0.7.0, 0.15.3
+tags: 0.5.3, 0.6.0, 0.7.0, 0.15.3, 0.21.1
 
 ```
 docker run --rm -it reslp/mamba:0.5.3
@@ -990,7 +993,7 @@ docker run --rm -it reslp/colord:1.1.0 colord
 
 # bmge
 
-BMGE (Block Mapping and Gathering with Entropy) is a program that selects regions in a multiple sequence alignment that are suited for phylogenetic inference. 
+BMGE (Block Mapping and Gathering with Entropy) is a program that selects regions in a multiple sequence alignment that are suited for phylogenetic inference. (https://bioweb.pasteur.fr/packages/pack@BMGE@1.12/)
 
 tags: 1.12
 
