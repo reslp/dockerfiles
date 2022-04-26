@@ -36,6 +36,7 @@ The **tags** given for each container correspond the the available versions of d
 [edta](#edta)
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
+[ete3](#ete3)
 [fasta3](#fasta3)
 [fastqc](#fastqc)
 [fastuniq](#fastuniq)
@@ -1001,5 +1002,17 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/bmge:1.12 bmge
+```
+
+# ete3
+
+A Python framework for the analysis and visualization of trees. - http://etetoolkit.org/
+
+tags: 3.1.2
+
+Hint: External programs don't work due to the omnipresent bug in ete3: https://github.com/etetoolkit/ete/issues/444
+
+```
+docker run --rm -it reslp/ete3:3.1.2
 ```
 
