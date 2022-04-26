@@ -1012,7 +1012,22 @@ tags: 3.1.2
 
 Hint: External programs don't work due to the omnipresent bug in ete3: https://github.com/etetoolkit/ete/issues/444
 
+WORKDIR /data
+
 ```
 docker run --rm -it reslp/ete3:3.1.2
 ```
+
+# dendropy
+
+DendroPy Phylogenetic Computing Library - https://dendropy.org/
+
+tags: 4.5.2
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/dendropy:4.5.2
+```
+
 
