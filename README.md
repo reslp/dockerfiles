@@ -76,6 +76,7 @@ The **tags** given for each container correspond the the available versions of d
 [pal2nal](#pal2nal)
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
+[phylopy](#phylopy)
 [phylo-scripts](#phylo-scripts)
 [picard](#picard)
 [purge_haplotigs](#purge_haplotigs)
@@ -1028,6 +1029,18 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/dendropy:4.5.2
+```
+
+# phylopy
+
+A container with dendropy, ete3 and pandas based on python 3.7.
+
+tags: 1
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/phylopy:1
 ```
 
 
