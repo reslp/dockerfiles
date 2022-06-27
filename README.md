@@ -40,6 +40,7 @@ The **tags** given for each container correspond the the available versions of d
 [fasta3](#fasta3)
 [fastqc](#fastqc)
 [fastuniq](#fastuniq)
+[ffsend](#ffsend)
 [flappie](#flappie)
 [flash](#flash)
 [fmlrc](#fmlrc)
@@ -1043,4 +1044,14 @@ WORKDIR /data
 docker run --rm -it reslp/phylopy:1
 ```
 
+# ffsend
 
+Easily and securely share files from the command line. A fully featured Firefox Send client. https://github.com/timvisee/ffsend
+
+tags: 0.2.76
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/ffsend:0.2.76 ffsend upload myfile.txt
+```
