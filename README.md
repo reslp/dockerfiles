@@ -1067,3 +1067,15 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/magic-wormhole:0.12.0
 ```
+
+# pandoc
+
+A universal document converter. https://pandoc.org/
+
+tags: 2.18
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/pandoc:2.18 pandoc test.md -o test.pdf
+```
