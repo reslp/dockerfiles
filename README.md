@@ -75,6 +75,7 @@ The **tags** given for each container correspond the the available versions of d
 [ont-fast5-api](#ont-fast5-api)
 [orthofinder](#orthofinder)
 [pal2nal](#pal2nal)
+[pandoc](#pandoc)
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
 [phylopy](#phylopy)
