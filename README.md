@@ -17,6 +17,7 @@ The **tags** given for each container correspond the the available versions of d
 [augustus](#augustus)
 [bamutil](#bamutil)
 [bbmap](#bbmap)
+[beast](#beast)
 [bedops](#bedops)
 [bedtools](#bedtools)
 [biopython_plus](#biopython_plus)
@@ -56,6 +57,7 @@ The **tags** given for each container correspond the the available versions of d
 [kmergenie](#kmergenie)
 [macse](#macse)
 [mafft](#mafft)
+[magic-wormhole](#magic-wormhole)
 [mamba](#mamba)
 [maxbin](#maxbin)
 [metabat](#metabat)
@@ -1080,3 +1082,17 @@ WORKDIR /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/pandoc:2.18 pandoc test.md -o test.pdf
 ```
+
+# beast
+
+Bayesian Evolutionary Analysis by Sampling Trees - https://github.com/CompEvol/beast2
+
+tags: 2.6.7
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/beast:2.6.7
+```
+
+
