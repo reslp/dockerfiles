@@ -83,6 +83,7 @@ The **tags** given for each container correspond the the available versions of d
 [phylopy](#phylopy)
 [phylo-scripts](#phylo-scripts)
 [picard](#picard)
+[pigz](#pigz)
 [purge_haplotigs](#purge_haplotigs)
 [pyscaf](#pyscaf)
 [raxml-ng](#raxml-ng)
@@ -1093,6 +1094,18 @@ WORKDIR /data
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/beast:2.6.7
+```
+
+# pigz
+
+Parallel implementation of gzip
+
+tags: 2.6
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/pigz:2.6
 ```
 
 
