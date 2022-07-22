@@ -918,10 +918,10 @@ docker run --rm -it reslp/julia:1.6.3 julia
 
 Nim programming lanuage
 
-tags: 1.4.8
+tags: 1.4.8, 1.6.6
 
 ```
-docker run --rm -it reslp/nim:1.4.8
+docker run --rm -it reslp/nim:1.6.6
 ```
 
 # mosdepth
