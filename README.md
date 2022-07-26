@@ -87,6 +87,7 @@ The **tags** given for each container correspond the the available versions of d
 [purge_haplotigs](#purge_haplotigs)
 [pyscaf](#pyscaf)
 [raxml-ng](#raxml-ng)
+[rename](#rename)
 [rmarkdown](#rmarkdown-based-on-r)
 [rphylogenetics](#rphylogenetics)
 [samtools](#samtools)
@@ -1108,4 +1109,14 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/pigz:2.6
 ```
 
+# rename
 
+Rename files
+
+tags: 1.10-1
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/rename:1.10-1 
+```
