@@ -386,12 +386,12 @@ docker run --rm -it -v $(pwd):/data reslp/guidance2:2.02
 ```
 
 ## raxml-ng
-tags: 1.0.0
+tags: 1.0.0, 1.1.0
 
 WORKDIR is /data
 
 ```
-docker run --rm -it -v $(pwd):/data reslp/raxml-ng:1.0.0
+docker run --rm -it -v $(pwd):/data reslp/raxml-ng:1.1.0
 ```
 
 ## rmarkdown based on R
