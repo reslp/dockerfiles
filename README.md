@@ -85,6 +85,7 @@ The **tags** given for each container correspond the the available versions of d
 [picard](#picard)
 [pigz](#pigz)
 [purge_haplotigs](#purge_haplotigs)
+[pyinstaller](#pyinstaller)
 [pyscaf](#pyscaf)
 [raxml-ng](#raxml-ng)
 [rename](#rename)
@@ -1120,3 +1121,17 @@ WORKDIR /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/rename:1.10-1 
 ```
+
+# pyinstaller
+
+PyInstaller bundles a Python application and all its dependencies into a single package.
+
+tags: 5.1
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/pyinstaller:5.1
+```
+
+
