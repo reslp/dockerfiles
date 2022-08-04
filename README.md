@@ -78,6 +78,7 @@ The **tags** given for each container correspond the the available versions of d
 [orthofinder](#orthofinder)
 [pal2nal](#pal2nal)
 [pandoc](#pandoc)
+[pear](#pear)
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
 [phylopy](#phylopy)
@@ -1134,4 +1135,15 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/pyinstaller:5.1
 ```
 
+# pear
+
+PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger
+
+tags: 0.9.6
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/pear:0.9.6
+```
 
