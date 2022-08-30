@@ -1147,3 +1147,16 @@ WORKDIR /data
 docker run --rm -it reslp/pear:0.9.6
 ```
 
+# taxonkit
+
+A Practical and Efficient NCBI Taxonomy Toolkit - https://github.com/shenwei356/taxonkit
+
+tags: 0.12.0
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/taxonkit:0.12.0
+```
+
+
