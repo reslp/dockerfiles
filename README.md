@@ -1159,4 +1159,14 @@ WORKDIR /data
 docker run --rm -it reslp/taxonkit:0.12.0
 ```
 
+# exonerate
+
+Exonerate - A generic tool for pairwise sequence comparison / alignment
+
+tags: 2.4.0
+
+```
+docker run --rm -it reslp/exonerate:2.4.0
+```
+
 
