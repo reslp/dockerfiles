@@ -74,6 +74,7 @@ The **tags** given for each container correspond the the available versions of d
 [nim](#nim)
 [norgal](#norgal)
 [novoplasty](#novoplasty)
+[oma-standalone](#oma-standalone)
 [ont-fast5-api](#ont-fast5-api)
 [orthofinder](#orthofinder)
 [pal2nal](#pal2nal)
@@ -1167,6 +1168,18 @@ tags: 2.4.0
 
 ```
 docker run --rm -it reslp/exonerate:2.4.0
+```
+
+# oma-standalone
+
+Standalone version of the OMA Orthology Matrix - https://omabrowser.org/oma/home/
+
+tags: 2.5.0
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/oma-standalone:2.5.0 OMA
 ```
 
 
