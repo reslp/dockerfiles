@@ -411,7 +411,7 @@ The Fast Cross-Platform Package Manager (https://github.com/mamba-org/mamba)
 
 This can serve as a base image for things installed using conda and mamba.
 
-tags: 0.5.3, 0.6.0, 0.7.0, 0.15.3, 0.21.1, 0.25.0
+tags: 0.5.3, 0.6.0, 0.7.0, 0.15.3, 0.21.1, 0.23.1, 0.25.0
 
 ```
 docker run --rm -it reslp/mamba:0.5.3
