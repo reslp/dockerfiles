@@ -600,7 +600,7 @@ docker run -v $(pwd):/data -it --rm reslp/pyscaf:0.12a
 ## edta
 Extensive de-novo TE annotator - https://github.com/oushujun/EDTA
 
-tags: 1.9.6, 1.9.9
+tags: 1.9.6, 1.9.9, 2.0.1
 
 WORKDIR /data
 
