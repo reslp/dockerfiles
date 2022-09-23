@@ -704,7 +704,7 @@ docker run --rm -it -v $(pwd):/data reslp/mitos:2.0.8
 This is an R container with some phylogenetic packages preinstalled. It is based on my rmarkdown container.
 Packages: ape, phytools, wesanderson, RColorBrewer
 
-tags: 4.0.3 (refers to used R version)
+tags: 4.0.3 (refers to used R version), 4.0.3-strict-versions (with more strict versioning of R packages)
 
 WORKDIR /data
 
