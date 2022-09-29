@@ -33,6 +33,8 @@ RUN R -e 'require(devtools); install_version("pheatmap", version = "1.0.12", rep
 RUN install2.r -e ggfun BiocManager
 Run R -e 'devtools::install_version("rvcheck", version = "0.1.8", repos = "http://cran.us.r-project.org")'
 RUN R -e 'BiocManager::install("ggtree")'
+
+RUN R -e 'require(devtools); install_version("ggnewscale", version = "0.4.7", repos = "http://cran.us.r-project.org")'
 WORKDIR /data
 
 CMD ["R"]
