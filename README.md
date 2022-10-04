@@ -1182,4 +1182,18 @@ WORKDIR /data
 docker run --rm -it reslp/oma-standalone:2.5.0 OMA
 ```
 
+# repeatmodeler-repeatmasker
+
+This container contains RepeatModeler and Repeatmasker including all dependencies (hopefully).
+
+The tag consists of the repeatmodeler version and the repeatmasker version:
+
+tags: 2.0.3-4.1.3
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/repeatmodeler-repeatmasker:2.0.3-4.1.3
+```
+
 
