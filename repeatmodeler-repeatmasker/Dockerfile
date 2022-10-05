@@ -80,6 +80,7 @@ RUN cpanm
 ENV RMBLAST_DIR=/software/rmblast-2.9.0-p2/bin
 ENV RECON_DIR=/software/RECON-1.08/bin
 ENV PATH="/software/RepeatModeler-2.0.3:$PATH"
+ENV PATH="/software/RepeatMasker:$PATH"
 
 WORKDIR /data
 

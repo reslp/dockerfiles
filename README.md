@@ -92,6 +92,7 @@ The **tags** given for each container correspond the the available versions of d
 [raxml-ng](#raxml-ng)
 [rename](#rename)
 [rmarkdown](#rmarkdown-based-on-r)
+[repeatmodeler-repeatmasker](#repeatmodeler-repeatmasker)
 [rphylogenetics](#rphylogenetics)
 [samtools](#samtools)
 [scrape_cazy](#scrape_cazy)
