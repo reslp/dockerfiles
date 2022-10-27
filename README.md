@@ -511,13 +511,12 @@ docker run --rm -it -v $(pwd):/data reslp/trimal:1.4.1 trimal -in /data/aligned_
 ```
 
 ## table2asn
-tags: 20201119
+tags: 20201119, 1.26.678
 
-Program has no good versioning, tags are build dates.
-This is the beta version from NCBI which includes also GFF support.
+Program had no good versioning while in beta, till it was released tags are build dates.
 
 ```
-docker run --rm -it -v $(pwd):/data reslp/table2asn:20201119 linux64.table2asn_GFF -help
+docker run --rm -it -v $(pwd):/data reslp/table2asn:1.26.678 table2asn -h
 ```
 
 ## tbl2asn
