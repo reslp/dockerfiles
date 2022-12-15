@@ -33,6 +33,12 @@ RUN install2.r -e reticulate
 #RUN R -e "tinytex::install_tinytex()"
 #RUN chmod a+w /usr/local/texlive
 #RUN chmod a+w /usr/local/texlive/tlpkg
+RUN R -e "reticulate::install_miniconda(path='/usr/local/reticulateminiconda')"
+RUN R -e "reticulate::conda_install('base', packages='pandas', conda='/usr/local/reticulateminiconda/bin/conda')"
+RUN apt update --allow-releaseinfo-change -y && apt install -y libstdc++6 # necessary for pandas (cython)
+RUN R -e "reticulate::conda_install('base', packages='pyyaml', conda='/usr/local/reticulateminiconda/bin/conda')"
+#ENV PYTHON_CONFIGURE_OPTS="--enable-shared"
+#RUN apt update --allow-releaseinfo-change -y && apt install -y python3 libpython3-dev
 
 WORKDIR /data
 
