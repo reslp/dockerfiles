@@ -715,12 +715,12 @@ docker run --rm -it -v $(pwd):/data reslp/rphylogenetics:4.0.3
 ## Orthofinder
 OrthoFinder: phylogenetic orthology inference for comparative genomics
 
-tags: 2.3.3, 2.5.2
+tags: 2.3.3, 2.5.2, 2.5.4
 
 WORKDIR /data
 
 ```
-docker run --rm -it -v $(pwd):/data reslp/orthofinder:2.5.2
+docker run --rm -it -v $(pwd):/data reslp/orthofinder:2.5.4
 ```
 
 ## Jupyter-Lab
