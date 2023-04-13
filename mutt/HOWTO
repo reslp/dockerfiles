@@ -1,0 +1,2 @@
+docker run --rm -it --user 1000:1000 -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v /home/$USER/Mail:/home/$USER/Mail reslp/mutt:2.2.6 /bin/bash
+docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/:/home/$USER/ -e HOME=/home/$USER reslp/mutt:2.2.6 mutt

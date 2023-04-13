@@ -69,6 +69,7 @@ The **tags** given for each container correspond the the available versions of d
 [multiqc](#multiqc)
 [mummer](#mummer)
 [muscle](#muscle)
+[mutt](#mutt)
 [ncbi-blast](#ncbi-blast)
 [necat](#necat)
 [nim](#nim)
@@ -1198,4 +1199,12 @@ WORKDIR /data
 docker run --rm -it reslp/repeatmodeler-repeatmasker:2.0.3-4.1.3
 ```
 
+# mutt
 
+Open source CLI email client
+
+tags: 3.2.6
+
+```
+docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/:/home/$USER/ -e HOME=/home/$USER reslp/mutt:3.2.6 mutt
+```
