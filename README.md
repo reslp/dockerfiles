@@ -78,6 +78,7 @@ The **tags** given for each container correspond the the available versions of d
 [oma-standalone](#oma-standalone)
 [ont-fast5-api](#ont-fast5-api)
 [orthofinder](#orthofinder)
+[paml](#paml)
 [pal2nal](#pal2nal)
 [pandoc](#pandoc)
 [pear](#pear)
@@ -1208,3 +1209,16 @@ tags: 3.2.6
 ```
 docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/:/home/$USER/ -e HOME=/home/$USER reslp/mutt:3.2.6 mutt
 ```
+
+# PAML
+
+Phylogenetic Analysis by Maximum Likelihood - https://github.com/abacus-gene/paml
+
+tags: 4.10.6
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/paml:4.10.6
+```
+

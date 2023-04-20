@@ -1,0 +1,10 @@
+FROM ubuntu:22.04
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN apt update && apt install -y wget
+WORKDIR /opt/src
+RUN wget https://github.com/abacus-gene/paml/releases/download/v4.10.6/paml-4.10.6-linux-X86_64.tgz && tar xvfz paml-4.10.6-linux-X86_64.tgz 
+RUN chmod +x /opt/src/paml-4.10.6/bin/*
+ENV PATH=$PATH:/opt/src/paml-4.10.6/bin
+WORKDIR /data
+
