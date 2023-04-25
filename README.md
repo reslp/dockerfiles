@@ -1222,3 +1222,19 @@ WORKDIR /data
 docker run --rm -it reslp/paml:4.10.6
 ```
 
+# pass
+
+the standard unix password manager - https://www.passwordstore.org/
+
+HOME /data
+
+GnuPG and pass needs to be configured correctly for this to work.
+
+```
+# linux
+docker run --rm -it -v $HOME:/data --user $(id -u):$(id -g) reslp/pass:1.7.4
+
+# mac
+docker run --rm -it -v $HOME:/data reslp/pass:1.7.4
+```
+
