@@ -81,6 +81,7 @@ The **tags** given for each container correspond the the available versions of d
 [paml](#paml)
 [pal2nal](#pal2nal)
 [pandoc](#pandoc)
+[pass](#pass)
 [pear](#pear)
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
