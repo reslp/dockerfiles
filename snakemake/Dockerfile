@@ -16,3 +16,4 @@ RUN mkdir data
 RUN cd data
 ENTRYPOINT ["snakemake"]
 CMD ["-v"]
+

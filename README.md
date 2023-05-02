@@ -101,6 +101,7 @@ The **tags** given for each container correspond the the available versions of d
 [scrape_cazy](#scrape_cazy)
 [seqtk](#seqtk)
 [singularity](#singularity)
+[snakemake](#snakemake)
 [spades](#spades)
 [sra-tools](#sra-tools)
 [table2asn](#table2asn)
@@ -1239,3 +1240,12 @@ docker run --rm -it -v $HOME:/data --user $(id -u):$(id -g) reslp/pass:1.7.4
 docker run --rm -it -v $HOME:/data reslp/pass:1.7.4
 ```
 
+# snakemake
+
+The Snakemake workflow management system - https://snakemake.readthedocs.io/en/stable/
+
+tags: 6.0.2
+
+```
+docker run --rm -it reslp/snakemake:6.0.2
+```

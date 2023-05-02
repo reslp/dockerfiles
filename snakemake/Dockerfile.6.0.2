@@ -1,0 +1,10 @@
+FROM reslp/mamba:1.4.1
+
+MAINTAINER <resl.philipp@bio.lmu.de>
+
+
+RUN mamba install -y -c conda-forge -c bioconda snakemake==6.0.2
+
+WORKDIR data
+
+CMD ["snakemake"]
