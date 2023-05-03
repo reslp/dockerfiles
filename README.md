@@ -73,6 +73,7 @@ The **tags** given for each container correspond the the available versions of d
 [ncbi-blast](#ncbi-blast)
 [necat](#necat)
 [nim](#nim)
+[nimbio_plus](#nimbio-plus)
 [norgal](#norgal)
 [novoplasty](#novoplasty)
 [oma-standalone](#oma-standalone)
@@ -1248,4 +1249,14 @@ tags: 6.0.2
 
 ```
 docker run --rm -it reslp/snakemake:6.0.2
+```
+
+#nimbio_plus
+
+My own nimbio library together with nim, glob and a few other things
+
+tags: 0.0.1, 0.0.2
+
+```
+docker run --rm -it reslp/nimbio_plus:0.0.2
 ```
