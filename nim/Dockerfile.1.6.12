@@ -14,8 +14,10 @@ RUN cd nim-1.6.12 && sh install.sh /usr/bin && bin/nim c koch && ./koch boot -d:
 RUN cp /opt/src/nim-1.6.12/bin/* /usr/bin
 RUN apt install -y git
 RUN git clone https://github.com/PMunch/nimcr && cd nimcr && nim c -d:release nimcr.nim && mv nimcr /usr/bin
-RUN nimble install -y glob
-RUN nimble install -y https://github.com/reslp/nimbio
+RUN mkdir /opt/src/nimble-packages
+RUN HOME="/opt/src/nimble-packages" && nimble install -y glob
+RUN HOME="/opt/src/nimble-packages" && nimble install -y https://github.com/reslp/nimbio
+ENV NIMBLE_DIR=/opt/src/nimble-packages
 
 WORKDIR /data
 
