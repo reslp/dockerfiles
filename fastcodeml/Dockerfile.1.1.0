@@ -1,0 +1,11 @@
+FROM ubuntu:22.04
+
+RUN apt update 
+RUN apt install -y build-essential
+RUN apt install -y wget
+WORKDIR /opt/src
+RUN wget https://selectome.org/ftp/FastCodeML/FastCodeML-1.1.0.tar.gz
+RUN tar xvfz FastCodeML-1.1.0.tar.gz
+ENV PATH=/opt/src/FastCodeML-1.1.0:$PATH
+WORKDIR /data
+

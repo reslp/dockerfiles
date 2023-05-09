@@ -39,6 +39,7 @@ The **tags** given for each container correspond the the available versions of d
 [emboss](#emboss)
 [ete3](#ete3)
 [fasta3](#fasta3)
+[fastcodeml](#fastcodeml)
 [fastqc](#fastqc)
 [fastuniq](#fastuniq)
 [ffsend](#ffsend)
@@ -1251,7 +1252,7 @@ tags: 6.0.2
 docker run --rm -it reslp/snakemake:6.0.2
 ```
 
-#nimbio_plus
+# nimbio_plus
 
 My own nimbio library together with nim, glob and a few other things
 
@@ -1260,3 +1261,15 @@ tags: 0.0.1, 0.0.2
 ```
 docker run --rm -it reslp/nimbio_plus:0.0.2
 ```
+
+# fastcodeml
+
+FastCodeML is a software to infer positive selection along positions of a protein coding gene using the Branch-Site model of evolution - https://bioweb.pasteur.fr/packages/pack@FastCodeML@1.1.0
+
+tags: 1.1.0
+
+```
+docker run --rm -it reslp/fastcodeml:1.1.0 fast
+```
+
+
