@@ -1218,7 +1218,7 @@ docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /e
 
 Phylogenetic Analysis by Maximum Likelihood - https://github.com/abacus-gene/paml
 
-tags: 4.10.6
+tags: 4.9 (conda version, comes with biopython1.81 scipy), 4.10.6
 
 WORKDIR /data
 

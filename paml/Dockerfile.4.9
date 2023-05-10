@@ -1,0 +1,7 @@
+FROM reslp/mamba:1.4.1
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y -c bioconda biopython=1.81 paml=4.9
+RUN mamba install -y -c anaconda scipy=1.10.1
+RUN conda clean -a
+WORKDIR /data
