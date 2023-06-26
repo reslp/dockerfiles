@@ -1,0 +1,7 @@
+FROM reslp/mamba:1.4.1
+
+RUN mamba install -c bioconda diamond=2.0.7
+
+WORKDIR /data
+
+CMD ["diamond", "version"]

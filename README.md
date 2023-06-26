@@ -34,6 +34,7 @@ The **tags** given for each container correspond the the available versions of d
 [cupp](#cupp)
 [deeploc](#deeploc)
 [dentist](#dentist)
+[diamond](#diamond)
 [edta](#edta)
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
@@ -1270,6 +1271,18 @@ tags: 1.1.0
 
 ```
 docker run --rm -it reslp/fastcodeml:1.1.0 fast
+```
+
+# diamond
+
+Accelerated BLAST compatible local sequence aligner. - https://github.com/bbuchfink/diamond
+
+tags: 0.9.22, 2.0.7
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/diamond:2.0.7
 ```
 
 
