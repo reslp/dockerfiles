@@ -62,6 +62,7 @@ The **tags** given for each container correspond the the available versions of d
 [magic-wormhole](#magic-wormhole)
 [mamba](#mamba)
 [maxbin](#maxbin)
+[mcl](#mcl)
 [metabat](#metabat)
 [metaxa](#metaxa)
 [miniBarcoder](#miniBarcoder)
@@ -1283,6 +1284,19 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/diamond:2.0.7
+```
+
+# MCL
+
+
+MCL - a cluster algorithm for graphs - https://github.com/micans/mcl
+
+tags: 14.137
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/mcl:14.137
 ```
 
 
