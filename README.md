@@ -454,9 +454,9 @@ docker run --rm -it reslp/ubuntu:20.04
 ## cafe
 Software for Computational Analysis of gene Family Evolution 
 
-tags: 4.2.1, 5.0.0b2
+tags: 4.2.1, 5.0.0b2, 5.1.0
 
-WORKDIR /data (5.0.0b2)
+WORKDIR /data (5.0.0b2, 5.1.0)
 ```
 docker run --rm -it reslp/cafe:4.2.1
 docker run --rm -it -v $(pwd):/data reslp/cafe:5.0.0b2 cafe
