@@ -27,6 +27,7 @@ The **tags** given for each container correspond the the available versions of d
 [bowtie2](#bowtie2)
 [busco](#busco)
 [cafe](#cafe)
+[cafe-viz](#cafe-viz)
 [clustalo](#clustalo)
 [colord](#colord)
 [concoct](#concoct)
@@ -1298,5 +1299,22 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/mcl:14.137
 ```
+
+# cafe-viz
+
+Tools for visualizing cafe output. Currently includes:  
+cafeplotter and CAFE_Fig  
+https://github.com/moshi4/CafePlotter  
+https://github.com/LKremer/CAFE_fig
+
+tags: 1.0
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/cafe-viz:1.0 cafeplotter
+docker run --rm -it reslp/cafe-viz:1.0 python3 /usr/bin/CAFE_fig.py
+```
+
 
 

@@ -1,0 +1,10 @@
+FROM reslp/mamba:1.4.1
+
+RUN pip install cafeplotter # install cafe plotter: https://github.com/moshi4/CafePlotter
+RUN pip3 install 'ete3==3.0.0b35'
+RUN pip3 install scipy
+WORKDIR /software
+RUN git clone https://github.com/LKremer/CAFE_fig.git && cd CAFE_fig && cp CAFE_fig.py /usr/bin 
+WORKDIR /data
+
+
