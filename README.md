@@ -1292,7 +1292,7 @@ docker run --rm -it reslp/diamond:2.0.7
 
 MCL - a cluster algorithm for graphs - https://github.com/micans/mcl
 
-tags: 14.137
+tags: 14.137, 22.282
 
 WORKDIR /data
 

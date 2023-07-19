@@ -1,0 +1,9 @@
+FROM ubuntu:22.04
+
+RUN apt-get update
+RUN apt install -y wget build-essential
+WORKDIR /software
+RUN wget https://micans.org/mcl/src/cimfomfa-22-273.tar.gz && tar xvfz cimfomfa-22-273.tar.gz && cd cimfomfa-22-273 && ./configure --disable-shared && make && make install
+RUN wget https://micans.org/mcl/src/mcl-22-282.tar.gz && tar xvfz mcl-22-282.tar.gz && cd mcl-22-282 && ./configure --enable-rcl && make && make install
+
+WORKDIR /data
