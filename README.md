@@ -88,6 +88,7 @@ The **tags** given for each container correspond the the available versions of d
 [pandoc](#pandoc)
 [pass](#pass)
 [pear](#pear)
+[phykit](#phykit)
 [phylobayes](#phylobayes)
 [phylobayes-mpi](#phylobayes-mpi)
 [phylopy](#phylopy)
@@ -1317,4 +1318,14 @@ docker run --rm -it reslp/cafe-viz:1.0 python3 /usr/bin/CAFE_fig.py
 ```
 
 
+# phykit
 
+a UNIX shell toolkit for processing and analyzing multiple sequence alignments and phylogenies - https://github.com/jlsteenwyk/phykit
+
+tags: 1.11.15
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/phykit:1.11.15 phykit -h
+```
