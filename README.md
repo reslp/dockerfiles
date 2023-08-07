@@ -49,6 +49,7 @@ The **tags** given for each container correspond the the available versions of d
 [flash](#flash)
 [fmlrc](#fmlrc)
 [gatk](#gatk)
+[genome-viz](#genome-viz)
 [get_organelle](#get_organelle)
 [guidance2](#guidance2)
 [hmmer](#hmmer)
@@ -1329,3 +1330,14 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/phykit:1.11.15 phykit -h
 ```
+
+# genome-viz
+
+a python script to visualize genome assemblies - https://github.com/reslp/genomics
+
+tags: 1.0
+
+```
+docker run --rm -it reslp/genome-viz:1.0 genome_viz.py
+```
+

@@ -1,0 +1,4 @@
+FROM reslp/mamba:1.4.1
+
+RUN mamba install -c conda-forge numpy=1.25.0 pillow=9.4.0
+RUN git clone https://github.com/reslp/genomics.git  && mv genomics/genome_viz.py /usr/local/bin && chmod +x /usr/local/bin/genome_viz.py
