@@ -20,6 +20,7 @@ The **tags** given for each container correspond the the available versions of d
 [beast](#beast)
 [bedops](#bedops)
 [bedtools](#bedtools)
+[bibcure](#bibcure)
 [biopython_plus](#biopython_plus)
 [blobtools](#blobtools)
 [bmge](#bmge)
@@ -1341,3 +1342,14 @@ tags: 1.0
 docker run --rm -it reslp/genome-viz:1.0 genome_viz.py
 ```
 
+# bibcure
+
+Bibcure helps in boring tasks by keeping your bibfile up to date and normalized...also allows you to easily download all papers inside your bibtex. - https://github.com/bibcure/bibcure
+
+tags: 0.3.0
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/bibcure:0.3.0 doi2bib -i literature_only_dois.txt -o bib.txt
+```
