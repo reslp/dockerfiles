@@ -1353,3 +1353,14 @@ WORKDIR /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/bibcure:0.3.0 doi2bib -i literature_only_dois.txt -o bib.txt
 ```
+
+# amplicon_sorter
+
+Sorts amplicons from Nanopore sequencing data based on similarity - https://github.com/avierstr/amplicon_sorter
+
+Tags are based on git commits, since there is no versioning. 
+tags: 33f0d38
+
+```
+docker run --rm -it -v $(pwd):/data reslp/amplicon_sorter:33f0d38 amplicon_sorter.py
+```
