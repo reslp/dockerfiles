@@ -385,7 +385,7 @@ docker run --rm -it -v $(pwd):/data reslp/phylobayes:4.1c
 ```
 
 ## phylobayes-mpi
-tags: 1.8b, git_dca7bdf, c12c4d7
+tags: 1.8b, git_dca7bdf, c12c4d7, 3c77656 (commit from Feb 2023)
 
 WORDIR is /data
 ```
@@ -1095,7 +1095,7 @@ docker run --rm -it reslp/magic-wormhole:0.12.0
 
 A universal document converter. https://pandoc.org/
 
-tags: 2.18
+tags: 2.18, 3.1.3
 
 WORKDIR /data
 

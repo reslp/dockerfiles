@@ -1,0 +1,17 @@
+FROM ubuntu:20.04
+MAINTAINER <philipp.resl@uni-graz.at>
+
+# necessary for tzdata (installed as dependency of libopenmpi)
+ENV TZ=Europe/Vienna
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+RUN apt-get update && apt-get install -y wget build-essential libopenmpi-dev
+RUN apt-get install -y git
+
+WORKDIR /software
+
+RUN git clone https://github.com/bayesiancook/pbmpi.git && cd pbmpi && git checkout 3c77656 && cd sources && make && cp -r ../data/* /usr/local/bin
+
+WORKDIR /data
+
+CMD ["pb_mpi"]
