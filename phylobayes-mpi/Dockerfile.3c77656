@@ -5,10 +5,11 @@ MAINTAINER <philipp.resl@uni-graz.at>
 ENV TZ=Europe/Vienna
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt-get update && apt-get install -y wget build-essential libopenmpi-dev
+RUN apt-get update && apt-get install -y wget build-essential
 RUN apt-get install -y git
 
 WORKDIR /software
+RUN wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.5.tar.bz2 && tar xf openmpi-4.1.5.tar.bz2 && cd openmpi-4.1.5 && ./configure --prefix=/usr/bin && make all && make install
 
 RUN git clone https://github.com/bayesiancook/pbmpi.git && cd pbmpi && git checkout 3c77656 && cd sources && make && cp -r ../data/* /usr/local/bin
 
