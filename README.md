@@ -52,6 +52,7 @@ The **tags** given for each container correspond the the available versions of d
 [gatk](#gatk)
 [genome-viz](#genome-viz)
 [get_organelle](#get_organelle)
+[gnuplot](#gnuplot)
 [guidance2](#guidance2)
 [hmmer](#hmmer)
 [ima2](#ima2)
@@ -1377,4 +1378,15 @@ WORKDIR /data
 ```
 docker run --rm -it -v $(pwd):/data reslp/typst:0.7.0 typst watch /data/document.typ
 ```
+
+# gnuplot
+
+Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. - http://www.gnuplot.info/
+
+tags: 5.4.9
+
+```
+docker run --rm -it reslp/gnuplot:5.4.9
+```
+
 
