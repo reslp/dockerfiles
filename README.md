@@ -1144,7 +1144,7 @@ docker run --rm -it -v $(pwd):/data reslp/rename:1.10-1
 
 PyInstaller bundles a Python application and all its dependencies into a single package.
 
-tags: 5.1
+tags: 5.1, 6.1
 
 WORKDIR /data
 
