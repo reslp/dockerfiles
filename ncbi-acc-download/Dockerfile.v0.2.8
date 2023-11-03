@@ -1,0 +1,7 @@
+FROM reslp/mamba:1.4.1
+MAINTAINER <philipp.resl@uni-grasz.at>
+
+RUN mamba install -c bioconda ncbi-acc-download 
+
+WORKDIR /data
+CMD ["ncbi-acc-download"]

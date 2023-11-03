@@ -1,0 +1,55 @@
+LOCUS       MK152534                 626 bp    DNA     linear   PLN 24-DEC-2018
+DEFINITION  UNVERIFIED: Cladia aggregata isolate CL82 translation elongation
+            factor 1 alpha-like (ef1a) gene, partial sequence.
+ACCESSION   MK152534
+VERSION     MK152534.1
+KEYWORDS    UNVERIFIED.
+SOURCE      Cladia aggregata
+  ORGANISM  Cladia aggregata
+            Eukaryota; Fungi; Dikarya; Ascomycota; Pezizomycotina;
+            Lecanoromycetes; OSLEUM clade; Lecanoromycetidae; Lecanorales;
+            Lecanorineae; Cladoniaceae; Cladia.
+REFERENCE   1  (bases 1 to 626)
+  AUTHORS   Stenroos,S., Pino-Bodas,R., Hyvoenen,J., Lumbsch,H.T. and Ahti,T.
+  TITLE     Phylogeny of the family Cladoniaceae (Lecanoromycetes, Ascomycota)
+            based on sequences of multiple loci
+  JOURNAL   Cladistics (2019) In press
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 626)
+  AUTHORS   Pino-Bodas,R., Stenroos,S., Lumbsch,T. and Ahti,T.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (08-NOV-2018) Micologia, Real Jardin Botanico de Madrid,
+            Plaza de Murillo, 2, Madrid 28014, Spain
+COMMENT     GenBank staff is unable to verify sequence and/or annotation
+            provided by the submitter.
+            
+            ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..626
+                     /organism="Cladia aggregata"
+                     /mol_type="genomic DNA"
+                     /isolate="CL82"
+                     /specimen_voucher="Miettinen 11620,7 (H)"
+                     /db_xref="taxon:52587"
+                     /country="Indonesia: Papua"
+     gene            <1..>626
+                     /gene="ef1a"
+     misc_feature    <1..>626
+                     /gene="ef1a"
+                     /note="similar to translation elongation factor 1 alpha"
+ORIGIN      
+        1 taaggccgag cgtgagcgtg gtatcaccat cgatattgcg ctatggaagt ttgagactcc
+       61 caagtactac gtcaccgtca ttggtaagtc ctgttgtagt cactcaacca attcagcagt
+      121 catgcttata gcttgttaca gacgctcctg gccatcgtga cttcattaag aacatgatca
+      181 ctggtacctc ccaggctgac tgcgccatcc tcattatcgc cgccggtact ggtgaattcg
+      241 aagctggtat ctccaaggat ggccagactc gtgagcacgc tcttctcgcc tacaccttgg
+      301 gtgtcaggca actcatcgtc gccatcaaca agatggacac agccaagtgg tccggcgacc
+      361 gatacaatga gatcatcaag gaaacctcca acttcatcaa gaaggttgga tacaacccaa
+      421 agaccgttcc ttttgtgccc atctctggtt tcaatggtga caacatgatc gacgagtcca
+      481 gcaactgccc ttggtataag ggttgggaga aggaaaccaa gaccaaatcc actggcaaga
+      541 cccttctcga ggccattgat gccatcgacc cccctagccg tcctaccgat aagccgctgc
+      601 gtcttcctct tcaagatgtc tacaag
+//
+
