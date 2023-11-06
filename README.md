@@ -113,6 +113,7 @@ The **tags** given for each container correspond the the available versions of d
 [snakemake](#snakemake)
 [spades](#spades)
 [sra-tools](#sra-tools)
+[stringtie](#stringtie)
 [table2asn](#table2asn)
 [tbl2asn](#tbl2asn)
 [trimal](#trimal)
