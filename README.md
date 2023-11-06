@@ -1401,4 +1401,16 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/ncbi-acc-download:0.2.8 ncbi-acc-download
 ```
 
+# stringtie
+
+Transcript assembly and quantification for RNA-Seq - https://github.com/gpertea/stringtie
+
+tags: 2.2.1
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/stringtie:2.2.1 stringtie
+```
+
 

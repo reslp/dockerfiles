@@ -1,0 +1,8 @@
+FROM reslp/mamba:1.4.1
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -c bioconda stringtie=2.2.1
+
+WORKDIR /data
+
+CMD ["stringtie"]
