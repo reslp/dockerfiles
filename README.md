@@ -1373,12 +1373,12 @@ docker run --rm -it -v $(pwd):/data reslp/amplicon_sorter:33f0d38 amplicon_sorte
 
 A new markup-based typesetting system that is powerful and easy to learn. - https://github.com/typst/typst
 
-tags: 0.7.0
+tags: 0.7.0, 0.9.0
 
 WORKDIR /data
 
 ```
-docker run --rm -it -v $(pwd):/data reslp/typst:0.7.0 typst watch /data/document.typ
+docker run --rm -it -v $(pwd):/data reslp/typst:0.9.0 typst watch /data/document.typ
 ```
 
 # gnuplot
