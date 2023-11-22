@@ -56,6 +56,7 @@ The **tags** given for each container correspond the the available versions of d
 [guidance2](#guidance2)
 [hmmer](#hmmer)
 [ima2](#ima2)
+[imagemagick](#imagemagick)
 [interproscan-wrapper](#interproscan-wrapper)
 [iqtree](#iqtree)
 [julia](#julia)
@@ -1412,6 +1413,18 @@ WORKDIR /data
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/stringtie:2.2.1 stringtie
+```
+
+# imagemagick
+
+ImageMagick is a free, open-source software suite, used for editing and manipulating digital images. - https://imagemagick.org/index.php
+
+tags: 7.1.0_46
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/imagemagick:7.1.0_46 convert
 ```
 
 
