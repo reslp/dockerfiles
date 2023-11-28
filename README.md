@@ -1427,4 +1427,15 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/imagemagick:7.1.0_46 convert
 ```
 
+# tectonic
+
+Tectonic is a modernized, complete, self-contained TeX/LaTeX engine, powered by XeTeX and TeXLive. - https://tectonic-typesetting.github.io/en-US/
+
+tags: 0.14.1
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/tectonic:0.14.1 tectonic
+```
 

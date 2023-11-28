@@ -1,0 +1,14 @@
+FROM reslp/mamba:1.4.1
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y -c conda-forge tectonic=0.14.1
+
+WORKDIR /tmp
+
+ADD first-build.tex /tmp/first-build.tex
+
+RUN tectonic first-build.tex
+
+WORKDIR /data
+
+CMD ["tectonic"]
