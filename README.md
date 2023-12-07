@@ -1439,3 +1439,16 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/tectonic:0.14.1 tectonic
 ```
 
+# multiqc
+
+Aggregate results from bioinformatics analyses across many samples into a single report  - https://multiqc.info/
+
+tags: 1.6, 1.17
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/multiqc:1.17 multiqc
+```
+
+
