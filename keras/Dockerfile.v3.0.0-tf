@@ -1,0 +1,17 @@
+FROM reslp/mamba:1.4.1
+
+RUN mamba install pip
+RUN python -m pip install keras==3.0.0
+RUN python3 -m pip install tensorflow
+RUN python -m pip install keras==3.0.0
+ENV KERAS_BACKEND="tensorflow"
+RUN wget https://raw.githubusercontent.com/keras-team/keras/master/requirements-tensorflow-cuda.txt && wget https://raw.githubusercontent.com/keras-team/keras/master/requirements-common.txt && python -m pip install -r requirements-tensorflow-cuda.txt
+# now install dependecies for GPU
+RUN python -m pip install matplotlib
+RUN python -m pip install keras-tuner -q
+RUN python -m pip install scikit-learn
+
+WORKDIR /data
+
+CMD ["python"]
+

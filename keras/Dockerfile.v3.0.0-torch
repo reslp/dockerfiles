@@ -1,0 +1,16 @@
+FROM reslp/mamba:1.4.1
+
+RUN mamba install pip
+RUN python -m pip install keras==3.0.0
+RUN python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+ENV KERAS_BACKEND="torch"
+# now install dependecies for GPU
+RUN wget https://raw.githubusercontent.com/keras-team/keras/master/requirements-torch-cuda.txt && wget https://raw.githubusercontent.com/keras-team/keras/master/requirements-common.txt && python -m pip install -r requirements-torch-cuda.txt
+RUN python -m pip install -U scikit-learn
+RUN python -m pip install matplotlib
+RUN python -m pip install keras-tuner -q
+
+WORKDIR /data
+
+CMD ["python"]
+

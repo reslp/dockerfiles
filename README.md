@@ -61,6 +61,7 @@ The **tags** given for each container correspond the the available versions of d
 [iqtree](#iqtree)
 [julia](#julia)
 [jupyter-lab](#jupyter-lab)
+[keras](#keras)
 [kmergenie](#kmergenie)
 [macse](#macse)
 [mafft](#mafft)
@@ -1451,4 +1452,13 @@ WORKDIR /data
 docker run --rm -it reslp/multiqc:1.17 multiqc
 ```
 
+# keras
+
+These containers come with the deep-learing library KERAS together with several additional libraries such as pandas, numpy, sci-kit and scikit-learn, matplotlib etc.
+
+tags: 3.0.0-torch, 3.0.0-tf
+
+```
+docker run --rm -it reslp/keras:3.0.0-tf
+```
 
