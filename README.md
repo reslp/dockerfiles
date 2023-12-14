@@ -118,6 +118,7 @@ The **tags** given for each container correspond the the available versions of d
 [stringtie](#stringtie)
 [table2asn](#table2asn)
 [tbl2asn](#tbl2asn)
+[treeshrink](treeshrink)
 [trimal](#trimal)
 [trimmomatic](#trimmomatic)
 [typst](#typst)
@@ -1460,5 +1461,17 @@ tags: 3.0.0-torch, 3.0.0-tf
 
 ```
 docker run --rm -it reslp/keras:3.0.0-tf
+```
+
+# treeshrink
+
+TreeShrink is an algorithm for detecting abnormally long branches in one or more phylogenetic trees. - https://github.com/uym2/TreeShrink
+
+tags: 1.3.9
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/treeshrink:1.3.9 run_treeshrink -h
 ```
 

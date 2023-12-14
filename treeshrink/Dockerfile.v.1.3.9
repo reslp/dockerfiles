@@ -1,0 +1,9 @@
+FROM reslp/mamba:1.4.1
+
+RUN mamba install -y -c smirarab treeshrink=1.3.9
+
+WORKDIR /data
+
+CMD ["run_treeshrink"]
+
+
