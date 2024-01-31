@@ -1,0 +1,9 @@
+FROM condaforge/miniforge3:23.11.0-0
+
+RUN mamba install -y -c bioconda ipyrad=0.9.93
+
+WORKDIR /data
+
+CMD ["ipyrad"]
+
+

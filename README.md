@@ -58,6 +58,7 @@ The **tags** given for each container correspond the the available versions of d
 [ima2](#ima2)
 [imagemagick](#imagemagick)
 [interproscan-wrapper](#interproscan-wrapper)
+[ipyrad](#ipyrad)
 [iqtree](#iqtree)
 [julia](#julia)
 [jupyter-lab](#jupyter-lab)
@@ -1475,3 +1476,14 @@ WORKDIR /data
 docker run --rm -it reslp/treeshrink:1.3.9 run_treeshrink -h
 ```
 
+# ipyrad
+
+Interactive assembly and analysis of RAD-seq data sets - https://github.com/dereneaton/ipyrad
+
+tags: 0.9.93
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/ipyrad:0.9.93 ipyrad
+```
