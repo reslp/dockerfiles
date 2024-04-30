@@ -734,14 +734,14 @@ docker run --rm -it -v $(pwd):/data reslp/rphylogenetics:4.0.3
 ## Orthofinder
 OrthoFinder: phylogenetic orthology inference for comparative genomics
 
-tags: 2.3.3, 2.5.2, 2.5.4
+tags: 2.3.3, 2.5.2, 2.5.4, 2.5.5
 
 **Note**: The version 2.5.4 of orthofinder seems to have a problem with formatting trees. This seems to be related to [this](https://github.com/davidemms/OrthoFinder/issues/782). Although in my container the python version is 3.9. Up to stride orthofinder seems to run correctly.
 
 WORKDIR /data
 
 ```
-docker run --rm -it -v $(pwd):/data reslp/orthofinder:2.5.4
+docker run --rm -it -v $(pwd):/data reslp/orthofinder:2.5.5
 ```
 
 ## Jupyter-Lab

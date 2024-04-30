@@ -2,7 +2,7 @@ FROM reslp/mamba:1.4.1
 
 MAINTAINER <philipp.resl@uni-graz.at>
 
-RUN mamba install -c bioconda orthofinder=2.5.4
+RUN mamba install -y -c bioconda -c conda-forge orthofinder=2.5.5
 RUN conda clean -a -y
 
 WORKDIR /data
