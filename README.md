@@ -253,7 +253,7 @@ Run QUAST on all fasta files in current directory:
 `
 
 ## ncbi-blast
-tags: 2.9.0
+tags: 2.9.0, 2.15.0
 
 To create a blast database and run a blastp search:
 `my_sequences.fasta`and `sequences_to_search.fa`need to be in the current working directory. The blastdb will also be created there.

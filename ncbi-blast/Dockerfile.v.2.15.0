@@ -1,0 +1,6 @@
+FROM mambaorg/micromamba:1.5.8
+MAINTAINER <resl.philipp@bio.lmu.de>
+
+RUN micromamba install --yes -n base -c conda-forge -c anaconda -c bioconda blast=2.15.0
+
+CMD ["blastn", "-version"]
