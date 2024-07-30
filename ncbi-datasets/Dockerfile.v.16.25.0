@@ -3,4 +3,5 @@ MAINTAINER <philipp.resl@uni-graz.at>
 
 RUN micromamba install --yes -n base -c conda-forge ncbi-datasets-cli=16.25.0
 
+ENV PATH="$PATH:/opt/conda/bin:/opt/conda/condabin"
 CMD ["datasets"]
