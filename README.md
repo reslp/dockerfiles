@@ -1496,7 +1496,7 @@ NCBI Datasets command-line clients - https://www.ncbi.nlm.nih.gov/datasets/docs/
 tags: 16.25.0
 
 ```
-docker run --rm -it reslp/datasets:16.25.0 datasets
+docker run --rm -it reslp/ncbi-datasets:16.25.0 datasets
 ```
 
 
