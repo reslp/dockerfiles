@@ -81,6 +81,7 @@ The **tags** given for each container correspond the the available versions of d
 [muscle](#muscle)
 [mutt](#mutt)
 [ncbi-blast](#ncbi-blast)
+[ncbi-datasets](#ncbi-datasets)
 [necat](#necat)
 [nim](#nim)
 [nimbio_plus](#nimbio-plus)
@@ -1487,3 +1488,15 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/ipyrad:0.9.93 ipyrad
 ```
+
+# ncbi-datasets
+
+NCBI Datasets command-line clients - https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
+
+tags: 16.25.0
+
+```
+docker run --rm -it reslp/datasets:16.25.0 datasets
+```
+
+
