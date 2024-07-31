@@ -120,6 +120,7 @@ The **tags** given for each container correspond the the available versions of d
 [stringtie](#stringtie)
 [table2asn](#table2asn)
 [tbl2asn](#tbl2asn)
+[tcoffee](#tcoffee)
 [treeshrink](treeshrink)
 [trimal](#trimal)
 [trimmomatic](#trimmomatic)
@@ -1498,5 +1499,17 @@ tags: 16.25.0
 ```
 docker run --rm -it reslp/ncbi-datasets:16.25.0 datasets
 ```
+
+#tcoffee
+
+A collection of tools for Computing, Evaluating and Manipulating Multiple Alignments of DNA, RNA, Protein Sequences and Structures. - https://github.com/cbcrg/tcoffee
+
+tags: 11.0.8
+
+```
+docker run --rm -it reslp/tcoffee:11.0.8 t_coffee
+```
+
+
 
 

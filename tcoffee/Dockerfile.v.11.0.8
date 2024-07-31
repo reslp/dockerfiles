@@ -1,0 +1,7 @@
+FROM mambaorg/micromamba:1.5.8
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN micromamba install --yes -n base -c bioconda -c conda-forge t_coffee=11.0.8
+
+ENV PATH="$PATH:/opt/conda/bin:/opt/conda/condabin"
+CMD ["t_coffee"]
