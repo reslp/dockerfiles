@@ -29,6 +29,7 @@ The **tags** given for each container correspond the the available versions of d
 [busco](#busco)
 [cafe](#cafe)
 [cafe-viz](#cafe-viz)
+[clipkit](#clipkit)
 [clustalo](#clustalo)
 [colord](#colord)
 [concoct](#concoct)
@@ -1500,7 +1501,7 @@ tags: 16.25.0
 docker run --rm -it reslp/ncbi-datasets:16.25.0 datasets
 ```
 
-#tcoffee
+# tcoffee
 
 A collection of tools for Computing, Evaluating and Manipulating Multiple Alignments of DNA, RNA, Protein Sequences and Structures. - https://github.com/cbcrg/tcoffee
 
@@ -1510,6 +1511,14 @@ tags: 11.0.8, v.13.46.0.919e8c6b
 docker run --rm -it reslp/tcoffee:13.46.0.919e8c6b t_coffee
 ```
 
+# clipkit
 
+Alignment trimming software for phylogenetics. - https://github.com/jlsteenwyk/clipkit
+
+tags: 2.3.0
+
+```
+docker run --rm -it reslp/clipkit:2.3.0 clipkit
+```
 
 
