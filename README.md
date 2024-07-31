@@ -1504,10 +1504,10 @@ docker run --rm -it reslp/ncbi-datasets:16.25.0 datasets
 
 A collection of tools for Computing, Evaluating and Manipulating Multiple Alignments of DNA, RNA, Protein Sequences and Structures. - https://github.com/cbcrg/tcoffee
 
-tags: 11.0.8
+tags: 11.0.8, v.13.46.0.919e8c6b
 
 ```
-docker run --rm -it reslp/tcoffee:11.0.8 t_coffee
+docker run --rm -it reslp/tcoffee:13.46.0.919e8c6b t_coffee
 ```
 
 
