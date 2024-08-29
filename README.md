@@ -1369,7 +1369,9 @@ docker run --rm -it -v $(pwd):/data reslp/bibcure:0.3.0 doi2bib -i literature_on
 Sorts amplicons from Nanopore sequencing data based on similarity - https://github.com/avierstr/amplicon_sorter
 
 Tags are based on git commits, since there is no versioning. 
-tags: 33f0d38
+tags: 33f0d38, c811f09
+
+INFO: The c811f09 is based on my own fork of amplicion_sorter. I added a feature there to change the limit of reads used to create and save the consensus alignment through the -rc flag. This flag does not exist in the official amplicon_sorter.
 
 ```
 docker run --rm -it -v $(pwd):/data reslp/amplicon_sorter:33f0d38 amplicon_sorter.py
