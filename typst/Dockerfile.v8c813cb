@@ -1,0 +1,9 @@
+FROM rust:slim-bullseye
+MAINTAINER <philipp.resl@uni-graz.at>
+
+
+WORKDIR /data
+RUN apt update && apt install -y libssl-dev openssl pkg-config
+RUN cargo install --git https://github.com/typst/typst --locked typst-cli
+
+CMD ["typst"]
