@@ -1,0 +1,7 @@
+FROM mambaorg/micromamba:1.5.8
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN micromamba install --yes -n base -c bioconda -c conda-forge prank=v.150803
+
+ENV PATH="$PATH:/opt/conda/bin:/opt/conda/condabin"
+CMD ["prank"]

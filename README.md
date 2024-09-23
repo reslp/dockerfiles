@@ -103,6 +103,7 @@ The **tags** given for each container correspond the the available versions of d
 [phylo-scripts](#phylo-scripts)
 [picard](#picard)
 [pigz](#pigz)
+[prank](#prank)
 [purge_haplotigs](#purge_haplotigs)
 [pyinstaller](#pyinstaller)
 [pyscaf](#pyscaf)
@@ -1521,6 +1522,16 @@ tags: 2.3.0
 
 ```
 docker run --rm -it reslp/clipkit:2.3.0 clipkit
+```
+
+# prank
+
+PRANK is a probabilistic multiple alignment program for DNA, codon and amino-acid sequences. - https://ariloytynoja.github.io/prank-msa/
+
+tags: v150803
+
+```
+docker run --rm -it reslp/prank:v150803 prank
 ```
 
 
