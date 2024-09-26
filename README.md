@@ -35,6 +35,7 @@ The **tags** given for each container correspond the the available versions of d
 [concoct](#concoct)
 [consent](#consent)
 [cupp](#cupp)
+[datasets](#datasets)
 [deeploc](#deeploc)
 [dentist](#dentist)
 [diamond](#diamond)
@@ -1534,4 +1535,12 @@ tags: v150803
 docker run --rm -it reslp/prank:v150803 prank
 ```
 
+# datasets
 
+The NCBI Datasets command-line tools (CLI) - https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
+
+tags: 2
+
+```
+docker run --rm -it reslp/datasets:2 datasets
+```

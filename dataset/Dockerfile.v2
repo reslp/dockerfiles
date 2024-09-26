@@ -1,0 +1,7 @@
+FROM ubuntu:24.04
+
+RUN apt update && apt install -y build-essential curl
+RUN curl -o datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets' && chmod +x datasets && mv datasets /usr/bin
+RUN curl -o dataformat 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/dataformat' && chmod +x dataformat && mv dataformat /usr/bin
+
+CMD ["datasets"]
