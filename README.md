@@ -1453,12 +1453,12 @@ docker run --rm -it -v $(pwd):/data reslp/tectonic:0.14.1 tectonic
 
 Aggregate results from bioinformatics analyses across many samples into a single report  - https://multiqc.info/
 
-tags: 1.6, 1.17
+tags: 1.6, 1.17 (broken), 1.25.1
 
 WORKDIR /data
 
 ```
-docker run --rm -it reslp/multiqc:1.17 multiqc
+docker run --rm -it reslp/multiqc:1.25.1 multiqc
 ```
 
 # keras
