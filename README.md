@@ -562,10 +562,10 @@ WORKDIR /data
 
 For convenience the flappy container now also includes ont-fast5-api v. 3.1.6. 
 ```
-# see also ont-fast5-api container on how to convert multi-read fast5 (which is the current read type) to single-read fast5.
+## see also ont-fast5-api container on how to convert multi-read fast5 (which is the current read type) to single-read fast5.
 docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f flappie --help
 docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f flappie /data/fast5_single/0/ > 0.fastq
-# using ont-fast5-api:
+## using ont-fast5-api:
 docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f multi_to_single_fast5 -i /data/fast5_pass -s /data/fast5_single -t 4
 ```
 
@@ -573,7 +573,7 @@ docker run --rm -it -v $(pwd):/data reslp/flappie:4de542f multi_to_single_fast5 
 tags: 3.1.6
 
 ```
-# this will convert multi-read fast5 (newer Minion read type) to single-read fast5. See here: https://github.com/nanoporetech/flappie/issues/32
+## this will convert multi-read fast5 (newer Minion read type) to single-read fast5. See here: https://github.com/nanoporetech/flappie/issues/32
 docker run --rm -it -v $(pwd):/data reslp/ont-fast5-api:3.1.6 multi_to_single_fast5 -i /data/fast5_pass -s /data/fast5_single -t 4
 ```
 
@@ -917,7 +917,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/fasta3:36.3.8 glsearch36 /data/query.fas /data/subset.fasta
 ```
 
-# macse
+## macse
 
 MACSE: Multiple Alignment of Coding SEquences Accounting for Frameshifts and Stop Codons.
 
@@ -930,7 +930,7 @@ docker run --rm -it reslp/macse:1.2 macse
 docker run --rm -it reslp/macse:2.05 macse -h
 ```
 
-# julia
+## julia
 
 julia - The Julia Programming Language
 
@@ -944,7 +944,7 @@ WORDKIR /data
 docker run --rm -it reslp/julia:1.6.3 julia
 ```
 
-# nim
+## nim
 
 Nim programming lanuage
 
@@ -954,7 +954,7 @@ tags: 1.4.8, 1.6.6, 1.6.12
 docker run --rm -it reslp/nim:1.6.6
 ```
 
-# mosdepth
+## mosdepth
 
 fast BAM/CRAM depth calculation for WGS, exome, or targeted sequencing (https://github.com/brentp/mosdepth)
 
@@ -964,7 +964,7 @@ tags: 0.3.3
 docker run --rm -it reslp/mosdepth:0.3.3
 ```
 
-# viralmsa
+## viralmsa
 
 Reference-guided multiple sequence alignment of viral genomes  (https://github.com/niemasd/ViralMSA)
 
@@ -978,7 +978,7 @@ WORKDUT /data
 docker run --rm -it reslp/viralmsa:1.1.20 ViralMSA.py -h
 ```
 
-# dentist
+## dentist
 
 Close assembly gaps using long-reads at high accuracy. (https://github.com/a-ludi/dentist)
 
@@ -990,7 +990,7 @@ tags: 3.0.0
 docker run --rm -it reslp/dentist:3.0.0 dentist
 ```
 
-# muscle
+## muscle
 
 Multiple sequence alignment with top benchmark scores scalable to thousands of sequences. (https://github.com/rcedgar/muscle)
 
@@ -1002,7 +1002,7 @@ WORKDIR /data
 docker run --rm -it reslp/muscle:5.1 muscle
 ```
 
-# necat
+## necat
 
 NECAT is an error correction and de-novo assembly tool for Nanopore long noisy reads. (https://github.com/xiaochuanle/NECAT)
 
@@ -1016,7 +1016,7 @@ The script in the container is called necat not necat.pl.
 docker run --rm -it reslp/necat:0.0.1_update20200803 necat
 ```
 
-# colord
+## colord
 
 A versatile compressor of third generation sequencing reads. (https://github.com/refresh-bio/colord)
 
@@ -1028,7 +1028,7 @@ WORKDIR /data
 docker run --rm -it reslp/colord:1.1.0 colord
 ```
 
-# bmge
+## bmge
 
 BMGE (Block Mapping and Gathering with Entropy) is a program that selects regions in a multiple sequence alignment that are suited for phylogenetic inference. (https://bioweb.pasteur.fr/packages/pack@BMGE@1.12/)
 
@@ -1040,7 +1040,7 @@ WORKDIR /data
 docker run --rm -it reslp/bmge:1.12 bmge
 ```
 
-# ete3
+## ete3
 
 A Python framework for the analysis and visualization of trees. - http://etetoolkit.org/
 
@@ -1054,7 +1054,7 @@ WORKDIR /data
 docker run --rm -it reslp/ete3:3.1.2
 ```
 
-# dendropy
+## dendropy
 
 DendroPy Phylogenetic Computing Library - https://dendropy.org/
 
@@ -1066,7 +1066,7 @@ WORKDIR /data
 docker run --rm -it reslp/dendropy:4.5.2
 ```
 
-# phylopy
+## phylopy
 
 A container with dendropy, ete3 and pandas based on python 3.7.
 
@@ -1078,7 +1078,7 @@ WORKDIR /data
 docker run --rm -it reslp/phylopy:1
 ```
 
-# ffsend
+## ffsend
 
 Easily and securely share files from the command line. A fully featured Firefox Send client. https://github.com/timvisee/ffsend
 
@@ -1090,7 +1090,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/ffsend:0.2.76 ffsend upload myfile.txt
 ```
 
-# magic-wormhole
+## magic-wormhole
 
 Get things from one computer to another, safely. https://github.com/magic-wormhole/magic-wormhole
 
@@ -1102,7 +1102,7 @@ WORKDIR /data
 docker run --rm -it reslp/magic-wormhole:0.12.0
 ```
 
-# pandoc
+## pandoc
 
 A universal document converter. https://pandoc.org/
 
@@ -1114,7 +1114,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/pandoc:2.18 pandoc test.md -o test.pdf
 ```
 
-# beast
+## beast
 
 Bayesian Evolutionary Analysis by Sampling Trees - https://github.com/CompEvol/beast2
 
@@ -1126,7 +1126,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/beast:2.6.7
 ```
 
-# pigz
+## pigz
 
 Parallel implementation of gzip
 
@@ -1138,7 +1138,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/pigz:2.6
 ```
 
-# rename
+## rename
 
 Rename files
 
@@ -1150,7 +1150,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/rename:1.10-1 
 ```
 
-# pyinstaller
+## pyinstaller
 
 PyInstaller bundles a Python application and all its dependencies into a single package.
 
@@ -1162,7 +1162,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/pyinstaller:5.1
 ```
 
-# pear
+## pear
 
 PEAR is an ultrafast, memory-efficient and highly accurate pair-end read merger
 
@@ -1174,7 +1174,7 @@ WORKDIR /data
 docker run --rm -it reslp/pear:0.9.6
 ```
 
-# taxonkit
+## taxonkit
 
 A Practical and Efficient NCBI Taxonomy Toolkit - https://github.com/shenwei356/taxonkit
 
@@ -1186,7 +1186,7 @@ WORKDIR /data
 docker run --rm -it reslp/taxonkit:0.12.0
 ```
 
-# exonerate
+## exonerate
 
 Exonerate - A generic tool for pairwise sequence comparison / alignment
 
@@ -1196,7 +1196,7 @@ tags: 2.4.0
 docker run --rm -it reslp/exonerate:2.4.0
 ```
 
-# oma-standalone
+## oma-standalone
 
 Standalone version of the OMA Orthology Matrix - https://omabrowser.org/oma/home/
 
@@ -1208,7 +1208,7 @@ WORKDIR /data
 docker run --rm -it reslp/oma-standalone:2.5.0 OMA
 ```
 
-# repeatmodeler-repeatmasker
+## repeatmodeler-repeatmasker
 
 This container contains RepeatModeler and Repeatmasker including all dependencies (hopefully).
 
@@ -1222,7 +1222,7 @@ WORKDIR /data
 docker run --rm -it reslp/repeatmodeler-repeatmasker:2.0.3-4.1.3
 ```
 
-# mutt
+## mutt
 
 Open source CLI email client
 
@@ -1232,7 +1232,7 @@ tags: 3.2.6
 docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/:/home/$USER/ -e HOME=/home/$USER reslp/mutt:3.2.6 mutt
 ```
 
-# PAML
+## PAML
 
 Phylogenetic Analysis by Maximum Likelihood - https://github.com/abacus-gene/paml
 
@@ -1244,7 +1244,7 @@ WORKDIR /data
 docker run --rm -it reslp/paml:4.10.6
 ```
 
-# pass
+## pass
 
 the standard unix password manager - https://www.passwordstore.org/
 
@@ -1253,14 +1253,14 @@ HOME /data
 GnuPG and pass needs to be configured correctly for this to work.
 
 ```
-# linux
+## linux
 docker run --rm -it -v $HOME:/data --user $(id -u):$(id -g) reslp/pass:1.7.4
 
-# mac
+## mac
 docker run --rm -it -v $HOME:/data reslp/pass:1.7.4
 ```
 
-# snakemake
+## snakemake
 
 The Snakemake workflow management system - https://snakemake.readthedocs.io/en/stable/
 
@@ -1270,7 +1270,7 @@ tags: 6.0.2
 docker run --rm -it reslp/snakemake:6.0.2
 ```
 
-# nimbio_plus
+## nimbio_plus
 
 My own nimbio library together with nim, glob, ggplotnim, clapfn, nimx 
 
@@ -1280,7 +1280,7 @@ tags: 0.0.1, 0.0.2, 0.0.3
 docker run --rm -it reslp/nimbio_plus:0.0.2
 ```
 
-# fastcodeml
+## fastcodeml
 
 FastCodeML is a software to infer positive selection along positions of a protein coding gene using the Branch-Site model of evolution - https://bioweb.pasteur.fr/packages/pack@FastCodeML@1.1.0
 
@@ -1290,7 +1290,7 @@ tags: 1.1.0
 docker run --rm -it reslp/fastcodeml:1.1.0 fast
 ```
 
-# diamond
+## diamond
 
 Accelerated BLAST compatible local sequence aligner. - https://github.com/bbuchfink/diamond
 
@@ -1302,7 +1302,7 @@ WORKDIR /data
 docker run --rm -it reslp/diamond:2.0.7
 ```
 
-# MCL
+## MCL
 
 
 MCL - a cluster algorithm for graphs - https://github.com/micans/mcl
@@ -1315,7 +1315,7 @@ WORKDIR /data
 docker run --rm -it reslp/mcl:14.137
 ```
 
-# cafe-viz
+## cafe-viz
 
 Tools for visualizing cafe output. Currently includes:  
 cafeplotter and CAFE_Fig  
@@ -1332,7 +1332,7 @@ docker run --rm -it reslp/cafe-viz:1.0 python3 /usr/bin/CAFE_fig.py
 ```
 
 
-# phykit
+## phykit
 
 a UNIX shell toolkit for processing and analyzing multiple sequence alignments and phylogenies - https://github.com/jlsteenwyk/phykit
 
@@ -1344,7 +1344,7 @@ WORKDIR /data
 docker run --rm -it reslp/phykit:1.11.15 phykit -h
 ```
 
-# genome-viz
+## genome-viz
 
 a python script to visualize genome assemblies - https://github.com/reslp/genomics
 
@@ -1354,7 +1354,7 @@ tags: 1.0
 docker run --rm -it reslp/genome-viz:1.0 genome_viz.py
 ```
 
-# bibcure
+## bibcure
 
 Bibcure helps in boring tasks by keeping your bibfile up to date and normalized...also allows you to easily download all papers inside your bibtex. - https://github.com/bibcure/bibcure
 
@@ -1366,7 +1366,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/bibcure:0.3.0 doi2bib -i literature_only_dois.txt -o bib.txt
 ```
 
-# amplicon_sorter
+## amplicon_sorter
 
 Sorts amplicons from Nanopore sequencing data based on similarity - https://github.com/avierstr/amplicon_sorter
 
@@ -1379,7 +1379,7 @@ INFO: The c811f09 is based on my own fork of amplicion_sorter. I added a feature
 docker run --rm -it -v $(pwd):/data reslp/amplicon_sorter:33f0d38 amplicon_sorter.py
 ```
 
-# typst
+## typst
 
 A new markup-based typesetting system that is powerful and easy to learn. - https://github.com/typst/typst
 
@@ -1391,7 +1391,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/typst:0.9.0 typst watch /data/document.typ
 ```
 
-# gnuplot
+## gnuplot
 
 Gnuplot is a portable command-line driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms. - http://www.gnuplot.info/
 
@@ -1401,7 +1401,7 @@ tags: 5.4.9
 docker run --rm -it reslp/gnuplot:5.4.9
 ```
 
-# ncbi-acc-download
+## ncbi-acc-download
 
 Download files from NCBI Entrez by accession - https://github.com/kblin/ncbi-acc-download/
 
@@ -1413,7 +1413,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/ncbi-acc-download:0.2.8 ncbi-acc-download
 ```
 
-# stringtie
+## stringtie
 
 Transcript assembly and quantification for RNA-Seq - https://github.com/gpertea/stringtie
 
@@ -1425,7 +1425,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/stringtie:2.2.1 stringtie
 ```
 
-# imagemagick
+## imagemagick
 
 ImageMagick is a free, open-source software suite, used for editing and manipulating digital images. - https://imagemagick.org/index.php
 
@@ -1437,7 +1437,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/imagemagick:7.1.0_46 convert
 ```
 
-# tectonic
+## tectonic
 
 Tectonic is a modernized, complete, self-contained TeX/LaTeX engine, powered by XeTeX and TeXLive. - https://tectonic-typesetting.github.io/en-US/
 
@@ -1449,7 +1449,7 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/tectonic:0.14.1 tectonic
 ```
 
-# multiqc
+## multiqc
 
 Aggregate results from bioinformatics analyses across many samples into a single report  - https://multiqc.info/
 
@@ -1461,7 +1461,7 @@ WORKDIR /data
 docker run --rm -it reslp/multiqc:1.25.1 multiqc
 ```
 
-# keras
+## keras
 
 These containers come with the deep-learing library KERAS together with several additional libraries such as pandas, numpy, sci-kit and scikit-learn, matplotlib etc.
 
@@ -1471,7 +1471,7 @@ tags: 3.0.0-torch, 3.0.0-tf
 docker run --rm -it reslp/keras:3.0.0-tf
 ```
 
-# treeshrink
+## treeshrink
 
 TreeShrink is an algorithm for detecting abnormally long branches in one or more phylogenetic trees. - https://github.com/uym2/TreeShrink
 
@@ -1483,7 +1483,7 @@ WORKDIR /data
 docker run --rm -it reslp/treeshrink:1.3.9 run_treeshrink -h
 ```
 
-# ipyrad
+## ipyrad
 
 Interactive assembly and analysis of RAD-seq data sets - https://github.com/dereneaton/ipyrad
 
@@ -1495,7 +1495,7 @@ WORKDIR /data
 docker run --rm -it reslp/ipyrad:0.9.93 ipyrad
 ```
 
-# ncbi-datasets
+## ncbi-datasets
 
 NCBI Datasets command-line clients - https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
 
@@ -1505,7 +1505,7 @@ tags: 16.25.0
 docker run --rm -it reslp/ncbi-datasets:16.25.0 datasets
 ```
 
-# tcoffee
+## tcoffee
 
 A collection of tools for Computing, Evaluating and Manipulating Multiple Alignments of DNA, RNA, Protein Sequences and Structures. - https://github.com/cbcrg/tcoffee
 
@@ -1515,7 +1515,7 @@ tags: 11.0.8, v.13.46.0.919e8c6b
 docker run --rm -it reslp/tcoffee:13.46.0.919e8c6b t_coffee
 ```
 
-# clipkit
+## clipkit
 
 Alignment trimming software for phylogenetics. - https://github.com/jlsteenwyk/clipkit
 
@@ -1525,7 +1525,7 @@ tags: 2.3.0
 docker run --rm -it reslp/clipkit:2.3.0 clipkit
 ```
 
-# prank
+## prank
 
 PRANK is a probabilistic multiple alignment program for DNA, codon and amino-acid sequences. - https://ariloytynoja.github.io/prank-msa/
 
@@ -1535,7 +1535,7 @@ tags: v150803
 docker run --rm -it reslp/prank:v150803 prank
 ```
 
-# datasets
+## datasets
 
 The NCBI Datasets command-line tools (CLI) - https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/
 
