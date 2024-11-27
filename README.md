@@ -42,6 +42,7 @@ The **tags** given for each container correspond the the available versions of d
 [edta](#edta)
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
+[entrez-direct](entrez-direct)
 [ete3](#ete3)
 [fasta3](#fasta3)
 [fastcodeml](#fastcodeml)
@@ -1544,3 +1545,14 @@ tags: 2
 ```
 docker run --rm -it reslp/datasets:2 datasets
 ```
+
+## entrez-direct
+
+Entrez Direct: E-utilities on the Unix Command Line - https://www.ncbi.nlm.nih.gov/books/NBK179288/
+
+tags: 22.4
+
+```
+docker run --rm it reslp/entrez-direct:22.4 esearch
+```
+

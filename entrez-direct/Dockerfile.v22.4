@@ -1,0 +1,5 @@
+FROM reslp/mamba:1.4.1
+
+RUN mamba install -c bioconda entrez-direct=22.4
+
+CMD ["datasets"]
