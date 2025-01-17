@@ -1556,3 +1556,14 @@ tags: 22.4
 docker run --rm it reslp/entrez-direct:22.4 esearch
 ```
 
+## sphinx
+
+Create intelligent and beautiful documentation with ease - https://www.sphinx-doc.org/en/master/
+
+tags: 8.1.3
+
+This is used to create phylociraptor's documentation locally.
+
+```
+docker run --rm -v $(pwd):/docs reslp/sphinx:8.1.3 make html
+```
