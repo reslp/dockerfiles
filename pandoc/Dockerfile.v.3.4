@@ -1,0 +1,11 @@
+FROM mambaorg/micromamba:1.5.8
+MAINTAINER <philipp.resl@uni-graz.at>
+
+USER root
+RUN micromamba install -n base --yes -c conda-forge pandoc=3.4 python=3
+RUN DEBIAN_FRONTEND=noninteractive && apt update && apt install -y texlive
+RUN apt install -y texlive-plain-generic texlive-xetex
+WORKDIR /data
+USER 1001
+
+CMD ["pandoc", "-h"]

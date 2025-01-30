@@ -1107,7 +1107,7 @@ docker run --rm -it reslp/magic-wormhole:0.12.0
 
 A universal document converter. https://pandoc.org/
 
-tags: 2.18, 3.1.3
+tags: 2.18, 3.1.3, 3.4
 
 WORKDIR /data
 
