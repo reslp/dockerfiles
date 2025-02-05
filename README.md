@@ -229,7 +229,7 @@ docker run --rm reslp/metabat:2.13
 ```
 
 ## busco
-tags: 3.0.2, 4.1.4, 5.2.1
+tags: 3.0.2, 4.1.4, 5.2.1, 5.7.0
 
 The command for busco >4 is busco instead of run_busco on busco <4.
 
