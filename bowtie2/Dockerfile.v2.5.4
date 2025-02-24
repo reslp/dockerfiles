@@ -1,0 +1,4 @@
+FROM reslp/mamba:2.0.5
+RUN mamba install -c bioconda bowtie2=2.5.4
+
+CMD ["bowtie2", "-h"]

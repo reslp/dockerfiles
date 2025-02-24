@@ -818,12 +818,12 @@ docker run --rm reslp/speedtest-cli:2.1.3 speedtest-cli --csv >> /home/pi/speedt
 ## bowtie2
 Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences. - https://github.com/BenLangmead/bowtie2
 
-tags: 2.3.5
+tags: 2.3.5, 2.5.4
 
 WORKDIR /data
 
 ```
-docker run reslp/bowtie2:2.3.5 bowtie2
+docker run reslp/bowtie2:2.5.4 bowtie2
 ```
 
 ## fastuniq

@@ -1,0 +1,7 @@
+FROM reslp/mamba:2.0.5
+
+RUN mamba install -c bioconda getorganelle=1.7.7.1
+RUN get_organelle_config.py -a animal_mt,embplant_mt,embplant_nr,embplant_pt,fungus_mt,other_pt
+
+CMD ["get_organelle_from_reads.py"]
+
