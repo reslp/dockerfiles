@@ -1,0 +1,8 @@
+FROM reslp/mamba:2.0.5
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -c bioconda -y samtools=1.21
+	
+WORKDIR /data
+
+CMD ["samtools"]

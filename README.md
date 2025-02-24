@@ -515,17 +515,19 @@ docker run --rm -it reslp/bedtools:2.29.2
 ```
 
 ## get_organelle
-tags: 1.7.1
+tags: 1.7.1, 1.7.7.1
 
 ```
 docker run --rm -it reslp/getorganelle:1.7.1 get_organelle_from_reads.py
 ```
 
 ## samtools
-tags: 1.9, 1.11
+tags: 1.9, 1.11, 1.21
+
+WORKDIR /data
 
 ```
-docker run --rm -it reslp/samtools:1.11
+docker run --rm -it reslp/samtools:1.21
 ```
 
 ## trimal
