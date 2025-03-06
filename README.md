@@ -1569,3 +1569,15 @@ This is used to create phylociraptor's documentation locally.
 ```
 docker run --rm -v $(pwd):/docs reslp/sphinx:8.1.3 make html
 ```
+
+## easy353
+
+Easy353 is a tool for recovering Angiosperms353 gene set. - https://github.com/plant720/Easy353
+
+WORDIR /data
+
+tags: 2.0.2
+
+```
+docker run --rm -it reslp/easy353:2.0.2
+```
