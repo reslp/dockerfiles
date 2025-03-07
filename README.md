@@ -1581,3 +1581,18 @@ tags: 2.0.2
 ```
 docker run --rm -it reslp/easy353:2.0.2
 ```
+
+## Jupyter hub
+
+A multi-user version of the notebook designed for companies, classrooms and research labs - https://jupyter.org/hub
+
+tags: 5.2.1
+
+WORKDIR /data
+
+Have a look here to see how this can be run with singularity: https://github.com/reslp/jupyterhub-singularity
+
+```
+docker run --rm -it reslp/jupyter-hub:5.2.1 jupyterhub
+```
+

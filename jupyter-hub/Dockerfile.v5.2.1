@@ -1,0 +1,11 @@
+FROM quay.io/jupyterhub/jupyterhub:5.2.1
+
+WORKDIR /data
+ENV PYTHONPATH="${PYTHONPATH}:/data"
+RUN pip install jupyterhub-nativeauthenticator
+RUN pip install dockerspawner
+RUN pip install jupyterlab
+RUN pip uninstall -y terminado
+RUN pip install matplotlib pandas numpy
+RUN pip install opencv-python
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 -y
