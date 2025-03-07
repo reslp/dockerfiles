@@ -39,6 +39,7 @@ The **tags** given for each container correspond the the available versions of d
 [deeploc](#deeploc)
 [dentist](#dentist)
 [diamond](#diamond)
+[easy353](#easy353)
 [edta](#edta)
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
@@ -64,6 +65,7 @@ The **tags** given for each container correspond the the available versions of d
 [ipyrad](#ipyrad)
 [iqtree](#iqtree)
 [julia](#julia)
+[jupyterhub](#jupyterhub)
 [jupyter-lab](#jupyter-lab)
 [keras](#keras)
 [kmergenie](#kmergenie)
@@ -120,6 +122,7 @@ The **tags** given for each container correspond the the available versions of d
 [singularity](#singularity)
 [snakemake](#snakemake)
 [spades](#spades)
+[sphinx](#sphinx)
 [sra-tools](#sra-tools)
 [stringtie](#stringtie)
 [table2asn](#table2asn)
@@ -1582,7 +1585,7 @@ tags: 2.0.2
 docker run --rm -it reslp/easy353:2.0.2
 ```
 
-## Jupyter hub
+## Jupyterhub
 
 A multi-user version of the notebook designed for companies, classrooms and research labs - https://jupyter.org/hub
 
