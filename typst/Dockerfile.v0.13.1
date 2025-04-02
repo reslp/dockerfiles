@@ -1,0 +1,8 @@
+FROM reslp/mamba:2.0.5
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y conda-forge::typst=0.13.1
+
+WORKDIR /data
+
+CMD ["typst"]
