@@ -1,0 +1,13 @@
+FROM ubuntu:24.04
+
+RUN apt update && apt install -y wget unzip default-jre
+WORKDIR /etc/software
+RUN wget https://github.com/rambaut/figtree/releases/download/v1.4.4/FigTree_v1.4.4.tgz && tar xfv FigTree_v1.4.4.tgz
+RUN mv FigTree_v1.4.4 figtree
+RUN chmod +x figtree/bin/figtree
+RUN sed -i 's$lib$/etc/software/figtree/bin/lib$' /etc/software/figtree/bin/figtree
+RUN mv figtree/lib figtree/bin
+ENV PATH="$PATH:/etc/software/figtree/bin:/etc/software/figtree/bin/lib"
+WORKDIR /data
+
+CMD ["figtree"]

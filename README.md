@@ -50,6 +50,7 @@ The **tags** given for each container correspond the the available versions of d
 [fastqc](#fastqc)
 [fastuniq](#fastuniq)
 [ffsend](#ffsend)
+[figtree](#figtree)
 [flappie](#flappie)
 [flash](#flash)
 [fmlrc](#fmlrc)
@@ -1599,3 +1600,19 @@ Have a look here to see how this can be run with singularity: https://github.com
 docker run --rm -it reslp/jupyter-hub:5.2.1 jupyterhub
 ```
 
+
+## figtree
+
+Software to visualize phylogenetic trees - https://github.com/rambaut/figtree
+
+WORKDIR /data
+
+Note:
+
+This requires xquartz to be running and accepting connections. Look here for details: https://gist.github.com/cschiewek/246a244ba23da8b9f0e7b11a68bf3285
+
+You can also use the figtree script in the folder of the dockerfile to automate this.
+
+```
+docker run -e DISPLAY=${HOSTNAME}:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME:/data --rm -it reslp/figtree:1.4.4 figtree
+```

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Starting xquartz..."
+open -a XQuartz
+while ! ls /tmp/.X11-unix/* > /dev/null 2>&1; do # this is necessary because xquartz needs to create a display socket which can take some time
+    echo "Waiting for X server to start..."
+    sleep 1
+done
+sleep 1
+echo "Setting up xhost..."
+xhost + ${HOSTNAME} 
+sleep 1
+echo "Starting figtree..."
+docker run -e DISPLAY=${HOSTNAME}:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME:/data --rm reslp/figtree:1.4.4 figtree
