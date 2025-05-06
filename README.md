@@ -124,6 +124,7 @@ The **tags** given for each container correspond the the available versions of d
 [snakemake](#snakemake)
 [spades](#spades)
 [sphinx](#sphinx)
+[spython](#spython)
 [sra-tools](#sra-tools)
 [stringtie](#stringtie)
 [table2asn](#table2asn)
@@ -1615,4 +1616,15 @@ You can also use the figtree script in the folder of the dockerfile to automate 
 
 ```
 docker run -e DISPLAY=${HOSTNAME}:0 -v /tmp/.X11-unix:/tmp/.X11-unix -v $HOME:/data --rm -it reslp/figtree:1.4.4 figtree
+```
+
+## spython
+
+Singularity Python is a Python API to work with the Singularity open source software - https://singularityhub.github.io/singularity-cli/
+
+WORKDIR /data
+
+Convert a dockerfile to a singularity definition file:
+```
+docker run --rm -it -v $(pwd):/data reslp/spython:0.3.14 spython recipe /data/Dockerfile > Singularity.def
 ```
