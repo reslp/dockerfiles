@@ -1,0 +1,25 @@
+FROM ubuntu:24.04
+# modified from: https://github.com/conda-forge/miniforge-images/blob/master/ubuntu/Dockerfile
+
+ARG MINIFORGE_NAME=Miniforge3
+ARG MINIFORGE_VERSION=25.3.0-3
+
+# setting conda directory and language
+ENV CONDA_DIR=/opt/miniforge
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV PATH=${CONDA_DIR}/bin:${PATH}
+
+RUN apt update && apt install --no-install-recommends -y \
+	wget bzip2 ca-certificates git && \
+	apt clean && rm -rf /var/lib/apt/lists/* && \
+	wget https://github.com/conda-forge/miniforge/releases/download/${MINIFORGE_VERSION}/${MINIFORGE_NAME}-${MINIFORGE_VERSION}-Linux-x86_64.sh -O /tmp/miniforge.sh && \
+	/bin/bash /tmp/miniforge.sh -b -p ${CONDA_DIR} && \
+	rm /tmp/miniforge.sh && \
+	conda clean --tarballs --index-cache --packages --yes && \
+	find ${CONDA_DIR} -follow -type f -name '*.a' -delete && \
+	find ${CONDA_DIR} -follow -type f -name '*.pyc' -delete && \
+	conda clean --force-pkgs-dirs --all --yes  && \
+	echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> /etc/skel/.bashrc && \
+	echo ". ${CONDA_DIR}/etc/profile.d/conda.sh && conda activate base" >> ~/.bashrc
+
+CMD ["conda"]

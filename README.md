@@ -79,6 +79,7 @@ The **tags** given for each container correspond the the available versions of d
 [metabat](#metabat)
 [metaxa](#metaxa)
 [miniBarcoder](#miniBarcoder)
+[miniforge](#miniforge)
 [mitos](#mitos)
 [mosdepth](#mosdepth)
 [mrbayes](#mrbayes)
@@ -1627,4 +1628,16 @@ WORKDIR /data
 Convert a dockerfile to a singularity definition file:
 ```
 docker run --rm -it -v $(pwd):/data reslp/spython:0.3.14 spython recipe /data/Dockerfile > Singularity.def
+```
+
+## miniforge
+
+A conda-forge distribution - https://github.com/conda-forge/miniforge
+
+This can serve as base for docker containers with conda install
+
+tags: 25.3.0-3
+
+```
+docker run --rm -it reslp/miniforge:25.3.0-3
 ```
