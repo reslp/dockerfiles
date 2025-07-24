@@ -123,6 +123,7 @@ The **tags** given for each container correspond the the available versions of d
 [scrape_cazy](#scrape_cazy)
 [seqtk](#seqtk)
 [singularity](#singularity)
+[sourmash](#sourmash)
 [snakemake](#snakemake)
 [spades](#spades)
 [sphinx](#sphinx)
@@ -1655,4 +1656,15 @@ WORKDIR /data
 docker run --rm -it reslp/mash:2.3
 ```
 
+## sourmash
+
+Quickly search, compare, and analyze genomic and metagenomic data sets. - https://github.com/sourmash-bio/sourmash
+
+tags: 3.2.2, 4.9.3
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/sourmah:4.9.3
+```
 
