@@ -1,0 +1,7 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN conda install -c bioconda mash=2.3
+
+WORKDIR /data
+
+RUN ["mash"]

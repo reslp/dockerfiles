@@ -74,6 +74,7 @@ The **tags** given for each container correspond the the available versions of d
 [mafft](#mafft)
 [magic-wormhole](#magic-wormhole)
 [mamba](#mamba)
+[mash](#mash)
 [maxbin](#maxbin)
 [mcl](#mcl)
 [metabat](#metabat)
@@ -1641,3 +1642,17 @@ tags: 25.3.0-3
 ```
 docker run --rm -it reslp/miniforge:25.3.0-3
 ```
+
+## mash
+
+Fast sequence distance estimator that uses MinHash - https://github.com/marbl/Mash
+
+tags: 2.3
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/mash:2.3
+```
+
+
