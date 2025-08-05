@@ -1,2 +1,8 @@
 docker run --rm -it --user 1000:1000 -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v /home/$USER/Mail:/home/$USER/Mail reslp/mutt:2.2.6 /bin/bash
 docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/:/home/$USER/ -e HOME=/home/$USER reslp/mutt:2.2.6 mutt
+
+This can be added to .bashrc:
+
+alias mutt="docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/:/home/reslp/ -e HOME=/home/reslp -w $HOME reslp/mutt:2.2.14 mutt"
+
+Password encryption with GPG works but it seems that the host and container need to have the same gpg version!
