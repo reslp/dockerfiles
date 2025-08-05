@@ -1235,12 +1235,12 @@ docker run --rm -it reslp/repeatmodeler-repeatmasker:2.0.3-4.1.3
 
 ## mutt
 
-Open source CLI email client
+Open source CLI email client - http://www.mutt.org/
 
-tags: 3.2.6
+tags: 2.2.6, 2.2.14
 
 ```
-docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/:/home/$USER/ -e HOME=/home/$USER reslp/mutt:3.2.6 mutt
+docker run --rm -it --user $(id -u):$(id -g) -v /etc/passwd:/etc/passwd:ro -v /etc/group:/etc/group:ro -v $HOME/:/home/$USER/ -e HOME=/home/$USER -w $HOME reslp/mutt:2.2.14 mutt
 ```
 
 ## PAML
