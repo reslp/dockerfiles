@@ -1,0 +1,9 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install conda-forge::uv=0.8.18
+
+RUN uv pip install blobtoolkit==4.4.5 --system
+
+WORKDIR /data
+
+

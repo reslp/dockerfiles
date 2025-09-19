@@ -22,6 +22,7 @@ The **tags** given for each container correspond the the available versions of d
 [bedtools](#bedtools)
 [bibcure](#bibcure)
 [biopython_plus](#biopython_plus)
+[blobtoolkit](#blobtoolkit)
 [blobtools](#blobtools)
 [bmge](#bmge)
 [bonito](#bonito)
@@ -1668,4 +1669,15 @@ WORKDIR /data
 docker run --rm -it reslp/sourmah:4.9.3
 ```
 
+## blobtoolkit
+
+Successor of blobtools1 and 2 - https://github.com/genomehubs/blobtoolkit
+
+tags: 4.4.5
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/blobtoolkit:4.4.5
+```
 
