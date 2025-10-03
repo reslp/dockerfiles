@@ -1681,3 +1681,15 @@ WORKDIR /data
 docker run --rm -it reslp/blobtoolkit:4.4.5
 ```
 
+## uv
+
+An extremly fast Python package manager - https://docs.astral.sh/uv/
+
+tags: 0.8.22
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/uv:0.8.22 uv run bin/script.py
+```
+

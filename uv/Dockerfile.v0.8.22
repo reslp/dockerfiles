@@ -1,0 +1,5 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install -c conda-forge uv=0.8.22
+
+WORKDIR /data
