@@ -1,0 +1,8 @@
+FROM reslp/miniforge:25.3.0-3
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y -c conda-forge magic-wormhole=0.20.0
+WORKDIR /data
+
+CMD ["wormhole"]
+

@@ -1106,12 +1106,12 @@ docker run --rm -it -v $(pwd):/data reslp/ffsend:0.2.76 ffsend upload myfile.txt
 
 Get things from one computer to another, safely. https://github.com/magic-wormhole/magic-wormhole
 
-tags: 0.12.0
+tags: 0.12.0, 0.20.0
 
 WORKDIR /data
 
 ```
-docker run --rm -it reslp/magic-wormhole:0.12.0
+docker run --rm -it reslp/magic-wormhole:0.20.0
 ```
 
 ## pandoc
