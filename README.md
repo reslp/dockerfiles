@@ -30,6 +30,7 @@ The **tags** given for each container correspond the the available versions of d
 [busco](#busco)
 [cafe](#cafe)
 [cafe-viz](#cafe-viz)
+[cd-hit](#cd-hit)
 [clipkit](#clipkit)
 [clustalo](#clustalo)
 [colord](#colord)
@@ -44,7 +45,7 @@ The **tags** given for each container correspond the the available versions of d
 [edta](#edta)
 [eggnog-mapper](#eggnog-mapper)
 [emboss](#emboss)
-[entrez-direct](entrez-direct)
+[entrez-direct](#entrez-direct)
 [ete3](#ete3)
 [fasta3](#fasta3)
 [fastcodeml](#fastcodeml)
@@ -1693,3 +1694,14 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/uv:0.8.22 uv run bin/script.py
 ```
 
+## cd-hit
+
+CD-HIT stands for Cluster Database at High Identity with Tolerance. - https://www.bioinformatics.org/cd-hit/
+
+tags: 4.8.1
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/cdhit:4.8.1 cd-hit
+```

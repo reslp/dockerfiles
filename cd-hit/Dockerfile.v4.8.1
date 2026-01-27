@@ -1,0 +1,8 @@
+FROM reslp/mamba:2.0.5
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y bioconda::cd-hit=4.8.1
+
+WORKDIR /data
+
+CMD ["cd-hit"]
