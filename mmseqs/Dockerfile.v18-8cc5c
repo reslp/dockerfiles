@@ -1,0 +1,7 @@
+FROM reslp/miniforge:25.3.0-3
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y -c conda-forge -c bioconda mmseqs2=18.8cc5c
+WORKDIR /data
+
+CMD ["mmseqs"]

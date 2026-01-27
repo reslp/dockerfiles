@@ -84,6 +84,7 @@ The **tags** given for each container correspond the the available versions of d
 [miniBarcoder](#miniBarcoder)
 [miniforge](#miniforge)
 [mitos](#mitos)
+[mmseqs2](#mmseqs2)
 [mosdepth](#mosdepth)
 [mrbayes](#mrbayes)
 [multiqc](#multiqc)
@@ -1705,3 +1706,17 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/cdhit:4.8.1 cd-hit
 ```
+
+## mmseqs2
+
+MMseqs2: ultra fast and sensitive search and clustering suite - https://github.com/soedinglab/MMseqs2
+
+tags: 18-8cc5c
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/mmseqs2:18-8cc5c mmseqs
+```
+
+
