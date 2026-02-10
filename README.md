@@ -186,7 +186,7 @@ docker pull reslp/spades:3.13.0
 
 
 ## trimmomatic
-tags: 0.38
+tags: 0.38, 0.39
 
 ```
 docker run -t -v $(pwd):/data reslp/trimmomatic:0.38 trimmomatic PE -phred33 -threads 8 /data/pair1.fq.gz /data/pair2.fq.gz /data/trimmed_pair1.fq.gz /data/unpaired_pair1.fq.gz /data/trimmed_pair2.fq.gz /data/unpaired_pair2.fq.gz HEADCROP:20 ILLUMINACLIP:/data/adapters.fa:2:30:10 LEADING:30 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:80
@@ -194,7 +194,7 @@ docker run -t -v $(pwd):/data reslp/trimmomatic:0.38 trimmomatic PE -phred33 -th
 or
 
 ```
-docker run --user $(id -u):$(id -g) --rm -v $(pwd):/data reslp/trimmomatic trimmomatic
+docker run --user $(id -u):$(id -g) --rm -v $(pwd):/data reslp/trimmomatic:0.39 trimmomatic
 ```
 
 Important: The adapter file is not part of the docker image. It needs to passed together with the mounted directory.

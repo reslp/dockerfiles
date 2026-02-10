@@ -1,0 +1,8 @@
+FROM reslp/miniforge:25.3.0-3
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y bioconda::trimmomatic=0.39
+WORKDIR /data
+
+CMD ["trimomatic"]
+
