@@ -137,6 +137,7 @@ The **tags** given for each container correspond the the available versions of d
 [tbl2asn](#tbl2asn)
 [tcoffee](#tcoffee)
 [treeshrink](treeshrink)
+[trim-galore](#trim-galore)
 [trimal](#trimal)
 [trimmomatic](#trimmomatic)
 [typst](#typst)
@@ -1719,4 +1720,13 @@ WORKDIR /data
 docker run --rm -it reslp/mmseqs2:18-8cc5c mmseqs
 ```
 
+## trim-galore
+
+Trim Galore is a wrapper around Cutadapt and FastQC to consistently apply adapter and quality trimming to FastQ files, with extra functionality for RRBS data. - https://github.com/FelixKrueger/TrimGalore
+
+tags: 0.6.10
+
+```
+docker run --rm -it reslp/trim-galore:0.6.10 trim_galore
+```
 
