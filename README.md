@@ -456,12 +456,12 @@ docker run --rm -it reslp/mamba:1.4.1
 ```
 
 ## abyss
-tags: 2.2.5
+tags: 2.2.5, 2.3.10
 
 WORKDIR is /data
 
 ```
-docker run --rm -it reslp/abyss:2.2.5
+docker run --rm -it reslp/abyss:2.3.10
 ```
 
 ## kmergenie
