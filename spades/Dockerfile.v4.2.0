@@ -1,0 +1,10 @@
+FROM reslp/miniforge:25.3.0-3
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN mamba install -y bioconda::spades=4.2.0
+WORKDIR /data
+
+CMD ["spades.py"]
+
+
+

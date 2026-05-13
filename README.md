@@ -176,12 +176,14 @@ docker run reslp/phylo-scripts:latest
 
 
 ## Spades
-tags: 3.12.0, 3.13.0, 3.15.3
+SPAdes Genome Assembler - https://github.com/ablab/spades
+
+tags: 3.12.0, 3.13.0, 3.15.3, 4.2.0
 
 WORKDIR /data
 
 ```
-docker pull reslp/spades:3.13.0
+docker pull reslp/spades:4.2.0
 ```
 
 
