@@ -1,0 +1,1148 @@
+# Metadata for the ct (container tool) CLI.
+# Derived from README.md and tracked Dockerfile names.
+
+schema: ct.yaml.v1
+namespace: reslp
+repository:
+  remote: https://github.com/reslp/dockerfiles
+defaults:
+  workdir: /data
+  docker_args: --rm -it -v $(pwd):/data
+containers:
+  abyss:
+    path: abyss
+    categories:
+    - assembly
+    tags:
+    - 2.2.5
+    - 2.3.10
+  alitv:
+    path: alitv
+    categories:
+    - visualization
+    - comparative-genomics
+    tags:
+    - d06bd45
+    - latest
+  amplicon_sorter:
+    path: amplicon_sorter
+    categories:
+    - long-read
+    - amplicon
+    tags:
+    - 33f0d38
+    - c811f09
+  angsd:
+    path: angsd
+    categories:
+    - population-genetics
+    tags:
+    - '0.935'
+    - latest
+  astral:
+    path: astral
+    categories:
+    - phylogeny
+    tags:
+    - 5.7.1
+    - latest
+    aliases:
+    - ASTRAL
+  augustus:
+    path: augustus
+    categories:
+    - annotation
+    tags:
+    - 3.3.3
+    - latest
+  bamutil:
+    path: bamutil
+    categories:
+    - read-processing
+    tags:
+    - 1.0.15
+    - latest
+  bbmap:
+    path: bbmap
+    categories:
+    - read-mapping
+    tags:
+    - '38.90'
+    - latest
+  beast:
+    path: beast
+    categories:
+    - phylogeny
+    tags:
+    - 2.6.7
+    - latest
+  bedops:
+    path: bedops
+    categories:
+    - genome-intervals
+    tags:
+    - 2.4.39
+    - latest
+  bedtools:
+    path: bedtools
+    categories:
+    - genome-intervals
+    tags:
+    - 2.29.2
+    - latest
+  bibcure:
+    path: bibcure
+    categories:
+    - document
+    tags:
+    - 0.3.0
+  binsanity:
+    path: binsanity
+    categories:
+    - metagenomics
+    tags:
+    - latest
+  biomartr:
+    path: biomartr
+    categories:
+    - download
+    - r
+    tags:
+    - latest
+  biopython_plus:
+    path: biopython_plus
+    categories:
+    - python
+    - utility
+    tags:
+    - latest
+  blobtoolkit:
+    path: blobtoolkit
+    categories:
+    - visualization
+    - qc
+    tags:
+    - 4.4.5
+  blobtools:
+    path: blobtools
+    categories:
+    - qc
+    - metagenomics
+    tags:
+    - 1.1.1
+    - latest
+  bmge:
+    path: bmge
+    categories:
+    - alignment
+    - phylogeny
+    tags:
+    - '1.12'
+    - latest
+  bonito:
+    path: bonito
+    categories:
+    - long-read
+    - basecalling
+    tags:
+    - 0.3.2
+    - latest
+  bowtie2:
+    path: bowtie2
+    categories:
+    - read-mapping
+    tags:
+    - 2.3.5
+    - 2.5.4
+  busco:
+    path: busco
+    categories:
+    - qc
+    - annotation
+    tags:
+    - 3.0.2
+    - 4.1.4
+    - 5.2.1
+    - 5.7.0
+  cafe:
+    path: cafe
+    categories:
+    - comparative-genomics
+    tags:
+    - 4.2.1
+    - 5.0.0b2
+    - 5.1.0
+    - latest
+    - cafe5b2
+  cafe-viz:
+    path: cafe-viz
+    categories:
+    - visualization
+    - comparative-genomics
+    tags:
+    - '1.0'
+  cdhit:
+    path: cd-hit
+    categories:
+    - clustering
+    tags:
+    - 4.8.1
+    aliases:
+    - cd-hit
+  clipkit:
+    path: clipkit
+    categories:
+    - alignment
+    tags:
+    - 2.3.0
+  clustalo:
+    path: clustalo
+    categories:
+    - alignment
+    tags:
+    - 1.2.4
+    - latest
+  colord:
+    path: colord
+    categories:
+    - utility
+    tags:
+    - 1.1.0
+    - latest
+  concoct:
+    path: concoct
+    categories:
+    - metagenomics
+    tags:
+    - '1.1'
+    - latest
+  consent:
+    path: CONSENT
+    categories:
+    - long-read
+    - error-correction
+    tags:
+    - v2.1
+    - latest
+    aliases:
+    - CONSENT
+  cupp:
+    path: cupp
+    categories:
+    - pathogen-typing
+    tags:
+    - 1.0.14
+    - latest
+    aliases:
+    - CUPP
+  datasets:
+    path: dataset
+    categories:
+    - download
+    tags:
+    - '2'
+    aliases:
+    - dataset
+  deeploc:
+    path: deeploc
+    categories:
+    - annotation
+    - prediction
+    tags:
+    - '1.0'
+    - latest
+  dendropy:
+    path: dendropy
+    categories:
+    - phylogeny
+    - python
+    tags:
+    - 4.5.2
+    - latest
+  dentist:
+    path: dentist
+    categories:
+    - assembly
+    tags:
+    - 3.0.0
+    - latest
+  diamond:
+    path: diamond
+    categories:
+    - homology-search
+    tags:
+    - 0.9.22
+    - 2.0.7
+    - 2.1.7
+  easy353:
+    path: easy353
+    categories:
+    - assembly
+    - phylogeny
+    tags:
+    - 2.0.2
+  edta:
+    path: edta
+    categories:
+    - annotation
+    - transposable-elements
+    tags:
+    - 1.9.6
+    - 1.9.9
+    - 2.0.1
+    - 2.2.0
+    - latest
+  eggnog-mapper:
+    path: eggnog-mapper
+    categories:
+    - annotation
+    - homology-search
+    tags:
+    - 1.0.3
+    - 2.0.1
+    - latest
+  emboss:
+    path: emboss
+    categories:
+    - sequence-analysis
+    tags:
+    - 6.6.0
+    - latest
+  entrez-direct:
+    path: entrez-direct
+    categories:
+    - download
+    tags:
+    - '22.4'
+  ete3:
+    path: ete3
+    categories:
+    - phylogeny
+    - python
+    tags:
+    - 3.1.2
+    - latest
+  exonerate:
+    path: exonerate
+    categories:
+    - homology-search
+    tags:
+    - 2.4.0
+    - latest
+  extract_contigs:
+    path: extract_contigs
+    categories:
+    - assembly
+    - utility
+    tags:
+    - latest
+  fasta3:
+    path: fasta3
+    categories:
+    - homology-search
+    tags:
+    - 36.3.8
+    - latest
+  fastcodeml:
+    path: fastcodeml
+    categories:
+    - selection-analysis
+    tags:
+    - 1.1.0
+  fastqc:
+    path: fastqc
+    categories:
+    - qc
+    tags:
+    - 0.11.7
+    - latest
+  fastuniq:
+    path: fastuniq
+    categories:
+    - read-processing
+    tags:
+    - '1.1'
+    - latest
+  ffsend:
+    path: ffsend
+    categories:
+    - utility
+    tags:
+    - 0.2.76
+    - latest
+  figtree:
+    path: figtree
+    categories:
+    - visualization
+    - phylogeny
+    tags:
+    - 1.4.4
+  flappie:
+    path: flappie
+    categories:
+    - long-read
+    - basecalling
+    tags:
+    - latest
+  flash:
+    path: flash
+    categories:
+    - read-processing
+    tags:
+    - 1.2.11
+    - latest
+  fmlrc:
+    path: fmlrc
+    categories:
+    - long-read
+    - error-correction
+    tags:
+    - v1.0.0
+    - latest
+  gatk:
+    path: gatk
+    categories:
+    - variant-calling
+    tags:
+    - '3.8'
+    - latest
+  genome-viz:
+    path: genome-viz
+    categories:
+    - visualization
+    tags:
+    - '1.0'
+  get_taxids:
+    path: get_taxids
+    categories:
+    - taxonomy
+    tags:
+    - latest
+  getorganelle:
+    path: getorganelle
+    categories:
+    - assembly
+    - organelle
+    tags:
+    - 1.7.1
+    - 1.7.7.1
+    aliases:
+    - get_organelle
+  gnuplot:
+    path: gnuplot
+    categories:
+    - visualization
+    tags:
+    - 5.4.9
+  guidance2:
+    path: guidance
+    categories:
+    - alignment
+    tags:
+    - '2.02'
+    - latest
+    aliases:
+    - guidance
+    - GUIDANCE2
+  hmmer:
+    path: hmmer
+    categories:
+    - homology-search
+    tags:
+    - 3.1b2
+    - latest
+  ima2:
+    path: ima2
+    categories:
+    - population-genetics
+    tags:
+    - 8.27.12
+    - latest
+  imagemagick:
+    path: imagemagick
+    categories:
+    - utility
+    tags:
+    - 7.1.0_46
+  interproscan-wrapper:
+    path: interproscan-wrapper
+    categories:
+    - annotation
+    tags:
+    - 5.39-77.0
+    - 5.48-83.0
+    - latest
+  ipyrad:
+    path: ipyrad
+    categories:
+    - population-genetics
+    tags:
+    - 0.9.93
+  iqtree:
+    path: iqtree
+    categories:
+    - phylogeny
+    tags:
+    - 2.0rc2
+    - 2.0.7
+    - 2.3.6
+  julia:
+    path: julia
+    categories:
+    - development
+    tags:
+    - 1.6.3
+    - latest
+  jupyter-hub:
+    path: jupyter-hub
+    categories:
+    - notebook
+    tags:
+    - 5.2.1
+    aliases:
+    - jupyterhub
+    - Jupyterhub
+  jupyter-tf:
+    path: jupyter-tf
+    categories:
+    - ml
+    - notebook
+    tags:
+    - 2.4.1
+    aliases:
+    - Jupyter-Lab
+  keras:
+    path: keras
+    categories:
+    - ml
+    tags:
+    - 3.0.0-torch
+    - 3.0.0-tf
+  kmergenie:
+    path: kmergenie
+    categories:
+    - assembly
+    tags:
+    - '1.7051'
+    - latest
+  macse:
+    path: macse
+    categories:
+    - alignment
+    tags:
+    - '1.2'
+    - '2.05'
+    - latest
+    - _2.05
+  mafft:
+    path: mafft
+    categories:
+    - alignment
+    tags:
+    - '7.464'
+    - latest
+  magic-wormhole:
+    path: magic-wormhole
+    categories:
+    - utility
+    tags:
+    - 0.12.0
+    - 0.20.0
+  mamba:
+    path: mamba
+    categories:
+    - workflow
+    - package-management
+    tags:
+    - 0.5.3
+    - 0.6.0
+    - 0.7.0
+    - 0.15.3
+    - 0.21.1
+    - 0.23.1
+    - 0.25.0
+    - 1.4.1
+    - 1.5.2(broken!)
+    - 2.0.5
+    - latest
+    - 1.5.2
+  mash:
+    path: mash
+    categories:
+    - sketching
+    - taxonomy
+    tags:
+    - '2.3'
+  maxbin:
+    path: maxbin
+    categories:
+    - metagenomics
+    tags:
+    - 2.2.6
+    - latest
+  mcl:
+    path: mcl
+    categories:
+    - clustering
+    tags:
+    - '14.137'
+    - '22.282'
+    aliases:
+    - MCL
+  metabat:
+    path: metabat
+    categories:
+    - metagenomics
+    tags:
+    - '2.13'
+    - latest
+  metaxa:
+    path: metaxa
+    categories:
+    - taxonomy
+    - metagenomics
+    tags:
+    - '2.2'
+    - latest
+  minibarcoder:
+    path: miniBarcoder
+    categories:
+    - barcoding
+    tags:
+    - 5e1dc3b
+    - latest
+    aliases:
+    - miniBarcoder
+  miniforge:
+    path: miniforge
+    categories:
+    - package-management
+    tags:
+    - 25.3.0-3
+  mitos:
+    path: mitos
+    categories:
+    - annotation
+    - organelle
+    tags:
+    - 2.0.8
+    - 1.0.5
+    - latest
+  mmseqs2:
+    path: mmseqs
+    categories:
+    - homology-search
+    - clustering
+    tags:
+    - 18-8cc5c
+    aliases:
+    - mmseqs
+  mosdepth:
+    path: mosdepth
+    categories:
+    - qc
+    tags:
+    - 0.3.3
+    - latest
+  mrbayes:
+    path: mrbayes
+    categories:
+    - phylogeny
+    tags:
+    - latest
+  multiqc:
+    path: multiqc
+    categories:
+    - qc
+    tags:
+    - '1.6'
+    - 1.17 (broken)
+    - 1.25.1
+    - '1.17'
+  mummer:
+    path: mummer
+    categories:
+    - genome-alignment
+    tags:
+    - 4.0.0beta2
+    - latest
+  muscle:
+    path: muscle
+    categories:
+    - alignment
+    tags:
+    - '5.1'
+    - latest
+  mutt:
+    path: mutt
+    categories:
+    - utility
+    tags:
+    - 2.2.6
+    - 2.2.14
+  ncbi-acc-download:
+    path: ncbi-acc-download
+    categories:
+    - download
+    tags:
+    - 0.2.8
+  ncbi-blast:
+    path: ncbi-blast
+    categories:
+    - homology-search
+    tags:
+    - 2.9.0
+    - 2.15.0
+    - latest
+  ncbi-datasets:
+    path: ncbi-datasets
+    categories:
+    - download
+    tags:
+    - 16.25.0
+  necat:
+    path: necat
+    categories:
+    - long-read
+    - assembly
+    tags:
+    - 0.0.1_update20200803
+    - latest
+  nim:
+    path: nim
+    categories:
+    - development
+    tags:
+    - 1.4.8
+    - 1.6.6
+    - 1.6.12
+    - latest
+  nimbio_plus:
+    path: nimbio_plus
+    categories:
+    - phylogeny
+    tags:
+    - 0.0.1
+    - 0.0.2
+    - 0.0.3
+    aliases:
+    - nimbio-plus
+  norgal:
+    path: norgal
+    categories:
+    - assembly
+    - organelle
+    tags:
+    - '1.0'
+    - latest
+  novoplasty:
+    path: novoplasty
+    categories:
+    - assembly
+    - organelle
+    tags:
+    - '4.2'
+    - latest
+  oma-standalone:
+    path: oma-standalone
+    categories:
+    - orthology
+    tags:
+    - 2.5.0
+    - latest
+  ont-fast5-api:
+    path: ont-fast5-api
+    categories:
+    - long-read
+    tags:
+    - latest
+  orthofinder:
+    path: orthofinder
+    categories:
+    - orthology
+    tags:
+    - 2.3.3
+    - 2.5.2
+    - 2.5.4
+    - 2.5.5
+    aliases:
+    - Orthofinder
+  pal2nal:
+    path: pal2nal
+    categories:
+    - alignment
+    tags:
+    - '14'
+    - latest
+  paml:
+    path: paml
+    categories:
+    - selection-analysis
+    - phylogeny
+    tags:
+    - 4.9 (conda version
+    - comes with biopython1.81 scipy)
+    - 4.10.6
+    - '4.9'
+    aliases:
+    - PAML
+  pandoc:
+    path: pandoc
+    categories:
+    - document
+    tags:
+    - '2.18'
+    - 3.1.3
+    - '3.4'
+  pass:
+    path: pass
+    categories:
+    - utility
+    tags:
+    - latest
+    aliases:
+    - linux
+    - mac
+  pear:
+    path: pear
+    categories:
+    - read-processing
+    tags:
+    - 0.9.6
+    - latest
+  phykit:
+    path: phykit
+    categories:
+    - phylogeny
+    tags:
+    - 1.11.15
+  phylobayes:
+    path: phylobayes
+    categories:
+    - phylogeny
+    tags:
+    - 4.1c
+    - latest
+  phylobayes-mpi:
+    path: phylobayes-mpi
+    categories:
+    - phylogeny
+    tags:
+    - 1.8b
+    - git_dca7bdf
+    - c12c4d7
+    - 3c77656 (commit from Feb 2023)
+    - 3c77656
+  phylopy:
+    path: phylopy
+    categories:
+    - phylogeny
+    tags:
+    - '1'
+    - latest
+  picard:
+    path: picard
+    categories:
+    - read-processing
+    tags:
+    - 2.18.7
+    - latest
+  pigz:
+    path: pigz
+    categories:
+    - utility
+    tags:
+    - '2.6'
+    - latest
+  prank:
+    path: prank
+    categories:
+    - alignment
+    tags:
+    - v150803
+    - '150803'
+  purge_haplotigs:
+    path: purge_haplotigs
+    categories:
+    - assembly
+    tags:
+    - 1.1.1
+    - latest
+  pyinstaller:
+    path: pyinstaller
+    categories:
+    - development
+    tags:
+    - '5.1'
+    - '6.1'
+  pyscaf:
+    path: pyscaf
+    categories:
+    - assembly
+    tags:
+    - 0.12a4
+    - latest
+  quast:
+    path: quast
+    categories:
+    - qc
+    - assembly
+    tags:
+    - 5.0.2
+    - latest
+    aliases:
+    - QUAST
+  quicktree:
+    path: quicktree
+    categories:
+    - phylogeny
+    tags:
+    - '2.5'
+    - latest
+  r8s:
+    path: r8s
+    categories:
+    - phylogeny
+    tags:
+    - latest
+  raxml-ng:
+    path: raxml-ng
+    categories:
+    - phylogeny
+    tags:
+    - 1.0.0
+    - 1.1.0
+    - latest
+  rename:
+    path: rename
+    categories:
+    - utility
+    tags:
+    - 1.10-1
+    - latest
+  repeatmodeler-repeatmasker:
+    path: repeatmodeler-repeatmasker
+    categories:
+    - annotation
+    - transposable-elements
+    tags:
+    - 2.0.3-4.1.3
+    - latest
+  rmarkdown:
+    path: rmarkdown
+    categories:
+    - document
+    - r
+    tags:
+    - 3.6.3
+    - 4.0.3
+    - 4.0.3_DT
+  rphylogenetics:
+    path: rphylogenetics
+    categories:
+    - phylogeny
+    - r
+    tags:
+    - 4.0.3 (refers to used R version)
+    - 4.0.3-strict-versions (with more strict versioning of R packages)
+    - latest
+    - 4.0.3-strict-versions
+  samtools:
+    path: samtools
+    categories:
+    - read-processing
+    tags:
+    - '1.9'
+    - '1.11'
+    - '1.21'
+  scrape_cazy:
+    path: scrape_cazy
+    categories:
+    - annotation
+    tags:
+    - '1'
+    - latest
+  seqtk:
+    path: seqtk
+    categories:
+    - read-processing
+    tags:
+    - '1.3'
+    - latest
+  singularity:
+    path: singularity
+    categories:
+    - container-runtime
+    tags:
+    - 3.4.1
+    - 3.6.3
+    - latest
+  smsi_ubuntu:
+    path: smsi_ubuntu
+    categories:
+    - utility
+    tags:
+    - latest
+  snakemake:
+    path: snakemake
+    categories:
+    - workflow
+    tags:
+    - 6.0.2
+    - latest
+  sourmash:
+    path: sourmash
+    categories:
+    - sketching
+    - taxonomy
+    tags:
+    - 3.2.2
+    - 4.9.3
+    aliases:
+    - sourmah
+  spades:
+    path: spades
+    categories:
+    - assembly
+    tags:
+    - 3.12.0
+    - 3.13.0
+    - 3.15.3
+    - 4.2.0
+    aliases:
+    - Spades
+  speedtest-cli:
+    path: speedtest-cli
+    categories:
+    - utility
+    tags:
+    - 2.1.2
+    - 2.1.3
+    - latest
+  sphinx:
+    path: sphinx
+    categories:
+    - document
+    tags:
+    - 8.1.3
+  spython:
+    path: spython
+    categories:
+    - container-runtime
+    tags:
+    - 0.3.14
+  sra-tools:
+    path: sra-tools
+    categories:
+    - download
+    tags:
+    - 2.20.1
+    - 2.10.9
+    - latest
+  stringtie:
+    path: stringtie
+    categories:
+    - transcriptomics
+    tags:
+    - 2.2.1
+  table2asn:
+    path: table2asn
+    categories:
+    - annotation
+    tags:
+    - '20201119'
+    - 1.26.678
+  taxonkit:
+    path: taxonkit
+    categories:
+    - taxonomy
+    tags:
+    - 0.12.0
+    - latest
+  tbl2asn:
+    path: tbl2asn
+    categories:
+    - annotation
+    tags:
+    - '25.8'
+    - latest
+  tcoffee:
+    path: tcoffee
+    categories:
+    - alignment
+    tags:
+    - 11.0.8
+    - v.13.46.0.919e8c6b
+    - 13.46.0.919e8c6b
+  tectonic:
+    path: tectonic
+    categories:
+    - document
+    tags:
+    - 0.14.1
+  threshml:
+    path: threshml
+    categories:
+    - ml
+    tags:
+    - latest
+  treeshrink:
+    path: treeshrink
+    categories:
+    - phylogeny
+    tags:
+    - 1.3.9
+  trim-galore:
+    path: trimgalore
+    categories:
+    - read-processing
+    tags:
+    - 0.6.10
+    aliases:
+    - trimgalore
+  trimal:
+    path: trimal
+    categories:
+    - alignment
+    tags:
+    - 1.4.1
+    - latest
+  trimmomatic:
+    path: trimmomatic
+    categories:
+    - read-processing
+    tags:
+    - '0.38'
+    - '0.39'
+    - latest
+  typst:
+    path: typst
+    categories:
+    - document
+    tags:
+    - 0.7.0
+    - 0.9.0
+    - 8c813cb (post line numbers!)
+    - 0.13.1
+    - 0.14.0
+    - 8c813cb
+  ubuntu:
+    path: ubuntu
+    categories:
+    - base-image
+    tags:
+    - '20.04'
+    - latest
+  uv:
+    path: uv
+    categories:
+    - development
+    tags:
+    - 0.8.22
+  viralmsa:
+    path: viralmsa
+    categories:
+    - alignment
+    tags:
+    - 1.1.20
+    - latest
