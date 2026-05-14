@@ -8,6 +8,7 @@ repository:
 defaults:
   workdir: /data
   docker_args: --rm -it -v $(pwd):/data
+  singularity_args: -B $(pwd)
 containers:
   abyss:
     path: abyss
@@ -130,7 +131,7 @@ containers:
     - python
     - utility
     tags:
-    - latest
+    - 1.77
   blobtoolkit:
     path: blobtoolkit
     notes: ""
@@ -622,7 +623,7 @@ containers:
     - 0.20.0
   mamba:
     path: mamba
-    notes: ""
+    notes: "tag 1.5.2 is broken"
     categories:
     - workflow
     - package-management
@@ -635,7 +636,7 @@ containers:
     - 0.23.1
     - 0.25.0
     - 1.4.1
-    - 1.5.2(broken!)
+    - 1.5.2
     - 2.0.5
     - latest
     - 1.5.2
@@ -736,12 +737,12 @@ containers:
     - latest
   multiqc:
     path: multiqc
-    notes: ""
+    notes: "tag 1.17 is broken"
     categories:
     - qc
     tags:
     - '1.6'
-    - 1.17 (broken)
+    - 1.17
     - 1.25.1
     - '1.17'
   mummer:
@@ -876,15 +877,13 @@ containers:
     - latest
   paml:
     path: paml
-    notes: ""
+    notes: "4.9 - conda version comes with biopthon1.81 & scipy"
     categories:
     - selection-analysis
     - phylogeny
     tags:
-    - 4.9 (conda version
-    - comes with biopython1.81 scipy)
     - 4.10.6
-    - '4.9'
+    - 4.9
     aliases:
     - PAML
   pandoc:
@@ -931,14 +930,13 @@ containers:
     - latest
   phylobayes-mpi:
     path: phylobayes-mpi
-    notes: ""
+    notes: "tag: 3c77656 (commit from Feb 2023)"
     categories:
     - phylogeny
     tags:
     - 1.8b
     - git_dca7bdf
     - c12c4d7
-    - 3c77656 (commit from Feb 2023)
     - 3c77656
   phylopy:
     path: phylopy
@@ -1060,13 +1058,12 @@ containers:
     - 4.0.3_DT
   rphylogenetics:
     path: rphylogenetics
-    notes: ""
+    notes: "tags refer to R version"
     categories:
     - phylogeny
     - r
     tags:
-    - 4.0.3 (refers to used R version)
-    - 4.0.3-strict-versions (with more strict versioning of R packages)
+    - 4.0.3 
     - latest
     - 4.0.3-strict-versions
   samtools:
@@ -1262,13 +1259,12 @@ containers:
     - latest
   typst:
     path: typst
-    notes: ""
+    notes: "tag 8c813cb (post line numbers!)"
     categories:
     - document
     tags:
     - 0.7.0
     - 0.9.0
-    - 8c813cb (post line numbers!)
     - 0.13.1
     - 0.14.0
     - 8c813cb
