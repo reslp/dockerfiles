@@ -1732,3 +1732,13 @@ tags: 0.6.10
 docker run --rm -it reslp/trim-galore:0.6.10 trim_galore
 ```
 
+## pixi
+
+Pixi is a fast, modern, and reproducible package management tool for developers of all backgrounds. - https://pixi.prefix.dev/latest/
+
+tags: 0.68.1
+
+```
+docker run --rm -it reslp/pixi:0.68.1 pixi
+```
+

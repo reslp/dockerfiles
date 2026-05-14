@@ -962,6 +962,13 @@ containers:
     tags:
     - '2.6'
     - latest
+  pixi:
+    path: pixi
+    notes: ""
+    categories:
+    - utility
+    tags:
+    - 0.68.1
   prank:
     path: prank
     notes: ""
