@@ -1,0 +1,15 @@
+FROM ubuntu:24.04
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN apt update && apt install -y wget #texlive
+RUN wget https://github.com/jgm/pandoc/releases/download/3.7.0.2/pandoc-3.7.0.2-1-amd64.deb 
+RUN dpkg -i pandoc-3.7.0.2-1-amd64.deb
+RUN apt install -y texlive
+RUN apt install -y texlive-latex-recommended texlive-latex-extra
+#RUN apt install -y texlive-plain-generic texlive-xetex
+
+#WORKDIR /data
+#USER 1001
+WORKDIR /data
+
+CMD ["pandoc", "-h"]
