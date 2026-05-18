@@ -581,7 +581,7 @@ containers:
     - Jupyter-Lab
   keras:
     path: keras
-    notes: ""
+    notes: "-tf tags also contain biopython and tensorboard"
     categories:
     - ml
     tags:

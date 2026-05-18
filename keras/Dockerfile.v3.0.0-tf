@@ -1,4 +1,4 @@
-FROM reslp/mamba:1.4.1
+FROM reslp/miniforge:25.3.0-3
 
 RUN mamba install pip
 RUN python -m pip install keras==3.0.0
@@ -10,6 +10,8 @@ RUN wget https://raw.githubusercontent.com/keras-team/keras/master/requirements-
 RUN python -m pip install matplotlib
 RUN python -m pip install keras-tuner -q
 RUN python -m pip install scikit-learn
+RUN python -m pip install tensorboard
+RUN mamba install -c bioconda biopython
 
 WORKDIR /data
 
