@@ -18,6 +18,9 @@ containers:
     tags:
     - 2.2.5
     - 2.3.10
+    entrypoint:
+    - "trimomatic"
+    - "abyss-pe help"
   alitv:
     path: alitv
     notes: ""
@@ -26,6 +29,8 @@ containers:
     - comparative-genomics
     tags:
     - d06bd45
+    entrypoint:
+    - "alitv.pl"
   amplicon_sorter:
     path: amplicon_sorter
     notes: ""
@@ -35,6 +40,8 @@ containers:
     tags:
     - 33f0d38
     - c811f09
+    entrypoint:
+    - "amplicon_sorter.py"
   angsd:
     path: angsd
     notes: ""
@@ -42,6 +49,8 @@ containers:
     - population-genetics
     tags:
     - '0.935'
+    entrypoint:
+    - "angsd"
   astral:
     path: astral
     notes: ""
@@ -49,6 +58,8 @@ containers:
     - phylogeny
     tags:
     - 5.7.1
+    entrypoint:
+    - "java -jar /ASTRAL-5.7.1/Astral/astral.5.7.1.jar"
     aliases:
     - ASTRAL
   augustus:
@@ -58,6 +69,8 @@ containers:
     - annotation
     tags:
     - 3.3.3
+    entrypoint:
+    - "augustus -h"
   bamutil:
     path: bamutil
     notes: ""
@@ -65,6 +78,8 @@ containers:
     - read-processing
     tags:
     - 1.0.15
+    entrypoint:
+    - "bam"
   bbmap:
     path: bbmap
     notes: ""
@@ -72,6 +87,8 @@ containers:
     - read-mapping
     tags:
     - '38.90'
+    entrypoint:
+    - "bbmap.sh"
   beast:
     path: beast
     notes: ""
@@ -79,6 +96,8 @@ containers:
     - phylogeny
     tags:
     - 2.6.7
+    entrypoint:
+    - "beast -h"
   bedops:
     path: bedops
     notes: ""
@@ -86,6 +105,8 @@ containers:
     - genome-intervals
     tags:
     - 2.4.39
+    entrypoint:
+    - "bedops"
   bedtools:
     path: bedtools
     notes: ""
@@ -93,6 +114,8 @@ containers:
     - genome-intervals
     tags:
     - 2.29.2
+    entrypoint:
+    - "bedtools"
   bibcure:
     path: bibcure
     notes: ""
@@ -100,6 +123,9 @@ containers:
     - document
     tags:
     - 0.3.0
+    entrypoint:
+    - "doi2bib -i literature_only_dois.txt -o bib.txt"
+    - "doi2bib"
   binsanity:
     path: binsanity
     notes: ""
@@ -107,6 +133,8 @@ containers:
     - metagenomics
     tags:
     - latest
+    entrypoint:
+    - "Binsanity-profile"
   biomartr:
     path: biomartr
     notes: ""
@@ -115,6 +143,8 @@ containers:
     - r
     tags:
     - latest
+    entrypoint:
+    - "/bin/bash"
   biopython_plus:
     path: biopython_plus
     notes: ""
@@ -123,6 +153,8 @@ containers:
     - utility
     tags:
     - 1.77
+    entrypoint:
+    - "python -v"
   blobtoolkit:
     path: blobtoolkit
     notes: ""
@@ -131,6 +163,7 @@ containers:
     - qc
     tags:
     - 4.4.5
+    entrypoint: []
   blobtools:
     path: blobtools
     notes: ""
@@ -139,6 +172,11 @@ containers:
     - metagenomics
     tags:
     - 1.1.1
+    entrypoint:
+    - "create -i /data/metagenome.fasta -b /data/metagenome.fasta.bam -t /data/blobtools/metagenome.fasta_diamond_matches_formatted -o /data/blobtools/metagenome.fasta_blobtools"
+    - "view -i /data/blobtools/metagenome.fasta_blobtools.blobDB.json -o /data/blobtools/"
+    - "plot -i /data/blobtools/metagenome.fasta_blobtools.blobDB.json -o /data/blobtools/"
+    - "blobtools -h"
   bmge:
     path: bmge
     notes: ""
@@ -147,6 +185,8 @@ containers:
     - phylogeny
     tags:
     - '1.12'
+    entrypoint:
+    - "bmge"
   bonito:
     path: bonito
     notes: ""
@@ -155,6 +195,11 @@ containers:
     - basecalling
     tags:
     - 0.3.2
+    entrypoint:
+    - "bonito basecaller dna_r9.4.1@v2 --use_openvino --device=cpu /data/fast5_pass 1> basecalls.fasta"
+    - "bonito basecaller dna_r9.4.1@v3 --use_openvino --device=cpu /data/fast5_pass 1> basecalls.fasta"
+    - "bonito basecaller dna_r9.4.1@v2 --use_openvino --device=cpu /data/fast5_pass --fastq 1> basecalls.fastq"
+    - "bonito"
   bowtie2:
     path: bowtie2
     notes: ""
@@ -163,6 +208,9 @@ containers:
     tags:
     - 2.3.5
     - 2.5.4
+    entrypoint:
+    - "bowtie2"
+    - "bowtie2 -h"
   busco:
     path: busco
     notes: ""
@@ -174,6 +222,8 @@ containers:
     - 4.1.4
     - 5.2.1
     - 5.7.0
+    entrypoint:
+    - "busco -h"
   cafe:
     path: cafe
     notes: ""
@@ -184,6 +234,9 @@ containers:
     - 5.0.0b2
     - 5.1.0
     - cafe5b2
+    entrypoint:
+    - "cafe"
+    - "cafe -v"
   cafe-viz:
     path: cafe-viz
     notes: ""
@@ -192,6 +245,9 @@ containers:
     - comparative-genomics
     tags:
     - '1.0'
+    entrypoint:
+    - "cafeplotter"
+    - "python3 /usr/bin/CAFE_fig.py"
   cdhit:
     path: cd-hit
     notes: ""
@@ -199,6 +255,8 @@ containers:
     - clustering
     tags:
     - 4.8.1
+    entrypoint:
+    - "cd-hit"
     aliases:
     - cd-hit
   clipkit:
@@ -208,6 +266,8 @@ containers:
     - alignment
     tags:
     - 2.3.0
+    entrypoint:
+    - "clipkit"
   clustalo:
     path: clustalo
     notes: ""
@@ -215,6 +275,8 @@ containers:
     - alignment
     tags:
     - 1.2.4
+    entrypoint:
+    - "clustalo -h"
   colord:
     path: colord
     notes: ""
@@ -222,6 +284,8 @@ containers:
     - utility
     tags:
     - 1.1.0
+    entrypoint:
+    - "colord"
   concoct:
     path: concoct
     notes: ""
@@ -229,6 +293,13 @@ containers:
     - metagenomics
     tags:
     - '1.1'
+    entrypoint:
+    - "cut_up_fasta.py /data/metagenome.fasta -c 10000 -o 0 --merge_last -b /data/metagenome.fasta_contigs_10K.bed > metagenome.fasta_contigs_10K.fa"
+    - "concoct_coverage_table.py /data/metagenome.fasta_contigs_10K.bed /data/metagenome.fasta.bam > concoct_coverage_table.tsv"
+    - "concoct --composition_file /data/metagenome.fasta_contigs_10K.fa --coverage_file /data/concoct_coverage_table.tsv -b /data/concoct/metagenome.fasta_concoct --threads 24"
+    - "merge_cutup_clustering.py /data/concoct/metagenome.fasta_concoct_clustering_gt1000.csv > concoct/metagenome.fasta_concoct_clustering_merged.csv"
+    - "extract_fasta_bins.py /data/metagenome.fasta /data/concoct/metagenome.fasta_concoct_clustering_merged.csv --output_path /data/concoct/bins"
+    - "concoct -h"
   consent:
     path: CONSENT
     notes: ""
@@ -237,6 +308,9 @@ containers:
     - error-correction
     tags:
     - v2.1
+    entrypoint:
+    - "CONSENT-correct --in /corrected/Lmin_combined.fasta --out /corrected/Lmin_combined_corrected.fasta --type ONT"
+    - "CONSENT-correct"
     aliases:
     - CONSENT
   cupp:
@@ -246,6 +320,8 @@ containers:
     - pathogen-typing
     tags:
     - 1.0.14
+    entrypoint:
+    - "python /software/CUPP_v1.0.14/CUPPprediction.py --help"
     aliases:
     - CUPP
   datasets:
@@ -255,6 +331,8 @@ containers:
     - download
     tags:
     - '2'
+    entrypoint:
+    - "datasets"
     aliases:
     - dataset
   deeploc:
@@ -265,6 +343,9 @@ containers:
     - prediction
     tags:
     - '1.0'
+    entrypoint:
+    - "deeploc -f /data/deeploc-1.0/test.fasta"
+    - "deeploc -h"
   dendropy:
     path: dendropy
     notes: ""
@@ -273,6 +354,8 @@ containers:
     - python
     tags:
     - 4.5.2
+    entrypoint:
+    - "/bin/bash"
   dentist:
     path: dentist
     notes: ""
@@ -280,6 +363,8 @@ containers:
     - assembly
     tags:
     - 3.0.0
+    entrypoint:
+    - "dentist"
   diamond:
     path: diamond
     notes: ""
@@ -289,6 +374,8 @@ containers:
     - 0.9.22
     - 2.0.7
     - 2.1.7
+    entrypoint:
+    - "diamond version"
   easy353:
     path: easy353
     notes: ""
@@ -297,6 +384,8 @@ containers:
     - phylogeny
     tags:
     - 2.0.2
+    entrypoint:
+    - "easy353.py"
   edta:
     path: edta
     notes: ""
@@ -308,6 +397,8 @@ containers:
     - 1.9.9
     - 2.0.1
     - 2.2.0
+    entrypoint:
+    - "EDTA.pl"
   eggnog-mapper:
     path: eggnog-mapper
     notes: ""
@@ -317,6 +408,8 @@ containers:
     tags:
     - 1.0.3
     - 2.0.1
+    entrypoint:
+    - "emapper.py"
   emboss:
     path: emboss
     notes: ""
@@ -324,6 +417,8 @@ containers:
     - sequence-analysis
     tags:
     - 6.6.0
+    entrypoint:
+    - "/bin/bash"
   entrez-direct:
     path: entrez-direct
     notes: ""
@@ -331,6 +426,9 @@ containers:
     - download
     tags:
     - '22.4'
+    entrypoint:
+    - "esearch"
+    - "datasets"
   ete3:
     path: ete3
     notes: ""
@@ -339,6 +437,7 @@ containers:
     - python
     tags:
     - 3.1.2
+    entrypoint: []
   exonerate:
     path: exonerate
     notes: ""
@@ -346,6 +445,8 @@ containers:
     - homology-search
     tags:
     - 2.4.0
+    entrypoint:
+    - "exonerate"
   extract_contigs:
     path: extract_contigs
     notes: ""
@@ -354,6 +455,8 @@ containers:
     - utility
     tags:
     - latest
+    entrypoint:
+    - "/usr/bin/extract_contigs_from_blobtools.py"
   fasta3:
     path: fasta3
     notes: ""
@@ -361,6 +464,8 @@ containers:
     - homology-search
     tags:
     - 36.3.8
+    entrypoint:
+    - "glsearch36 /data/query.fas /data/subset.fasta"
   fastcodeml:
     path: fastcodeml
     notes: ""
@@ -368,6 +473,8 @@ containers:
     - selection-analysis
     tags:
     - 1.1.0
+    entrypoint:
+    - "fast"
   fastqc:
     path: fastqc
     notes: ""
@@ -375,6 +482,10 @@ containers:
     - qc
     tags:
     - 0.11.7
+    entrypoint:
+    - "fastqc /data/illumina_reads_5_R1_trimmed.fq -o /data"
+    - "fastqc -h"
+    - "fastqc"
   fastuniq:
     path: fastuniq
     notes: ""
@@ -382,6 +493,8 @@ containers:
     - read-processing
     tags:
     - '1.1'
+    entrypoint:
+    - "fastuniq"
   ffsend:
     path: ffsend
     notes: ""
@@ -389,6 +502,9 @@ containers:
     - utility
     tags:
     - 0.2.76
+    entrypoint:
+    - "ffsend upload myfile.txt"
+    - "ffsend"
   figtree:
     path: figtree
     notes: ""
@@ -397,6 +513,8 @@ containers:
     - phylogeny
     tags:
     - 1.4.4
+    entrypoint:
+    - "figtree"
   flappie:
     path: flappie
     notes: ""
@@ -405,6 +523,11 @@ containers:
     - basecalling
     tags:
     - latest
+    entrypoint:
+    - "flappie --help"
+    - "flappie /data/fast5_single/0/ > 0.fastq"
+    - "multi_to_single_fast5 -i /data/fast5_pass -s /data/fast5_single -t 4"
+    - "/bin/bash"
   flash:
     path: flash
     notes: ""
@@ -412,6 +535,8 @@ containers:
     - read-processing
     tags:
     - 1.2.11
+    entrypoint:
+    - "flash"
   fmlrc:
     path: fmlrc
     notes: ""
@@ -420,6 +545,8 @@ containers:
     - error-correction
     tags:
     - v1.0.0
+    entrypoint:
+    - "fmlrc"
   gatk:
     path: gatk
     notes: ""
@@ -427,6 +554,9 @@ containers:
     - variant-calling
     tags:
     - '3.8'
+    entrypoint:
+    - "gatk3"
+    - "gatk3 -h"
   genome-viz:
     path: genome-viz
     notes: ""
@@ -434,6 +564,8 @@ containers:
     - visualization
     tags:
     - '1.0'
+    entrypoint:
+    - "genome_viz.py"
   get_taxids:
     path: get_taxids
     notes: ""
@@ -441,6 +573,8 @@ containers:
     - taxonomy
     tags:
     - latest
+    entrypoint:
+    - "get_taxids.py"
   getorganelle:
     path: getorganelle
     notes: ""
@@ -450,6 +584,8 @@ containers:
     tags:
     - 1.7.1
     - 1.7.7.1
+    entrypoint:
+    - "get_organelle_from_reads.py"
     aliases:
     - get_organelle
   gnuplot:
@@ -459,6 +595,7 @@ containers:
     - visualization
     tags:
     - 5.4.9
+    entrypoint: []
   guidance2:
     path: guidance
     notes: ""
@@ -466,6 +603,8 @@ containers:
     - alignment
     tags:
     - '2.02'
+    entrypoint:
+    - "perl /software/guidance.v2.02/www/Guidance/guidance.pl"
     aliases:
     - guidance
     - GUIDANCE2
@@ -476,6 +615,8 @@ containers:
     - homology-search
     tags:
     - 3.1b2
+    entrypoint:
+    - "/bin/bash"
   ima2:
     path: ima2
     notes: ""
@@ -483,6 +624,8 @@ containers:
     - population-genetics
     tags:
     - 8.27.12
+    entrypoint:
+    - "IMa2"
   imagemagick:
     path: imagemagick
     notes: ""
@@ -490,6 +633,9 @@ containers:
     - utility
     tags:
     - 7.1.0_46
+    entrypoint:
+    - "convert"
+    - "typst"
   interproscan-wrapper:
     path: interproscan-wrapper
     notes: ""
@@ -498,6 +644,7 @@ containers:
     tags:
     - 5.39-77.0
     - 5.48-83.0
+    entrypoint: []
   ipyrad:
     path: ipyrad
     notes: ""
@@ -505,6 +652,8 @@ containers:
     - population-genetics
     tags:
     - 0.9.93
+    entrypoint:
+    - "ipyrad"
   iqtree:
     path: iqtree
     notes: ""
@@ -514,6 +663,8 @@ containers:
     - 2.0rc2
     - 2.0.7
     - 2.3.6
+    entrypoint:
+    - "iqtree"
   julia:
     path: julia
     notes: ""
@@ -521,6 +672,8 @@ containers:
     - development
     tags:
     - 1.6.3
+    entrypoint:
+    - "julia"
   jupyter-hub:
     path: jupyter-hub
     notes: ""
@@ -528,6 +681,8 @@ containers:
     - notebook
     tags:
     - 5.2.1
+    entrypoint:
+    - "jupyterhub"
     aliases:
     - jupyterhub
     - Jupyterhub
@@ -539,6 +694,8 @@ containers:
     - notebook
     tags:
     - 2.4.1
+    entrypoint:
+    - "jupyter-lab"
     aliases:
     - Jupyter-Lab
   keras:
@@ -549,6 +706,8 @@ containers:
     tags:
     - 3.0.0-torch
     - 3.0.0-tf
+    entrypoint:
+    - "python"
   kmergenie:
     path: kmergenie
     notes: ""
@@ -556,6 +715,9 @@ containers:
     - assembly
     tags:
     - '1.7051'
+    entrypoint:
+    - "kmergenie"
+    - "/bin/bash"
   macse:
     path: macse
     notes: ""
@@ -564,6 +726,9 @@ containers:
     tags:
     - '1.2'
     - '2.05'
+    entrypoint:
+    - "macse"
+    - "macse -h"
   mafft:
     path: mafft
     notes: ""
@@ -571,6 +736,9 @@ containers:
     - alignment
     tags:
     - '7.464'
+    entrypoint:
+    - "mafft --auto --quiet /data/OG0000331.fa > OG0000331_aligned.fa"
+    - "mafft"
   magic-wormhole:
     path: magic-wormhole
     notes: ""
@@ -579,6 +747,8 @@ containers:
     tags:
     - 0.12.0
     - 0.20.0
+    entrypoint:
+    - "wormhole"
   mamba:
     path: mamba
     notes: "tag 1.5.2 is broken"
@@ -597,6 +767,8 @@ containers:
     - 1.5.2
     - 2.0.5
     - 1.5.2
+    entrypoint:
+    - "mamba"
   mash:
     path: mash
     notes: ""
@@ -605,6 +777,7 @@ containers:
     - taxonomy
     tags:
     - '2.3'
+    entrypoint: []
   maxbin:
     path: maxbin
     notes: ""
@@ -612,6 +785,8 @@ containers:
     - metagenomics
     tags:
     - 2.2.6
+    entrypoint:
+    - "run_MaxBin.pl"
   mcl:
     path: mcl
     notes: ""
@@ -620,6 +795,8 @@ containers:
     tags:
     - '14.137'
     - '22.282'
+    entrypoint:
+    - "mcl"
     aliases:
     - MCL
   metabat:
@@ -629,6 +806,8 @@ containers:
     - metagenomics
     tags:
     - '2.13'
+    entrypoint:
+    - "metabat2 -h"
   metaxa:
     path: metaxa
     notes: ""
@@ -637,6 +816,8 @@ containers:
     - metagenomics
     tags:
     - '2.2'
+    entrypoint:
+    - "metaxa2 -h"
   minibarcoder:
     path: miniBarcoder
     notes: ""
@@ -644,6 +825,8 @@ containers:
     - barcoding
     tags:
     - 5e1dc3b
+    entrypoint:
+    - "/bin/bash"
     aliases:
     - miniBarcoder
   miniforge:
@@ -653,6 +836,8 @@ containers:
     - package-management
     tags:
     - 25.3.0-3
+    entrypoint:
+    - "conda"
   mitos:
     path: mitos
     notes: ""
@@ -662,6 +847,8 @@ containers:
     tags:
     - 2.0.8
     - 1.0.5
+    entrypoint:
+    - "runmitos.py"
   mmseqs2:
     path: mmseqs
     notes: ""
@@ -670,6 +857,8 @@ containers:
     - clustering
     tags:
     - 18-8cc5c
+    entrypoint:
+    - "mmseqs"
     aliases:
     - mmseqs
   mosdepth:
@@ -679,6 +868,8 @@ containers:
     - qc
     tags:
     - 0.3.3
+    entrypoint:
+    - "mosdepth -h"
   mrbayes:
     path: mrbayes
     notes: ""
@@ -686,6 +877,8 @@ containers:
     - phylogeny
     tags:
     - latest
+    entrypoint:
+    - "/sbin/my_init"
   multiqc:
     path: multiqc
     notes: "tag 1.17 is broken"
@@ -696,6 +889,8 @@ containers:
     - 1.17
     - 1.25.1
     - '1.17'
+    entrypoint:
+    - "multiqc"
   mummer:
     path: mummer
     notes: ""
@@ -703,6 +898,8 @@ containers:
     - genome-alignment
     tags:
     - 4.0.0beta2
+    entrypoint:
+    - "/bin/bash /run.sh"
   muscle:
     path: muscle
     notes: ""
@@ -710,6 +907,9 @@ containers:
     - alignment
     tags:
     - '5.1'
+    entrypoint:
+    - "muscle"
+    - "muscle -h"
   mutt:
     path: mutt
     notes: ""
@@ -718,6 +918,8 @@ containers:
     tags:
     - 2.2.6
     - 2.2.14
+    entrypoint:
+    - "mutt"
   ncbi-acc-download:
     path: ncbi-acc-download
     notes: ""
@@ -725,6 +927,8 @@ containers:
     - download
     tags:
     - 0.2.8
+    entrypoint:
+    - "ncbi-acc-download"
   ncbi-blast:
     path: ncbi-blast
     notes: ""
@@ -733,6 +937,10 @@ containers:
     tags:
     - 2.9.0
     - 2.15.0
+    entrypoint:
+    - "makeblastdb -in /files/my_sequences.fasta -dbtype prot -hash_index -out /files/my_blastdb"
+    - "blastp -db /files/my_blastdb -query /files/sequences_to_search.fa -outfmt 6 > blast_results.txt"
+    - "blastn -version"
   ncbi-datasets:
     path: ncbi-datasets
     notes: ""
@@ -740,6 +948,8 @@ containers:
     - download
     tags:
     - 16.25.0
+    entrypoint:
+    - "datasets"
   necat:
     path: necat
     notes: ""
@@ -748,6 +958,8 @@ containers:
     - assembly
     tags:
     - 0.0.1_update20200803
+    entrypoint:
+    - "necat"
   nim:
     path: nim
     notes: ""
@@ -757,6 +969,8 @@ containers:
     - 1.4.8
     - 1.6.6
     - 1.6.12
+    entrypoint:
+    - "nim"
   nimbio_plus:
     path: nimbio_plus
     notes: ""
@@ -766,6 +980,7 @@ containers:
     - 0.0.1
     - 0.0.2
     - 0.0.3
+    entrypoint: []
     aliases:
     - nimbio-plus
   norgal:
@@ -776,6 +991,10 @@ containers:
     - organelle
     tags:
     - '1.0'
+    entrypoint:
+    - "norgal"
+    - "norgal.py"
+    - "/bin/bash"
   novoplasty:
     path: novoplasty
     notes: ""
@@ -784,6 +1003,8 @@ containers:
     - organelle
     tags:
     - '4.2'
+    entrypoint:
+    - "NOVOPlasty.pl"
   oma-standalone:
     path: oma-standalone
     notes: ""
@@ -791,6 +1012,8 @@ containers:
     - orthology
     tags:
     - 2.5.0
+    entrypoint:
+    - "OMA"
   ont-fast5-api:
     path: ont-fast5-api
     notes: ""
@@ -798,6 +1021,9 @@ containers:
     - long-read
     tags:
     - latest
+    entrypoint:
+    - "multi_to_single_fast5 -i /data/fast5_pass -s /data/fast5_single -t 4"
+    - "/bin/bash"
   orthofinder:
     path: orthofinder
     notes: ""
@@ -808,6 +1034,8 @@ containers:
     - 2.5.2
     - 2.5.4
     - 2.5.5
+    entrypoint:
+    - "orthofinder"
     aliases:
     - Orthofinder
   pal2nal:
@@ -817,6 +1045,8 @@ containers:
     - alignment
     tags:
     - '14'
+    entrypoint:
+    - "pal2nal.pl"
   paml:
     path: paml
     notes: "4.9 - conda version comes with biopthon1.81 & scipy"
@@ -826,6 +1056,7 @@ containers:
     tags:
     - 4.10.6
     - 4.9
+    entrypoint: []
     aliases:
     - PAML
   pandoc:
@@ -838,6 +1069,9 @@ containers:
     - 3.1.3
     - 3.4
     - 3.7.0.2
+    entrypoint:
+    - "pandoc test.md -o test.pdf"
+    - "pandoc -h"
   pass:
     path: pass
     notes: ""
@@ -845,6 +1079,8 @@ containers:
     - utility
     tags:
     - latest
+    entrypoint:
+    - "pass"
     aliases:
     - linux
     - mac
@@ -855,6 +1091,8 @@ containers:
     - read-processing
     tags:
     - 0.9.6
+    entrypoint:
+    - "pear"
   phykit:
     path: phykit
     notes: ""
@@ -862,6 +1100,8 @@ containers:
     - phylogeny
     tags:
     - 1.11.15
+    entrypoint:
+    - "phykit -h"
   phylobayes:
     path: phylobayes
     notes: ""
@@ -869,6 +1109,8 @@ containers:
     - phylogeny
     tags:
     - 4.1c
+    entrypoint:
+    - "pb"
   phylobayes-mpi:
     path: phylobayes-mpi
     notes: "tag: 3c77656 (commit from Feb 2023)"
@@ -879,6 +1121,8 @@ containers:
     - git_dca7bdf
     - c12c4d7
     - 3c77656
+    entrypoint:
+    - "pb_mpi"
   phylopy:
     path: phylopy
     notes: ""
@@ -886,6 +1130,8 @@ containers:
     - phylogeny
     tags:
     - '1'
+    entrypoint:
+    - "python"
   picard:
     path: picard
     notes: ""
@@ -893,6 +1139,8 @@ containers:
     - read-processing
     tags:
     - 2.18.7
+    entrypoint:
+    - "picard"
   pigz:
     path: pigz
     notes: ""
@@ -900,6 +1148,8 @@ containers:
     - utility
     tags:
     - '2.6'
+    entrypoint:
+    - "pigz"
   pixi:
     path: pixi
     notes: ""
@@ -907,6 +1157,8 @@ containers:
     - utility
     tags:
     - 0.68.1
+    entrypoint:
+    - "pixi"
   prank:
     path: prank
     notes: ""
@@ -915,6 +1167,8 @@ containers:
     tags:
     - v150803
     - '150803'
+    entrypoint:
+    - "prank"
   purge_haplotigs:
     path: purge_haplotigs
     notes: ""
@@ -922,6 +1176,8 @@ containers:
     - assembly
     tags:
     - 1.1.1
+    entrypoint:
+    - "purge_haplotigs"
   pyinstaller:
     path: pyinstaller
     notes: ""
@@ -930,6 +1186,9 @@ containers:
     tags:
     - '5.1'
     - '6.1'
+    entrypoint:
+    - "pyinstaller"
+    - "/entrypoint.sh"
   pyscaf:
     path: pyscaf
     notes: ""
@@ -937,6 +1196,8 @@ containers:
     - assembly
     tags:
     - 0.12a4
+    entrypoint:
+    - "/bin/bash"
   quast:
     path: quast
     notes: ""
@@ -945,6 +1206,9 @@ containers:
     - assembly
     tags:
     - 5.0.2
+    entrypoint:
+    - "quast.py $(ls -d -1 *.fasta | sed s/^/\\/data\\//) -o /data/quast --silent"
+    - "quast.py -h"
     aliases:
     - QUAST
   quicktree:
@@ -954,6 +1218,8 @@ containers:
     - phylogeny
     tags:
     - '2.5'
+    entrypoint:
+    - "quicktree"
   r8s:
     path: r8s
     notes: ""
@@ -961,6 +1227,8 @@ containers:
     - phylogeny
     tags:
     - latest
+    entrypoint:
+    - "r8s"
   raxml-ng:
     path: raxml-ng
     notes: ""
@@ -969,6 +1237,8 @@ containers:
     tags:
     - 1.0.0
     - 1.1.0
+    entrypoint:
+    - "raxml-ng"
   rename:
     path: rename
     notes: ""
@@ -976,6 +1246,8 @@ containers:
     - utility
     tags:
     - 1.10-1
+    entrypoint:
+    - "rename"
   repeatmodeler-repeatmasker:
     path: repeatmodeler-repeatmasker
     notes: ""
@@ -984,6 +1256,8 @@ containers:
     - transposable-elements
     tags:
     - 2.0.3-4.1.3
+    entrypoint:
+    - "/bin/bash"
   rmarkdown:
     path: rmarkdown
     notes: ""
@@ -994,6 +1268,9 @@ containers:
     - 3.6.3
     - 4.0.3
     - 4.0.3_DT
+    entrypoint:
+    - "Rscript -e rmarkdown::render('./report.rmd')"
+    - "R"
   rphylogenetics:
     path: rphylogenetics
     notes: "tags refer to R version"
@@ -1003,6 +1280,8 @@ containers:
     tags:
     - 4.0.3 
     - 4.0.3-strict-versions
+    entrypoint:
+    - "R"
   samtools:
     path: samtools
     notes: ""
@@ -1012,6 +1291,8 @@ containers:
     - '1.9'
     - '1.11'
     - '1.21'
+    entrypoint:
+    - "samtools"
   scrape_cazy:
     path: scrape_cazy
     notes: ""
@@ -1019,6 +1300,9 @@ containers:
     - annotation
     tags:
     - '1'
+    entrypoint:
+    - "scrape_cazy.py -f GH3"
+    - "scrape_cazy.py -h"
   seqtk:
     path: seqtk
     notes: ""
@@ -1026,6 +1310,8 @@ containers:
     - read-processing
     tags:
     - '1.3'
+    entrypoint:
+    - "seqtk"
   singularity:
     path: singularity
     notes: ""
@@ -1034,6 +1320,9 @@ containers:
     tags:
     - 3.4.1
     - 3.6.3
+    entrypoint:
+    - "/bin/bash"
+    - "singularity"
   smsi_ubuntu:
     path: smsi_ubuntu
     notes: ""
@@ -1041,6 +1330,8 @@ containers:
     - utility
     tags:
     - latest
+    entrypoint:
+    - "/bin/bash"
   snakemake:
     path: snakemake
     notes: ""
@@ -1048,6 +1339,9 @@ containers:
     - workflow
     tags:
     - 6.0.2
+    entrypoint:
+    - "snakemake -v"
+    - "snakemake"
   sourmash:
     path: sourmash
     notes: ""
@@ -1057,6 +1351,8 @@ containers:
     tags:
     - 3.2.2
     - 4.9.3
+    entrypoint:
+    - "sourmash"
     aliases:
     - sourmah
   spades:
@@ -1069,6 +1365,9 @@ containers:
     - 3.13.0
     - 3.15.3
     - 4.2.0
+    entrypoint:
+    - "spades.py -h"
+    - "spades.py"
     aliases:
     - Spades
   speedtest-cli:
@@ -1079,6 +1378,9 @@ containers:
     tags:
     - 2.1.2
     - 2.1.3
+    entrypoint:
+    - "speedtest-cli --csv >> /home/pi/speedtest/speedtest_data.txt"
+    - "speedtest-cli"
   sphinx:
     path: sphinx
     notes: ""
@@ -1086,6 +1388,8 @@ containers:
     - document
     tags:
     - 8.1.3
+    entrypoint:
+    - "make html"
   spython:
     path: spython
     notes: ""
@@ -1093,6 +1397,9 @@ containers:
     - container-runtime
     tags:
     - 0.3.14
+    entrypoint:
+    - "spython recipe /data/Dockerfile > Singularity.def"
+    - "spython"
   sra-tools:
     path: sra-tools
     notes: ""
@@ -1101,6 +1408,9 @@ containers:
     tags:
     - 2.20.1
     - 2.10.9
+    entrypoint:
+    - "fastq-dump"
+    - "/bin/bash"
   stringtie:
     path: stringtie
     notes: ""
@@ -1108,6 +1418,8 @@ containers:
     - transcriptomics
     tags:
     - 2.2.1
+    entrypoint:
+    - "stringtie"
   table2asn:
     path: table2asn
     notes: ""
@@ -1116,6 +1428,9 @@ containers:
     tags:
     - '20201119'
     - 1.26.678
+    entrypoint:
+    - "table2asn -h"
+    - "linux64.table2asn_GFF -h"
   taxonkit:
     path: taxonkit
     notes: ""
@@ -1123,6 +1438,8 @@ containers:
     - taxonomy
     tags:
     - 0.12.0
+    entrypoint:
+    - "taxonkit"
   tbl2asn:
     path: tbl2asn
     notes: ""
@@ -1130,6 +1447,8 @@ containers:
     - annotation
     tags:
     - '25.8'
+    entrypoint:
+    - "tbl2asn --help"
   tcoffee:
     path: tcoffee
     notes: ""
@@ -1139,6 +1458,8 @@ containers:
     - 11.0.8
     - v.13.46.0.919e8c6b
     - 13.46.0.919e8c6b
+    entrypoint:
+    - "t_coffee"
   tectonic:
     path: tectonic
     notes: ""
@@ -1146,6 +1467,8 @@ containers:
     - document
     tags:
     - 0.14.1
+    entrypoint:
+    - "tectonic"
   threshml:
     path: threshml
     notes: ""
@@ -1153,6 +1476,8 @@ containers:
     - ml
     tags:
     - latest
+    entrypoint:
+    - "R"
   treeshrink:
     path: treeshrink
     notes: ""
@@ -1160,6 +1485,9 @@ containers:
     - phylogeny
     tags:
     - 1.3.9
+    entrypoint:
+    - "run_treeshrink -h"
+    - "run_treeshrink"
   trim-galore:
     path: trimgalore
     notes: ""
@@ -1167,6 +1495,8 @@ containers:
     - read-processing
     tags:
     - 0.6.10
+    entrypoint:
+    - "trim_galore"
     aliases:
     - trimgalore
   trimal:
@@ -1176,6 +1506,9 @@ containers:
     - alignment
     tags:
     - 1.4.1
+    entrypoint:
+    - "trimal -in /data/aligned_all_PF00083.fas -out /data/trimmed_all_PF00083.fas -gappyout"
+    - "trimal -h"
   trimmomatic:
     path: trimmomatic
     notes: ""
@@ -1184,6 +1517,10 @@ containers:
     tags:
     - '0.38'
     - '0.39'
+    entrypoint:
+    - "trimmomatic PE -phred33 -threads 8 /data/pair1.fq.gz /data/pair2.fq.gz /data/trimmed_pair1.fq.gz /data/unpaired_pair1.fq.gz /data/trimmed_pair2.fq.gz /data/unpaired_pair2.fq.gz HEADCROP:20 ILLUMINACLIP:/data/adapters.fa:2:30:10 LEADING:30 TRAILING:30 SLIDINGWINDOW:4:15 MINLEN:80"
+    - "trimmomatic"
+    - "trimomatic"
   typst:
     path: typst
     notes: "tag 8c813cb (post line numbers!)"
@@ -1195,6 +1532,9 @@ containers:
     - 0.13.1
     - 0.14.0
     - 8c813cb
+    entrypoint:
+    - "typst watch /data/document.typ"
+    - "typst"
   ubuntu:
     path: ubuntu
     notes: ""
@@ -1202,6 +1542,8 @@ containers:
     - base-image
     tags:
     - '20.04'
+    entrypoint:
+    - "/bin/bash"
   uv:
     path: uv
     notes: ""
@@ -1209,6 +1551,8 @@ containers:
     - development
     tags:
     - 0.8.22
+    entrypoint:
+    - "uv run bin/script.py"
   viralmsa:
     path: viralmsa
     notes: ""
@@ -1216,3 +1560,5 @@ containers:
     - alignment
     tags:
     - 1.1.20
+    entrypoint:
+    - "ViralMSA.py -h"
