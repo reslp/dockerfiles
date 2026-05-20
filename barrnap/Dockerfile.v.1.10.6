@@ -1,0 +1,6 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN conda install bioconda::barrnap==1.10.6
+
+WORKDIR /data
+

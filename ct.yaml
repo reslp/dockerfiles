@@ -80,6 +80,16 @@ containers:
     - 1.0.15
     entrypoint:
     - "bam"
+  barrnap:
+    path: barrnap
+    notes: "Microbial RNA annotation"
+    categories:
+      - annotation
+      - RNA
+    tags:
+      - 1.10.6
+    entrypoint:
+      - "barrnap -h"
   bbmap:
     path: bbmap
     notes: ""

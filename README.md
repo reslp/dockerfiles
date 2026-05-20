@@ -16,6 +16,7 @@ The **tags** given for each container correspond the the available versions of d
 [astral](#astral)
 [augustus](#augustus)
 [bamutil](#bamutil)
+[barrnap](#barrnap)
 [bbmap](#bbmap)
 [beast](#beast)
 [bedops](#bedops)
@@ -113,6 +114,7 @@ The **tags** given for each container correspond the the available versions of d
 [phylo-scripts](#phylo-scripts)
 [picard](#picard)
 [pigz](#pigz)
+[pixi](#pixi)
 [prank](#prank)
 [purge_haplotigs](#purge_haplotigs)
 [pyinstaller](#pyinstaller)
@@ -1740,5 +1742,17 @@ tags: 0.68.1
 
 ```
 docker run --rm -it reslp/pixi:0.68.1 pixi
+```
+
+## barrnap
+
+Mikrobial RNA annotation - https://github.com/tseemann/barrnap
+
+tags: 1.10.6
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/barrnap:1.10.6 barrnap -h
 ```
 
