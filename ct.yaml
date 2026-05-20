@@ -26,7 +26,6 @@ containers:
     - comparative-genomics
     tags:
     - d06bd45
-    - latest
   amplicon_sorter:
     path: amplicon_sorter
     notes: ""
@@ -43,7 +42,6 @@ containers:
     - population-genetics
     tags:
     - '0.935'
-    - latest
   astral:
     path: astral
     notes: ""
@@ -51,7 +49,6 @@ containers:
     - phylogeny
     tags:
     - 5.7.1
-    - latest
     aliases:
     - ASTRAL
   augustus:
@@ -61,7 +58,6 @@ containers:
     - annotation
     tags:
     - 3.3.3
-    - latest
   bamutil:
     path: bamutil
     notes: ""
@@ -69,7 +65,6 @@ containers:
     - read-processing
     tags:
     - 1.0.15
-    - latest
   bbmap:
     path: bbmap
     notes: ""
@@ -77,7 +72,6 @@ containers:
     - read-mapping
     tags:
     - '38.90'
-    - latest
   beast:
     path: beast
     notes: ""
@@ -85,7 +79,6 @@ containers:
     - phylogeny
     tags:
     - 2.6.7
-    - latest
   bedops:
     path: bedops
     notes: ""
@@ -93,7 +86,6 @@ containers:
     - genome-intervals
     tags:
     - 2.4.39
-    - latest
   bedtools:
     path: bedtools
     notes: ""
@@ -101,7 +93,6 @@ containers:
     - genome-intervals
     tags:
     - 2.29.2
-    - latest
   bibcure:
     path: bibcure
     notes: ""
@@ -148,7 +139,6 @@ containers:
     - metagenomics
     tags:
     - 1.1.1
-    - latest
   bmge:
     path: bmge
     notes: ""
@@ -157,7 +147,6 @@ containers:
     - phylogeny
     tags:
     - '1.12'
-    - latest
   bonito:
     path: bonito
     notes: ""
@@ -166,7 +155,6 @@ containers:
     - basecalling
     tags:
     - 0.3.2
-    - latest
   bowtie2:
     path: bowtie2
     notes: ""
@@ -195,7 +183,6 @@ containers:
     - 4.2.1
     - 5.0.0b2
     - 5.1.0
-    - latest
     - cafe5b2
   cafe-viz:
     path: cafe-viz
@@ -228,7 +215,6 @@ containers:
     - alignment
     tags:
     - 1.2.4
-    - latest
   colord:
     path: colord
     notes: ""
@@ -236,7 +222,6 @@ containers:
     - utility
     tags:
     - 1.1.0
-    - latest
   concoct:
     path: concoct
     notes: ""
@@ -244,7 +229,6 @@ containers:
     - metagenomics
     tags:
     - '1.1'
-    - latest
   consent:
     path: CONSENT
     notes: ""
@@ -253,7 +237,6 @@ containers:
     - error-correction
     tags:
     - v2.1
-    - latest
     aliases:
     - CONSENT
   cupp:
@@ -263,7 +246,6 @@ containers:
     - pathogen-typing
     tags:
     - 1.0.14
-    - latest
     aliases:
     - CUPP
   datasets:
@@ -283,7 +265,6 @@ containers:
     - prediction
     tags:
     - '1.0'
-    - latest
   dendropy:
     path: dendropy
     notes: ""
@@ -292,7 +273,6 @@ containers:
     - python
     tags:
     - 4.5.2
-    - latest
   dentist:
     path: dentist
     notes: ""
@@ -300,7 +280,6 @@ containers:
     - assembly
     tags:
     - 3.0.0
-    - latest
   diamond:
     path: diamond
     notes: ""
@@ -329,7 +308,6 @@ containers:
     - 1.9.9
     - 2.0.1
     - 2.2.0
-    - latest
   eggnog-mapper:
     path: eggnog-mapper
     notes: ""
@@ -339,7 +317,6 @@ containers:
     tags:
     - 1.0.3
     - 2.0.1
-    - latest
   emboss:
     path: emboss
     notes: ""
@@ -347,7 +324,6 @@ containers:
     - sequence-analysis
     tags:
     - 6.6.0
-    - latest
   entrez-direct:
     path: entrez-direct
     notes: ""
@@ -363,7 +339,6 @@ containers:
     - python
     tags:
     - 3.1.2
-    - latest
   exonerate:
     path: exonerate
     notes: ""
@@ -371,7 +346,6 @@ containers:
     - homology-search
     tags:
     - 2.4.0
-    - latest
   extract_contigs:
     path: extract_contigs
     notes: ""
@@ -387,7 +361,6 @@ containers:
     - homology-search
     tags:
     - 36.3.8
-    - latest
   fastcodeml:
     path: fastcodeml
     notes: ""
@@ -402,7 +375,6 @@ containers:
     - qc
     tags:
     - 0.11.7
-    - latest
   fastuniq:
     path: fastuniq
     notes: ""
@@ -410,7 +382,6 @@ containers:
     - read-processing
     tags:
     - '1.1'
-    - latest
   ffsend:
     path: ffsend
     notes: ""
@@ -418,7 +389,6 @@ containers:
     - utility
     tags:
     - 0.2.76
-    - latest
   figtree:
     path: figtree
     notes: ""
@@ -442,7 +412,6 @@ containers:
     - read-processing
     tags:
     - 1.2.11
-    - latest
   fmlrc:
     path: fmlrc
     notes: ""
@@ -451,7 +420,6 @@ containers:
     - error-correction
     tags:
     - v1.0.0
-    - latest
   gatk:
     path: gatk
     notes: ""
@@ -459,7 +427,6 @@ containers:
     - variant-calling
     tags:
     - '3.8'
-    - latest
   genome-viz:
     path: genome-viz
     notes: ""
@@ -499,7 +466,6 @@ containers:
     - alignment
     tags:
     - '2.02'
-    - latest
     aliases:
     - guidance
     - GUIDANCE2
@@ -510,7 +476,6 @@ containers:
     - homology-search
     tags:
     - 3.1b2
-    - latest
   ima2:
     path: ima2
     notes: ""
@@ -518,7 +483,6 @@ containers:
     - population-genetics
     tags:
     - 8.27.12
-    - latest
   imagemagick:
     path: imagemagick
     notes: ""
@@ -534,7 +498,6 @@ containers:
     tags:
     - 5.39-77.0
     - 5.48-83.0
-    - latest
   ipyrad:
     path: ipyrad
     notes: ""
@@ -558,7 +521,6 @@ containers:
     - development
     tags:
     - 1.6.3
-    - latest
   jupyter-hub:
     path: jupyter-hub
     notes: ""
@@ -594,7 +556,6 @@ containers:
     - assembly
     tags:
     - '1.7051'
-    - latest
   macse:
     path: macse
     notes: ""
@@ -603,8 +564,6 @@ containers:
     tags:
     - '1.2'
     - '2.05'
-    - latest
-    - _2.05
   mafft:
     path: mafft
     notes: ""
@@ -612,7 +571,6 @@ containers:
     - alignment
     tags:
     - '7.464'
-    - latest
   magic-wormhole:
     path: magic-wormhole
     notes: ""
@@ -638,7 +596,6 @@ containers:
     - 1.4.1
     - 1.5.2
     - 2.0.5
-    - latest
     - 1.5.2
   mash:
     path: mash
@@ -655,7 +612,6 @@ containers:
     - metagenomics
     tags:
     - 2.2.6
-    - latest
   mcl:
     path: mcl
     notes: ""
@@ -673,7 +629,6 @@ containers:
     - metagenomics
     tags:
     - '2.13'
-    - latest
   metaxa:
     path: metaxa
     notes: ""
@@ -682,7 +637,6 @@ containers:
     - metagenomics
     tags:
     - '2.2'
-    - latest
   minibarcoder:
     path: miniBarcoder
     notes: ""
@@ -690,7 +644,6 @@ containers:
     - barcoding
     tags:
     - 5e1dc3b
-    - latest
     aliases:
     - miniBarcoder
   miniforge:
@@ -709,7 +662,6 @@ containers:
     tags:
     - 2.0.8
     - 1.0.5
-    - latest
   mmseqs2:
     path: mmseqs
     notes: ""
@@ -727,7 +679,6 @@ containers:
     - qc
     tags:
     - 0.3.3
-    - latest
   mrbayes:
     path: mrbayes
     notes: ""
@@ -752,7 +703,6 @@ containers:
     - genome-alignment
     tags:
     - 4.0.0beta2
-    - latest
   muscle:
     path: muscle
     notes: ""
@@ -760,7 +710,6 @@ containers:
     - alignment
     tags:
     - '5.1'
-    - latest
   mutt:
     path: mutt
     notes: ""
@@ -784,7 +733,6 @@ containers:
     tags:
     - 2.9.0
     - 2.15.0
-    - latest
   ncbi-datasets:
     path: ncbi-datasets
     notes: ""
@@ -800,7 +748,6 @@ containers:
     - assembly
     tags:
     - 0.0.1_update20200803
-    - latest
   nim:
     path: nim
     notes: ""
@@ -810,7 +757,6 @@ containers:
     - 1.4.8
     - 1.6.6
     - 1.6.12
-    - latest
   nimbio_plus:
     path: nimbio_plus
     notes: ""
@@ -830,7 +776,6 @@ containers:
     - organelle
     tags:
     - '1.0'
-    - latest
   novoplasty:
     path: novoplasty
     notes: ""
@@ -839,7 +784,6 @@ containers:
     - organelle
     tags:
     - '4.2'
-    - latest
   oma-standalone:
     path: oma-standalone
     notes: ""
@@ -847,7 +791,6 @@ containers:
     - orthology
     tags:
     - 2.5.0
-    - latest
   ont-fast5-api:
     path: ont-fast5-api
     notes: ""
@@ -874,7 +817,6 @@ containers:
     - alignment
     tags:
     - '14'
-    - latest
   paml:
     path: paml
     notes: "4.9 - conda version comes with biopthon1.81 & scipy"
@@ -913,7 +855,6 @@ containers:
     - read-processing
     tags:
     - 0.9.6
-    - latest
   phykit:
     path: phykit
     notes: ""
@@ -928,7 +869,6 @@ containers:
     - phylogeny
     tags:
     - 4.1c
-    - latest
   phylobayes-mpi:
     path: phylobayes-mpi
     notes: "tag: 3c77656 (commit from Feb 2023)"
@@ -946,7 +886,6 @@ containers:
     - phylogeny
     tags:
     - '1'
-    - latest
   picard:
     path: picard
     notes: ""
@@ -954,7 +893,6 @@ containers:
     - read-processing
     tags:
     - 2.18.7
-    - latest
   pigz:
     path: pigz
     notes: ""
@@ -962,7 +900,6 @@ containers:
     - utility
     tags:
     - '2.6'
-    - latest
   pixi:
     path: pixi
     notes: ""
@@ -985,7 +922,6 @@ containers:
     - assembly
     tags:
     - 1.1.1
-    - latest
   pyinstaller:
     path: pyinstaller
     notes: ""
@@ -1001,7 +937,6 @@ containers:
     - assembly
     tags:
     - 0.12a4
-    - latest
   quast:
     path: quast
     notes: ""
@@ -1010,7 +945,6 @@ containers:
     - assembly
     tags:
     - 5.0.2
-    - latest
     aliases:
     - QUAST
   quicktree:
@@ -1020,7 +954,6 @@ containers:
     - phylogeny
     tags:
     - '2.5'
-    - latest
   r8s:
     path: r8s
     notes: ""
@@ -1036,7 +969,6 @@ containers:
     tags:
     - 1.0.0
     - 1.1.0
-    - latest
   rename:
     path: rename
     notes: ""
@@ -1044,7 +976,6 @@ containers:
     - utility
     tags:
     - 1.10-1
-    - latest
   repeatmodeler-repeatmasker:
     path: repeatmodeler-repeatmasker
     notes: ""
@@ -1053,7 +984,6 @@ containers:
     - transposable-elements
     tags:
     - 2.0.3-4.1.3
-    - latest
   rmarkdown:
     path: rmarkdown
     notes: ""
@@ -1072,7 +1002,6 @@ containers:
     - r
     tags:
     - 4.0.3 
-    - latest
     - 4.0.3-strict-versions
   samtools:
     path: samtools
@@ -1090,7 +1019,6 @@ containers:
     - annotation
     tags:
     - '1'
-    - latest
   seqtk:
     path: seqtk
     notes: ""
@@ -1098,7 +1026,6 @@ containers:
     - read-processing
     tags:
     - '1.3'
-    - latest
   singularity:
     path: singularity
     notes: ""
@@ -1107,7 +1034,6 @@ containers:
     tags:
     - 3.4.1
     - 3.6.3
-    - latest
   smsi_ubuntu:
     path: smsi_ubuntu
     notes: ""
@@ -1122,7 +1048,6 @@ containers:
     - workflow
     tags:
     - 6.0.2
-    - latest
   sourmash:
     path: sourmash
     notes: ""
@@ -1154,7 +1079,6 @@ containers:
     tags:
     - 2.1.2
     - 2.1.3
-    - latest
   sphinx:
     path: sphinx
     notes: ""
@@ -1177,7 +1101,6 @@ containers:
     tags:
     - 2.20.1
     - 2.10.9
-    - latest
   stringtie:
     path: stringtie
     notes: ""
@@ -1200,7 +1123,6 @@ containers:
     - taxonomy
     tags:
     - 0.12.0
-    - latest
   tbl2asn:
     path: tbl2asn
     notes: ""
@@ -1208,7 +1130,6 @@ containers:
     - annotation
     tags:
     - '25.8'
-    - latest
   tcoffee:
     path: tcoffee
     notes: ""
@@ -1255,7 +1176,6 @@ containers:
     - alignment
     tags:
     - 1.4.1
-    - latest
   trimmomatic:
     path: trimmomatic
     notes: ""
@@ -1264,7 +1184,6 @@ containers:
     tags:
     - '0.38'
     - '0.39'
-    - latest
   typst:
     path: typst
     notes: "tag 8c813cb (post line numbers!)"
@@ -1283,7 +1202,6 @@ containers:
     - base-image
     tags:
     - '20.04'
-    - latest
   uv:
     path: uv
     notes: ""
@@ -1298,4 +1216,3 @@ containers:
     - alignment
     tags:
     - 1.1.20
-    - latest
