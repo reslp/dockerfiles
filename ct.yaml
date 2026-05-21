@@ -686,11 +686,13 @@ containers:
     - "julia"
   jupyter-hub:
     path: jupyter-hub
-    notes: ""
+    notes: "reference: https://github.com/reslp/jupyterhub-singularity"
     categories:
     - notebook
+    - R
     tags:
     - 5.2.1
+    - 5.2.1-r-bash
     entrypoint:
     - "jupyterhub"
     aliases:

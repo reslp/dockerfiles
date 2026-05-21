@@ -1,0 +1,94 @@
+FROM quay.io/jupyterhub/jupyterhub:5.2.1
+
+WORKDIR /data
+ENV PYTHONPATH="${PYTHONPATH}:/data"
+ENV DEBIAN_FRONTEND=noninteractive
+
+# System dependencies plus R and build dependencies for common R packages.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    git \
+    openssh-client \
+    bash \
+    nano \
+    vim-tiny \
+    gnupg \
+    apt-transport-https \
+    lsb-release \
+    sudo \
+    psmisc \
+    libclang-dev \
+    libsqlite3-0 \
+    libssl-dev \
+    libcurl4-openssl-dev \
+    libxml2-dev \
+    libzmq3-dev \
+    r-base \
+    r-base-dev \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Python/Jupyter packages.
+RUN python3 -m pip install --no-cache-dir \
+    jupyterhub-nativeauthenticator \
+    dockerspawner \
+    jupyterlab \
+    jupyter_server_terminals \
+    matplotlib \
+    terminado \
+    pandas \
+    numpy \
+    opencv-python
+
+# R kernel for JupyterLab.
+RUN R --vanilla -e "install.packages(c('IRkernel', 'repr', 'evaluate', 'IRdisplay'), repos='https://cloud.r-project.org')"
+RUN R --vanilla -e "install.packages(c('dplyr', 'ggplot2', 'terra', 'geodata', 'sf', 'CoordinateCleaner'), repos='https://cloud.r-project.org')"
+
+# Site-wide R defaults for JupyterHub/Singularity teaching use.
+# System libraries inside the container are read-only at runtime, so package
+# installs should go to a writable per-user library under the JupyterHub HOME.
+RUN mkdir -p /etc/R && \
+    cat > /etc/R/Rprofile.site <<'EOF'
+local({
+  r_libs_user <- Sys.getenv("R_LIBS_USER")
+  if (identical(r_libs_user, "")) {
+    r_libs_user <- file.path(
+      Sys.getenv("HOME"),
+      "R",
+      paste0(R.version$platform, "-library"),
+      paste(R.version$major, R.version$minor, sep = ".")
+    )
+    Sys.setenv(R_LIBS_USER = r_libs_user)
+  }
+
+  dir.create(r_libs_user, recursive = TRUE, showWarnings = FALSE)
+  .libPaths(unique(c(r_libs_user, .libPaths())))
+  options(repos = c(CRAN = "https://cloud.r-project.org"))
+})
+EOF
+
+# Explicit system-wide kernelspec so JupyterLab exposes an R launcher.
+RUN mkdir -p /usr/local/share/jupyter/kernels/ir && \
+    cat > /usr/local/share/jupyter/kernels/ir/kernel.json <<'EOF'
+{
+  "argv": [
+    "R",
+    "--slave",
+    "-e",
+    "IRkernel::main()",
+    "--args",
+    "{connection_file}"
+  ],
+  "display_name": "R",
+  "language": "R",
+  "env": {
+    "R_HOME": "/usr/lib/R"
+  }
+}
+EOF
+
+
