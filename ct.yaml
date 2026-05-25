@@ -1155,11 +1155,12 @@ containers:
     - "picard"
   pigz:
     path: pigz
-    notes: ""
+    notes: "parallel gzip"
     categories:
     - utility
     tags:
-    - '2.6'
+    - 2.6
+    - 2.8
     entrypoint:
     - "pigz"
   pixi:

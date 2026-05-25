@@ -1149,7 +1149,7 @@ docker run --rm -it -v $(pwd):/data reslp/beast:2.6.7
 
 Parallel implementation of gzip
 
-tags: 2.6
+tags: 2.6, 2.8
 
 WORKDIR /data
 
