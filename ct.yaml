@@ -1566,6 +1566,16 @@ containers:
     - 0.8.22
     entrypoint:
     - "uv run bin/script.py"
+  vcftools:
+    path: vcftools
+    notes: ""
+    categories:
+    - variant-calling
+    - snp
+    tags:
+    - 0.1.17
+    entrypoint:
+    - "vcftools"
   viralmsa:
     path: viralmsa
     notes: ""

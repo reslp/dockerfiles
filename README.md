@@ -144,6 +144,7 @@ The **tags** given for each container correspond the the available versions of d
 [trimmomatic](#trimmomatic)
 [typst](#typst)
 [ubuntu](#ubuntu)
+[vcftools](#vcftools)
 [viralmsa](#viralmsa)
 [quast](#quast)
 [quicktree](#quicktree)
@@ -1755,5 +1756,17 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/barrnap:1.10.6 barrnap -h
+```
+
+## vcftools
+
+A set of tools written in Perl and C++ for working with VCF files - https://github.com/vcftools/vcftools
+
+tags: 0.1.17
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/vcftools:0.1.17
 ```
 
