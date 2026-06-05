@@ -138,6 +138,7 @@ The **tags** given for each container correspond the the available versions of d
 [table2asn](#table2asn)
 [tbl2asn](#tbl2asn)
 [tcoffee](#tcoffee)
+[tiberius](#tiberius)
 [treeshrink](treeshrink)
 [trim-galore](#trim-galore)
 [trimal](#trimal)
@@ -1769,4 +1770,17 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/vcftools:0.1.17
 ```
+
+## tiberius
+
+Tiberius is a deep learning gene finder. - https://github.com/Gaius-Augustus/Tiberius
+
+tags: 2.0.5
+
+WORKDIR /data
+
+```
+docker run --rm -it -v $(pwd):/data reslp/tiberius:2.0.5 tiberius.py --genome /data/genome.fasta --model_cfg fungi.yaml
+```
+
 

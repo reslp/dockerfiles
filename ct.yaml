@@ -1491,6 +1491,16 @@ containers:
     - latest
     entrypoint:
     - "R"
+  tiberius:
+    path: tiberius
+    notes: ""
+    categories:
+    - annotation
+    - gene-calling
+    tags:
+    - 2.0.5
+    entrypoint:
+    - "tiberius.py --genome assembly.fasta --model_cfg fungi.yaml"
   treeshrink:
     path: treeshrink
     notes: ""

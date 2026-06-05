@@ -1,0 +1,6 @@
+FROM reslp/uv:0.8.22
+
+#RUN uv pip install --system "git+https://github.com/Gaius-Augustus/Tiberius@v2.0.5"
+RUN cd /opt && git clone https://github.com/Gaius-Augustus/Tiberius && cd Tiberius && git checkout v2.0.5 && uv pip install --system ".[from_source]"
+RUN chmod a+x /opt/Tiberius/tiberius.py 
+ENV PATH="$PATH:/opt/Tiberius"
