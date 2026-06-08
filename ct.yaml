@@ -654,6 +654,7 @@ containers:
     tags:
     - 5.39-77.0
     - 5.48-83.0
+    - 5.77-108.0
     entrypoint: []
   ipyrad:
     path: ipyrad

@@ -621,7 +621,7 @@ docker run --rm -i -v $(pwd):/data reslp/bonito:0.3.2 bonito basecaller dna_r9.4
 ```
 
 ## interproscan-wrapper
-tags: 5.39-77.0, 5.48-83.0
+tags: 5.39-77.0, 5.48-83.0, 5.77-108.0
 
 This is a wrapper container for use with interproscan. Interproscan is huge so it can't be properly packed into a container. The tags refer to the tested versions of interproscan which work with this container.
 The dockerfile provided may not be the same for different tags. For older versions, Ubuntu 18.04 is used as base due to MobiDBs incompatibility with python >3.8.2 (see here: https://github.com/ebi-pf-team/interproscan/issues/147). 
