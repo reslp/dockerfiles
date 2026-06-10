@@ -1,0 +1,9 @@
+FROM reslp/miniforge:25.3.0-3
+
+WORKDIR /data
+
+RUN conda install -c bioconda fastqsplitter=1.2.0
+
+CMD ["fastqsplitter"]
+
+

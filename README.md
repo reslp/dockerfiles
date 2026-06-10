@@ -51,6 +51,7 @@ The **tags** given for each container correspond the the available versions of d
 [fasta3](#fasta3)
 [fastcodeml](#fastcodeml)
 [fastqc](#fastqc)
+[fastqsplitter](#fastqsplitter)
 [fastuniq](#fastuniq)
 [ffsend](#ffsend)
 [figtree](#figtree)
@@ -1783,4 +1784,15 @@ WORKDIR /data
 docker run --rm -it -v $(pwd):/data reslp/tiberius:2.0.5 tiberius.py --genome /data/genome.fasta --model_cfg fungi.yaml
 ```
 
+## fastqsplitter
+
+Splits fastq files evenly - https://github.com/LUMC/fastqsplitter
+
+tags: 1.2.0
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/fastqsplitter:1.2.0 fastqsplitter
+```
 

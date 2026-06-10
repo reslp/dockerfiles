@@ -496,6 +496,17 @@ containers:
     - "fastqc /data/illumina_reads_5_R1_trimmed.fq -o /data"
     - "fastqc -h"
     - "fastqc"
+  fastqsplitter:
+    path: fastqc
+    notes: "splits fastq files into evenly sized chunks"
+    categories:
+    - qc
+    - utility
+    tags:
+    - 1.2.0
+    entrypoint:
+    - "fastqsplitter"
+    - "fastqsplitter -h"
   fastuniq:
     path: fastuniq
     notes: ""
