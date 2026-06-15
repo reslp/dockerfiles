@@ -1567,6 +1567,7 @@ containers:
     - 0.13.1
     - 0.14.0
     - 8c813cb
+    - 0.15.0
     entrypoint:
     - "typst watch /data/document.typ"
     - "typst"
