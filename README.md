@@ -386,7 +386,7 @@ This image should serve as a base environment to execute python scripts which us
 tags: 1.77
 
 ```
-docker run reslp:biopython_plus:1.77
+docker run reslp/biopython_plus:1.77
 ```
 
 
