@@ -485,6 +485,17 @@ containers:
     - 1.1.0
     entrypoint:
     - "fast"
+  fastp:
+    path: fastp
+    notes: ""
+    categories:
+    - trimming
+    - qc
+    - read filtering
+    tags:
+    - 1.3.3
+    entrypoint:
+    - "fastp"
   fastqc:
     path: fastqc
     notes: ""

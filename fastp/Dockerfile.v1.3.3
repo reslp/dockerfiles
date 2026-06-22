@@ -1,0 +1,5 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install -c bioconda fastp=1.3.3
+
+WORKDIR /data

@@ -1808,4 +1808,17 @@ tags: 2.68
 docker run --rm -it reslp/stacks:2.68 process_radtags
 ```
 
+## fastp
+
+An ultra-fast all-in-one FASTQ preprocessor (QC/adapters/trimming/filtering/splitting/merging...) - https://github.com/OpenGene/fastp
+
+tags: 1.3.3
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/fastp:1.3.3
+```
+
+
 
