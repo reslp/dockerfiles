@@ -1639,3 +1639,14 @@ containers:
     - 1.1.20
     entrypoint:
     - "ViralMSA.py -h"
+  bcftools:
+    path: bcftools
+    notes: ""
+    categories:
+    - variant calling
+    - snp
+    - population genomics
+    tags:
+    - 1.23.1
+    entrypoint:
+    - "bcftools"

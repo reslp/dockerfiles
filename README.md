@@ -18,6 +18,7 @@ The **tags** given for each container correspond the the available versions of d
 [bamutil](#bamutil)
 [barrnap](#barrnap)
 [bbmap](#bbmap)
+[bcftools](#bcftools)
 [beast](#beast)
 [bedops](#bedops)
 [bedtools](#bedtools)
@@ -29,6 +30,7 @@ The **tags** given for each container correspond the the available versions of d
 [bonito](#bonito)
 [bowtie2](#bowtie2)
 [busco](#busco)
+[bwa](#bwa)
 [cafe](#cafe)
 [cafe-viz](#cafe-viz)
 [cd-hit](#cd-hit)
@@ -1832,5 +1834,13 @@ WORKDIR /data
 docker run --rm -it reslp/bwa:0.7.19 bwa
 ```
 
+## bcftools
 
+BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. - https://github.com/samtools/bcftools
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/bcftools:1.23.1 bcftools
+```
 
