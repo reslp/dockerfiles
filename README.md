@@ -1820,5 +1820,17 @@ WORKDIR /data
 docker run --rm -it reslp/fastp:1.3.3
 ```
 
+## bwa
+
+Burrow-Wheeler Aligner for short-read alignment (see minimap2 for long-read alignment) - https://github.com/lh3/bwa
+
+tags: 0.7.19
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/bwa:0.7.19 bwa
+```
+
 
 

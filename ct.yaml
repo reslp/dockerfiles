@@ -234,6 +234,15 @@ containers:
     - 5.7.0
     entrypoint:
     - "busco -h"
+  bwa:
+    path: bwa
+    notes: ""
+    categories:
+    - read-mapping
+    tags:
+    - 0.7.19
+    entrypoint:
+    - "bwa"
   cafe:
     path: cafe
     notes: ""
