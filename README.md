@@ -135,6 +135,7 @@ The **tags** given for each container correspond the the available versions of d
 [sphinx](#sphinx)
 [spython](#spython)
 [sra-tools](#sra-tools)
+[stacks](#stacks)
 [stringtie](#stringtie)
 [table2asn](#table2asn)
 [tbl2asn](#tbl2asn)
@@ -1795,4 +1796,16 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/fastqsplitter:1.2.0 fastqsplitter
 ```
+
+## stacks
+
+Stacks is a software pipeline for building loci from short-read sequences, such as those generated on the Illumina platform. - https://catchenlab.life.illinois.edu/stacks/
+
+tags: 2.68
+
+
+```
+docker run --rm -it reslp/stacks:2.68 process_radtags
+```
+
 

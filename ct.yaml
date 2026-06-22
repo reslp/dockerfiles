@@ -1436,6 +1436,17 @@ containers:
     entrypoint:
     - "fastq-dump"
     - "/bin/bash"
+  stacks:
+    path: stacks
+	notes: "not extensively tested"
+    categories:
+    - read-mapping
+    - population genomics
+    - RADseq
+    tags:
+    - 2.68
+	entrypoint:
+    - "process_radtags"
   stringtie:
     path: stringtie
     notes: ""
