@@ -1458,14 +1458,14 @@ containers:
     - "/bin/bash"
   stacks:
     path: stacks
-	notes: "not extensively tested"
+    notes: "not extensively tested"
     categories:
     - read-mapping
     - population genomics
     - RADseq
     tags:
     - 2.68
-	entrypoint:
+    entrypoint:
     - "process_radtags"
   stringtie:
     path: stringtie
