@@ -31,6 +31,7 @@ The **tags** given for each container correspond the the available versions of d
 [bowtie2](#bowtie2)
 [busco](#busco)
 [bwa](#bwa)
+[bwa-mem2](#bwa-mem2)
 [cafe](#cafe)
 [cafe-viz](#cafe-viz)
 [cd-hit](#cd-hit)
@@ -1844,3 +1845,14 @@ WORKDIR /data
 docker run --rm -it reslp/bcftools:1.23.1 bcftools
 ```
 
+## bwa-mem2
+
+Burrow-Wheeler Aligner for short-read alignment V2 - https://github.com/bwa-mem2/bwa-mem2
+
+tags: 2.3
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/bwa-mem2:2.3 bwa-mem2
+```

@@ -1650,3 +1650,13 @@ containers:
     - 1.23.1
     entrypoint:
     - "bcftools"
+  bwa-mem2:
+    path: bwa-mem2
+    notes: ""
+    categories:
+    - read-mapping
+    - alignment
+    tags:
+    - 2.3
+    entrypoint:
+    - "bwa-mem2"
