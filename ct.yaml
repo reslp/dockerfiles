@@ -1660,3 +1660,14 @@ containers:
     - 2.3
     entrypoint:
     - "bwa-mem2"
+  snpeff:
+    path: snpeff
+    notes: ""
+    categories:
+    - variant-calling
+    - population genomics
+    - snp
+    tags:
+    - 5.4.0c
+    entrypoint:
+    - "snpEff"

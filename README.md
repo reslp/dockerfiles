@@ -137,6 +137,7 @@ The **tags** given for each container correspond the the available versions of d
 [spades](#spades)
 [sphinx](#sphinx)
 [spython](#spython)
+[snpeff](#snpeff)
 [sra-tools](#sra-tools)
 [stacks](#stacks)
 [stringtie](#stringtie)
@@ -1855,4 +1856,18 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/bwa-mem2:2.3 bwa-mem2
+```
+
+## snpEff
+
+Genetic variant annotation and effect prediction toolbox - https://pcingola.github.io/SnpEff/
+
+tags: 5.4.0c
+
+```
+docker run --rm -it reslp/snpeff:5.4.0c snpEff
+```
+
+
+
 ```
