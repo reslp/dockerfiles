@@ -138,6 +138,7 @@ The **tags** given for each container correspond the the available versions of d
 [sphinx](#sphinx)
 [spython](#spython)
 [snpeff](#snpeff)
+[snpsift](#snpsift)
 [sra-tools](#sra-tools)
 [stacks](#stacks)
 [stringtie](#stringtie)
@@ -1868,6 +1869,14 @@ tags: 5.4.0c
 docker run --rm -it reslp/snpeff:5.4.0c snpEff
 ```
 
+## snpSift
 
+Genetic variant annotation and effect prediction toolbox - https://pcingola.github.io/SnpEff/
+
+tags: 5.4.0c
 
 ```
+docker run --rm -it reslp/snpsift:5.4.0c SnpSift
+```
+
+

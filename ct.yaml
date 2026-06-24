@@ -1662,7 +1662,7 @@ containers:
     - "bwa-mem2"
   snpeff:
     path: snpeff
-    notes: ""
+    notes: "use in combination with snpsift"
     categories:
     - variant-calling
     - population genomics
@@ -1671,3 +1671,14 @@ containers:
     - 5.4.0c
     entrypoint:
     - "snpEff"
+  snpsift:
+    path: snpsift
+    notes: "use in combination with snpeff"
+    categories:
+    - variant-calling
+    - population genomics
+    - snp
+    tags:
+    - 5.4.0c
+    entrypoint:
+    - "SnpSift"

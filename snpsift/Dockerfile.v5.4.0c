@@ -1,0 +1,5 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install -c bioconda snpsift=5.4.0c
+
+WORKDIR /data
