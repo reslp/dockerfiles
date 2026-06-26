@@ -1683,3 +1683,14 @@ containers:
     - 5.4.0c
     entrypoint:
     - "SnpSift"
+  genespace:
+    path: genespace
+    notes: "This contains all dependencies (orthofinder, MCScanX, etc) in a standalone image"
+    categories:
+    - synteny
+    - whole genome alignment
+    - gene order
+    tags:
+    - 1.2.3
+    entrypoint:
+    - "R"

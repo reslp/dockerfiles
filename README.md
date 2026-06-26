@@ -62,6 +62,7 @@ The **tags** given for each container correspond the the available versions of d
 [flash](#flash)
 [fmlrc](#fmlrc)
 [gatk](#gatk)
+[genespace](#genespace)
 [genome-viz](#genome-viz)
 [get_organelle](#get_organelle)
 [gnuplot](#gnuplot)
@@ -1877,6 +1878,18 @@ tags: 5.4.0c
 
 ```
 docker run --rm -it reslp/snpsift:5.4.0c SnpSift
+```
+
+## genespace
+
+GENESPACE: an R package for synteny- and orthology-constrained comparative genomics.
+
+Note: This contains all dependencies (orthofinder, MCScanX, etc) in a standalone image
+
+tags: 1.2.3
+
+```
+docker run --rm -it reslp/genespace:1.2.3 R
 ```
 
 
