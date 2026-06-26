@@ -942,6 +942,7 @@ containers:
     - genome-alignment
     tags:
     - 4.0.0beta2
+    - 4.0.1
     entrypoint:
     - "/bin/bash /run.sh"
   muscle:

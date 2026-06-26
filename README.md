@@ -606,12 +606,12 @@ docker run --rm -it -v $(pwd):/data reslp/ont-fast5-api:3.1.6 multi_to_single_fa
 ```
 
 ## mummer
-tags: 4.0.0beta2
+tags: 4.0.0beta2, 4.0.1
 
 WORKDIR /data
 
 ```
-docker run --rm -it -v $(pwd):/data reslp/mummer:4.0.0beta2
+docker run --rm -it -v $(pwd):/data reslp/mummer:4.0.1
 ```
 
 ## bonito
