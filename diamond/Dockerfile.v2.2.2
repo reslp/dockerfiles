@@ -1,0 +1,7 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install -c bioconda diamond=2.2.2
+
+WORKDIR /data
+
+CMD ["diamond", "version"]

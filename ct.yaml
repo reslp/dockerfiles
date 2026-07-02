@@ -389,10 +389,13 @@ containers:
     notes: ""
     categories:
     - homology-search
+    - alignment
+    - blast
     tags:
     - 0.9.22
     - 2.0.7
     - 2.1.7
+    - 2.2.2
     entrypoint:
     - "diamond version"
   easy353:

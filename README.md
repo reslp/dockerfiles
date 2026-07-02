@@ -1323,12 +1323,12 @@ docker run --rm -it reslp/fastcodeml:1.1.0 fast
 
 Accelerated BLAST compatible local sequence aligner. - https://github.com/bbuchfink/diamond
 
-tags: 0.9.22, 2.0.7, 2.1.7
+tags: 0.9.22, 2.0.7, 2.1.7, 2.2.2
 
 WORKDIR /data
 
 ```
-docker run --rm -it reslp/diamond:2.0.7
+docker run --rm -it reslp/diamond:2.2.2
 ```
 
 ## MCL
