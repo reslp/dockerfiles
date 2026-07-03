@@ -13,6 +13,7 @@ The **tags** given for each container correspond the the available versions of d
 [abyss](#abyss)
 [alitv](#alitv)
 [angsd](#angsd)
+[antismash](#antismash)
 [astral](#astral)
 [augustus](#augustus)
 [bamutil](#bamutil)
@@ -1892,4 +1893,15 @@ tags: 1.2.3
 docker run --rm -it reslp/genespace:1.2.3 R
 ```
 
+## antismash
+
+antiSMASH - the antibiotics and Secondary Metabolite Analysis SHell
+
+WORKDIR /data
+
+tags: 8.0.4
+
+```
+docker run --rm -it reslp/antismash:8.0.4 antismash
+```
 

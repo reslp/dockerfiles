@@ -1697,3 +1697,14 @@ containers:
     - 1.2.3
     entrypoint:
     - "R"
+  antismash:
+    path: antismash
+    notes: "antiSMASH - the antibiotics and Secondary Metabolite Analysis SHell"
+    categories:
+    - annotation
+    - secondary metabolite genes
+    - BGC
+    tags:
+    - 8.0.4
+    entrypoint:
+    - "antismash"
