@@ -78,6 +78,7 @@ The **tags** given for each container correspond the the available versions of d
 [jupyterhub](#jupyterhub)
 [jupyter-lab](#jupyter-lab)
 [keras](#keras)
+[kofamscan](#kofamscan)
 [kmergenie](#kmergenie)
 [macse](#macse)
 [mafft](#mafft)
@@ -1905,3 +1906,16 @@ tags: 8.0.4
 docker run --rm -it reslp/antismash:8.0.4 antismash
 ```
 
+## kofamscan
+
+CLI tool to annotate genes with KOfam - https://github.com/takaram/kofam_scan
+
+WORKDIR /data
+
+tags: 1.3.0
+
+Note: KO profiles and list are in /opt/database (downloaded: 07072026)
+
+```
+docker run --rm -it -v $(pwd):/data -w /data reslp/kofamscan:1.3.0 exec_annotation -p /opt/database/profiles -k /opt/database/ko_list --cpu 10 -o /data/ko1-results.txt /data/Cladonia_bellidiflora-proteins.fasta
+```
