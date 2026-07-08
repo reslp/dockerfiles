@@ -1720,4 +1720,16 @@ containers:
     - 1.3.0
     entrypoint:
     - "exec_annotation -p /opt/database/profiles -k /opt/database/ko_list --cpu 10 -o output.txt inputfile.prot.fas"
+  kegg-pathways-completeness:
+    path: kegg-pathways-completeness
+    notes: ""
+    categories:
+    - annotation
+    - kegg
+    - kogg
+    - pathways
+    tags:
+    - 1.4.3
+    entrypoint:
+    - "give_completeness --input-list kos_list.txt --list-separator ',' --outprefix my_analysis"
 

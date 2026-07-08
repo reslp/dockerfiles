@@ -1,0 +1,5 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install -c bioconda kegg-pathways-completeness=1.4.3
+
+WORKDIR /data

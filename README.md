@@ -77,6 +77,7 @@ The **tags** given for each container correspond the the available versions of d
 [julia](#julia)
 [jupyterhub](#jupyterhub)
 [jupyter-lab](#jupyter-lab)
+[kegg-pathways-completeness](#kegg-pathways-completeness)
 [keras](#keras)
 [kofamscan](#kofamscan)
 [kmergenie](#kmergenie)
@@ -1919,3 +1920,14 @@ Note: KO profiles and list are in /opt/database (downloaded: 07072026)
 ```
 docker run --rm -it -v $(pwd):/data -w /data reslp/kofamscan:1.3.0 exec_annotation -p /opt/database/profiles -k /opt/database/ko_list --cpu 10 -o /data/ko1-results.txt /data/Cladonia_bellidiflora-proteins.fasta
 ```
+
+## kegg-pathways-completeness
+
+This tool estimates the completeness of KEGG pathway modules from the presence or absence of KEGG orthologues (KOs) - https://github.com/EBI-Metagenomics/kegg-pathways-completeness-tool
+
+tags: 1.4.3
+
+```
+docker run --rm -it reslp/kegg-pathways-completeness:1.4.3 give_completeness
+```
+
