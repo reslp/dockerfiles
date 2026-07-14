@@ -1,0 +1,46 @@
+FROM rocker/r-base:4.6.0
+
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN apt-get update && apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    gfortran \
+    pkg-config \
+    libcurl4-openssl-dev \
+    libfontconfig1-dev \
+    libfreetype6-dev \
+    libfribidi-dev \
+    libharfbuzz-dev \
+    libjpeg-dev \
+    libpng-dev \
+    libtiff5-dev \
+    libwebp-dev \
+    zlib1g-dev \
+    libicu-dev \
+    pandoc \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    make \
+    g++ \
+    libxml2-dev \
+    libgit2-dev \
+    libuv1-dev \
+    && rm -rf /var/lib/apt/lists/*
+#install some packages for phylogenetics, statistics and plotting
+RUN install2.r -e fs sass bslib rmarkdown gargle
+RUN install2.r -e googledrive googlesheets4 ragg reprex
+RUN install2.r -e tidyverse dplyr readr ggplot2 viridis
+RUN install2.r -e plotly plyr reshape2
+RUN apt-get update && apt-get install -y --no-install-recommends cmake && rm -rf /var/lib/apt/lists/*
+RUN install2.r -e nloptr
+RUN install2.r -e ggpubr cowplot patchwork
+RUN install2.r -e ape phytools wesanderson RColorBrewer
+RUN install2.r -e ggrepel
+#phytools geiger brms wesanderson RColorBrewer 
+RUN install2.r -e BiocManager
+RUN R -e 'BiocManager::install("ggtree")'
+WORKDIR /data
+
+CMD ["R"]

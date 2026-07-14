@@ -1322,13 +1322,14 @@ containers:
     - "R"
   rphylogenetics:
     path: rphylogenetics
-    notes: "tags refer to R version"
+    notes: "tags refer to R version; build times for these are loooong"
     categories:
     - phylogeny
     - r
     tags:
     - 4.0.3 
     - 4.0.3-strict-versions
+    - 4.6.0
     entrypoint:
     - "R"
   samtools:
