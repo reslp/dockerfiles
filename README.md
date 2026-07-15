@@ -43,6 +43,7 @@ The **tags** given for each container correspond the the available versions of d
 [consent](#consent)
 [cupp](#cupp)
 [datasets](#datasets)
+[dbcan](#dbcan)
 [deeploc](#deeploc)
 [dentist](#dentist)
 [diamond](#diamond)
@@ -1932,4 +1933,17 @@ tags: 1.4.3
 ```
 docker run --rm -it reslp/kegg-pathways-completeness:1.4.3 give_completeness
 ```
+
+## dbcan
+
+Quick local cazyme annotation. - https://github.com/linnabrown/run_dbcan
+
+tags: 5.2.9
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/dbcan:5.2.9 run_dbcan
+```
+
 

@@ -1,0 +1,7 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install -c bioconda dbcan=5.2.9
+
+ADD parse_dbcan.py /opt/miniforge/bin
+RUN chmod +x /opt/miniforge/bin/parse_dbcan.py
+WORKDIR /data

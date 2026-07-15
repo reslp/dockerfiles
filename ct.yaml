@@ -1733,4 +1733,17 @@ containers:
     - 1.4.3
     entrypoint:
     - "give_completeness --input-list kos_list.txt --list-separator ',' --outprefix my_analysis"
-
+  dbcan:
+    path: dbcan
+    notes: "includes parse_dbcan.py"
+    categories:
+    - annotation
+    - cazyme
+    - cazy
+    tags:
+    - 5.2.9
+    entrypoint:
+    - "dbcan_build --cpus 12 --db-dir db --clean"
+    - "run_dbcan /path/to/aminoacid.fasta protein -dt 10 --db_dir results/db --out_dir /path/to/output/directory"
+    - "parse_dbcan.py -h"
+  
