@@ -1743,7 +1743,7 @@ containers:
     tags:
     - 5.2.9
     entrypoint:
-    - "dbcan_build --cpus 12 --db-dir db --clean"
-    - "run_dbcan /path/to/aminoacid.fasta protein -dt 10 --db_dir results/db --out_dir /path/to/output/directory"
+    - "run_dbcan database --db-dir db"
+    - "run_dbcan CAZyme_annotation --mode protein --input_raw_data /path/to/aminoacid.fasta --threads 10 --db_dir results/db --output_dir /path/to/output/directory"
     - "parse_dbcan.py -h"
   
