@@ -2,4 +2,6 @@ FROM reslp/miniforge:25.3.0-3
 
 RUN mamba install -c bioconda antismash=8.0.4
 
+RUN download-antismash-databases
+
 WORKDIR /data
