@@ -1746,4 +1746,16 @@ containers:
     - "run_dbcan database --db-dir db"
     - "run_dbcan CAZyme_annotation --mode protein --input_raw_data /path/to/aminoacid.fasta --threads 10 --db_dir results/db --output_dir /path/to/output/directory"
     - "parse_dbcan.py -h"
+  agat:
+    path: agat
+    notes: ""
+    categories:
+    - annotation
+    - file conversion
+    - gff
+    - gtf
+    tags:
+    - 1.7.0
+    entrypoint:
+    - "agat"
   

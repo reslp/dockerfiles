@@ -11,6 +11,7 @@ The **tags** given for each container correspond the the available versions of d
 **Currently available containers:**
 
 [abyss](#abyss)
+[agat](#agat)
 [alitv](#alitv)
 [angsd](#angsd)
 [antismash](#antismash)
@@ -1946,4 +1947,15 @@ WORKDIR /data
 docker run --rm -it reslp/dbcan:5.2.9 run_dbcan
 ```
 
+## agat
+
+Another Gtf/Gff Analysis Toolkit - https://nbisweden.github.io/AGAT
+
+tags: 1.7.0
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/agat:1.7.0 agat
+```
 
