@@ -569,12 +569,12 @@ docker run --rm -it -v $(pwd):/data reslp/trimal:1.4.1 trimal -in /data/aligned_
 ```
 
 ## table2asn
-tags: 20201119, 1.26.678
+tags: 20201119, 1.26.678, 1.29.324
 
 Program had no good versioning while in beta, till it was released tags are build dates.
 
 ```
-docker run --rm -it -v $(pwd):/data reslp/table2asn:1.26.678 table2asn -h
+docker run --rm -it -v $(pwd):/data reslp/table2asn:1.29.324 table2asn -version
 ```
 
 ## tbl2asn
