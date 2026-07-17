@@ -126,6 +126,7 @@ The **tags** given for each container correspond the the available versions of d
 [picard](#picard)
 [pigz](#pigz)
 [pixi](#pixi)
+[plink](#plink)
 [prank](#prank)
 [purge_haplotigs](#purge_haplotigs)
 [pyinstaller](#pyinstaller)
@@ -1967,5 +1968,17 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/gff-to-genbank:0.1.0
+```
+
+## plink
+
+PLINK is a free, open-source whole genome association analysis toolset, designed to perform a range of basic, large-scale analyses in a computationally efficient manner. - https://www.cog-genomics.org/plink/1.9/
+
+tags: 1.90b6.21
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/plink:1.90b6.21 plink
 ```
 

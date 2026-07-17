@@ -1,0 +1,5 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install -c bioconda plink=1.90b6.21
+
+WORKDIR /data
