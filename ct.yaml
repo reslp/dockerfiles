@@ -1759,4 +1759,14 @@ containers:
     - 1.7.0
     entrypoint:
     - "agat"
-  
+  gff-to-genbank:
+    path: gff-to-genbank
+    notes: ""
+    categories:
+    - annotation
+    - ncbi
+    - gff3
+    tags:
+    - 0.1.0
+    entrypoint:
+    - "gff-to-genbank gff_file assembly_fasta_file"

@@ -68,6 +68,7 @@ The **tags** given for each container correspond the the available versions of d
 [genespace](#genespace)
 [genome-viz](#genome-viz)
 [get_organelle](#get_organelle)
+[gff-to-genbank](#gff-to-genbank)
 [gnuplot](#gnuplot)
 [guidance2](#guidance2)
 [hmmer](#hmmer)
@@ -585,9 +586,6 @@ This is the legacy version of the NCBI tool.
 ```
 docker run --rm -it -v $(pwd):/data reslp/tbl2asn:25.8
 ```
-
-
-
 
 ## flappie
 tags: 4de542f
@@ -1957,5 +1955,17 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/agat:1.7.0 agat
+```
+
+## gff-to-genbank
+
+Convert GFF file to GenBank file format while extracting the sequences between the annotated regions - https://pypi.org/project/gff-to-genbank/
+
+tags: 0.1.0
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/gff-to-genbank:0.1.0
 ```
 
