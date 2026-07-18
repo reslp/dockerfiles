@@ -1,0 +1,9 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN mamba install -c bioconda plink2=2.00a5.12
+
+RUN apt update && apt install -y unzip
+RUN rm /opt/miniforge/bin/plink2 && wget -P /opt/miniforge/bin/ https://s3.amazonaws.com/plink2-assets/alpha7/plink2_linux_x86_64_20260504.zip
+RUN cd /opt/miniforge/bin/ && unzip plink2_linux_x86_64_20260504.zip
+
+WORKDIR /data

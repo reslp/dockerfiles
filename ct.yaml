@@ -1772,13 +1772,15 @@ containers:
     - "gff-to-genbank gff_file assembly_fasta_file"
   plink:
     path: plink
-    notes: ""
+    notes: "entrypoint is plink or plink2 according to version"
     categories:
     - snp
     - genomics
     - gff3
     - vcf
     tags:
+    - 2.0a7.1
     - 1.90b6.21
     entrypoint:
+    - "plink2"
     - "plink"
