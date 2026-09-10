@@ -36,6 +36,7 @@ The **tags** given for each container correspond the the available versions of d
 [bwa-mem2](#bwa-mem2)
 [cafe](#cafe)
 [cafe-viz](#cafe-viz)
+[carveme](#carveme)
 [cd-hit](#cd-hit)
 [clipkit](#clipkit)
 [clustalo](#clustalo)
@@ -1981,5 +1982,17 @@ WORKDIR /data
 ```
 docker run --rm -it reslp/plink:1.90b6.21 plink
 docker run --rm -it reslp/plink:2.0a7.1 plink2
+```
+
+## carveme
+
+CarveMe: genome-scale metabolic model reconstruction - https://github.com/cdanielmachado/carveme
+
+tags: 1.6.6
+
+WORKDIR /data
+
+```
+docker run --rm -it reslp/carveme:1.6.6
 ```
 

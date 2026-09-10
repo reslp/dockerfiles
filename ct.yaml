@@ -1784,3 +1784,15 @@ containers:
     entrypoint:
     - "plink2"
     - "plink"
+  carveme:
+    path: carveme
+    notes: ""
+    categories:
+    - annotation
+    - genomics
+    - metabolism
+    - gem
+    tags:
+    - 1.6.6
+    entrypoint:
+    - "carve"

@@ -1,0 +1,5 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN conda install bioconda::carveme=1.6.6
+
+WORKDIR /data
