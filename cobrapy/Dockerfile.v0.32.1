@@ -1,0 +1,4 @@
+FROM reslp/miniforge:25.3.0-3
+
+RUN conda install conda-forge::cobra=0.32.1
+WORKDIR /data

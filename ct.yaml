@@ -1796,3 +1796,29 @@ containers:
     - 1.6.6
     entrypoint:
     - "carve"
+  memote:
+    path: memote
+    notes: ""
+    categories:
+    - annotation
+    - genomics
+    - metabolism
+    - gem
+    tags:
+    - 0.17.0
+    entrypoint:
+    - "memote"
+  cobrapy:
+    path: cobrapy
+    notes: ""
+    categories:
+    - annotation
+    - genomics
+    - metabolism
+    - gem
+    tags:
+    - 0.32.1
+    entrypoint:
+    - "(is library)"
+
+

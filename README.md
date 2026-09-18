@@ -40,6 +40,7 @@ The **tags** given for each container correspond the the available versions of d
 [cd-hit](#cd-hit)
 [clipkit](#clipkit)
 [clustalo](#clustalo)
+[cobrapy](#cobrapy)
 [colord](#colord)
 [concoct](#concoct)
 [consent](#consent)
@@ -92,6 +93,7 @@ The **tags** given for each container correspond the the available versions of d
 [mash](#mash)
 [maxbin](#maxbin)
 [mcl](#mcl)
+[memote](#memote)
 [metabat](#metabat)
 [metaxa](#metaxa)
 [miniBarcoder](#miniBarcoder)
@@ -1994,5 +1996,25 @@ WORKDIR /data
 
 ```
 docker run --rm -it reslp/carveme:1.6.6
+```
+
+## corbrapy
+
+cobrapy is a python package that provides a simple interface to metabolic constraint-based reconstruction and analysis. - https://opencobra.github.io/cobrapy/
+
+tags: 0.32.1
+
+```
+docker run --rm -it reslp/cobrapy:0.32.1
+```
+
+## memote
+
+memote – the genome-scale metabolic model test suite - https://github.com/opencobra/memote
+
+tags: 0.17.0
+
+```
+docker run --rm -it reslp/memote:0.17.0
 ```
 
