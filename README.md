@@ -12,6 +12,7 @@ The **tags** given for each container correspond the the available versions of d
 
 [abyss](#abyss)
 [agat](#agat)
+[aleph](#aleph)
 [alitv](#alitv)
 [angsd](#angsd)
 [antismash](#antismash)
@@ -2018,3 +2019,14 @@ tags: 0.17.0
 docker run --rm -it reslp/memote:0.17.0
 ```
 
+## aleph
+
+Give satellite imagery, terrain data, buildings, streetview photos to your LLM - https://github.com/Belluxx/Aleph
+
+tags: 0c09456 (this is post 0.2.0)
+
+WORKDIR /data
+
+```
+docker run --rm -p 127.0.0.1:8100:8100 -v aleph-data:/data reslp/aleph:0c09456
+```

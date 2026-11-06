@@ -1,0 +1,20 @@
+FROM python:3.12-slim-bookworm
+
+ARG ALEPH_REF=1b307cdb7c470a7715da497ba406355dfe7d3163
+
+# dont write pyc files, send python directly to docker
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+
+RUN pip install --no-cache-dir "https://github.com/Belluxx/Aleph/archive/${ALEPH_REF}.tar.gz"
+
+# Listen outside container loopback; retain upstream's localhost Host-header checks.
+RUN python -c 'from pathlib import Path; import alephgeo.dashboard as dashboard; p = Path(dashboard.__file__); source = p.read_text(); old = "ThreadingHTTPServer((\"127.0.0.1\", port), Handler)"; assert source.count(old) == 1, "Upstream dashboard binding changed"; p.write_text(source.replace(old, "ThreadingHTTPServer((\"0.0.0.0\", port), Handler)"))'
+
+# make it more secure by using a seperate user
+RUN useradd --create-home --uid 1000 aleph && mkdir -p /data/captures /data/cache && chown -R aleph:aleph /data
+USER aleph
+WORKDIR /data
+EXPOSE 8100
+
+ENTRYPOINT ["alephgeo"]
+CMD ["dashboard", "--no-browser", "--port", "8100", "--output", "/data/captures", "--cache-dir", "/data/cache"]

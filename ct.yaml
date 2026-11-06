@@ -1820,5 +1820,17 @@ containers:
     - 0.32.1
     entrypoint:
     - "(is library)"
+  alpeh:
+    path: alpeh
+    notes: ""
+    categories:
+    - gis
+    - landscape
+    - data
+    - visualization
+    tags:
+    - 0c09456
+    entrypoint:
+    - "docker run --rm -p 127.0.0.1:8100:8100 -v aleph-data:/data reslp/aleph:0c09456"
 
 
