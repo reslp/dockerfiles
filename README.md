@@ -175,10 +175,10 @@ The **tags** given for each container correspond the the available versions of d
 
 
 ## iqtree
-tags: 2.0rc2, 2.0.7, 2.3.6
+tags: 2.0rc2, 2.0.7, 2.3.6, 3.1.4
 
 ```
-docker run -v $(pwd):/data reslp/iqtree:2.0.7
+docker run --rm -it -v $(pwd):/data reslp/iqtree:3.1.4 iqtree
 ```
  
 

@@ -1,0 +1,12 @@
+FROM ubuntu:24.04
+MAINTAINER <philipp.resl@uni-graz.at>
+
+RUN apt update && apt install -y wget
+
+WORKDIR /opt
+
+RUN wget https://github.com/iqtree/iqtree3/releases/download/v3.1.4/iqtree-3.1.4-Linux.tar.gz && tar xvfz iqtree-3.1.4-Linux.tar.gz && cp iqtree-3.1.4-Linux/bin/iqtree3 /usr/bin && cp iqtree-3.1.4-Linux/bin/iqtree3 /usr/bin/iqtree && cp iqtree-3.1.4-Linux/bin/iqtree3_intel /usr/bin/iqtree3_intel
+
+WORKDIR /data
+
+CMD ["iqtree"]
